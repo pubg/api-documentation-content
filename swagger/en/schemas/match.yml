@@ -1,0 +1,91 @@
+title: Match Object
+description: "Match objects contain the results of a completed match such as the game mode played, duration, and which players participated"
+type: object
+properties:
+  type:
+    type: string
+    description: "match"
+  id:
+    type: string
+    description: "Match ID"
+  attributes:
+    type: object
+    properties:
+      createdAt:
+        type: string
+        format: dateTime
+        description: "Time this match object was stored in the API"
+      duration:
+        type: integer
+        description: "Length of the match"
+      gameMode:
+        type: string
+        description: "Game mode played"
+        enum: [duo, duo-fpp, solo, solo-fpp, squad, squad-fpp]
+      mapName:
+        type: string
+        description: "Map name"
+        enum: [Desert_Main, Erangel_Main]
+      patchVersion:
+        type: string
+        description: "N/A"
+      shardId:
+        type: string
+        description: "Platform-region shard"
+      stats:
+        type: object
+        description: "N/A"
+      tags:
+        type: object
+        description: "N/A"
+      titleId:
+        type: string
+        description: "Identifies the studio and game"
+  relationships:
+    type: object
+    description: "References to resource objects that can be found in the included array"
+    properties:
+      assets:
+        type: object
+        properties:
+          data:
+            type: array
+            items:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: "asset"
+                id:
+                  type: string
+                  description: "Asset ID - Use to find full asset in included"
+      rosters:
+        type: object
+        properties:
+          data:
+            type: array
+            items:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: "roster"
+                id:
+                  type: string
+                  description: "Roster ID - Use to find full roster in included"
+
+      rounds:
+        type: object
+        description: "N/A"
+      spectators:
+        type: object
+        description: "N/A"
+  links:
+    type: object
+    properties:
+      schema:
+        type: string
+        description: "N/A"
+      self:
+        type: string
+        description: "Link to this object"

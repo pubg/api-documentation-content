@@ -1,0 +1,51 @@
+openapi: 3.0.0
+
+info:
+  version: 1.0.0
+  title: ""
+  description: "Note: Any property with \"N/A\" as its description is not currently in use."
+
+servers:
+  - url: https://api.playbattlegrounds.com/shards/{platform-region}
+    variables:
+      "platform-region":
+        enum:
+        - "xbox-as"
+        - "xbox-eu"
+        - "xbox-na"
+        - "xbox-oc"
+        - "pc-krjp"
+        - "pc-jp"
+        - "pc-na"
+        - "pc-eu"
+        - "pc-oc"
+        - "pc-kakao"
+        - "pc-sea"
+        - "pc-sa"
+        - "pc-as"
+        default: pc-na
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /matches/{id}:
+    $ref: './paths/index.yml#/match'
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: http
+      description: "Enter your API key here to be used with the interactive documentation!"
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    match:
+      $ref: 'schemas/index.yml#/match'
+    roster:
+      $ref: 'schemas/index.yml#/roster'
+    participant:
+      $ref: 'schemas/index.yml#/participant'
+    asset:
+      $ref: 'schemas/index.yml#/asset'

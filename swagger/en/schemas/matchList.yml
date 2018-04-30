@@ -1,0 +1,16 @@
+title: Match List
+description: "Contains a list of match IDs"
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          description: "match"
+        id:
+          type: string
+          description: "Match ID"
+

@@ -1,0 +1,26 @@
+description: Match response
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          $ref: '../schemas/index.yml#match'
+        included:
+          type: array
+          description: "An array of complete asset, participant, and roster objects"
+          items:
+            oneOf:
+            - $ref: '../schemas/index.yml#asset'
+            - $ref: '../schemas/index.yml#participant'
+            - $ref: '../schemas/index.yml#roster'
+        links:
+          type: object
+          description: "Pagination links"
+          properties:
+            self:
+              type: string
+              description: "Link to this match response"
+        meta:
+          type: object
+          description: "N/A"

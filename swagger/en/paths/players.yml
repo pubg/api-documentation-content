@@ -1,0 +1,19 @@
+get:
+  tags:
+  - Players
+  summary: Get a collection of players.
+  description: "Note: Either filter[playerIds] or filter[playerNames] must be specified, however, it is not necessary to use both"
+  parameters:
+    - $ref: '../parameters/index.yml#/filterPlayerIds'
+    - $ref: '../parameters/index.yml#/filterPlayerNames'
+  responses:
+    200:
+      $ref: '../responses/index.yml#/players-200'
+    401:
+      $ref: '../responses/index.yml#/errors/unauthorized'
+    404:
+      $ref: '../responses/index.yml#/errors/notFound'
+    415:
+      $ref: '../responses/index.yml#/errors/unsupportedMediaType'
+    429:
+      $ref: '../responses/index.yml#/errors/tooManyRequests'

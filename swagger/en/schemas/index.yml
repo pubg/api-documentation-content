@@ -1,0 +1,26 @@
+match:
+  $ref: './match.yml'
+
+matchList:
+  $ref: './matchList.yml'
+
+player:
+  $ref: './player.yml'
+
+gameModeStats:
+  $ref: './gameModeStats.yml'
+
+season:
+  $ref: './season.yml'
+
+roster:
+  $ref: './roster.yml'
+
+asset:
+  $ref: './asset.yml'
+
+participant:
+  $ref: './participant.yml'
+
+sample:
+  $ref: './sample.yml'

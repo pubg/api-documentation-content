@@ -1,0 +1,18 @@
+get:
+  tags:
+  - Players
+  summary: Get season information for a single player.
+  parameters:
+    - $ref: '../parameters/index.yml#/id'
+    - $ref: '../parameters/index.yml#/seasonId'
+  responses:
+    200:
+      $ref: '../responses/index.yml#/playerSeason-200'
+    401:
+      $ref: '../responses/index.yml#/errors/unauthorized'
+    404:
+      $ref: '../responses/index.yml#/errors/notFound'
+    415:
+      $ref: '../responses/index.yml#/errors/unsupportedMediaType'
+    429:
+      $ref: '../responses/index.yml#/errors/tooManyRequests'

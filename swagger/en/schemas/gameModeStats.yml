@@ -1,0 +1,64 @@
+title: Game Mode Stats Object
+description: "Game Mode stats objects contain a player's aggregated stats for a game mode in the context of a season."
+type: object
+properties:
+  assists:
+    type: integer
+  boosts:
+    type: integer
+  dBNOs:
+    type: integer
+  dailyKills:
+    type: integer
+  damageDealt:
+    type: number
+  days:
+    type: integer
+  headshotKills:
+    type: integer
+  heals:
+    type: integer
+  kills:
+    type: integer
+  longestKill:
+    type: number
+  longestTimeSurvived:
+    type: number
+  losses:
+    type: integer
+  maxKillStreaks:
+    type: integer
+  mostSurvivalTime:
+    type: number
+  revives:
+    type: integer
+  rideDistance:
+    type: number
+  roadKills:
+    type: integer
+  roundMostKills:
+    type: integer
+  roundsPlayed:
+    type: integer
+  suicides:
+    type: integer
+  teamKills:
+    type: integer
+  timeSurvived:
+    type: number
+  top10s:
+    type: integer
+  vehicleDestroys:
+    type: integer
+  walkDistance:
+    type: number
+  weaponAcquired:
+    type: integer
+  weeklyKills:
+    type: integer
+  winPoints:
+    type: number
+  winRatio:
+    type: number
+  wins:
+    type: integer

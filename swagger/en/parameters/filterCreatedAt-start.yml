@@ -1,0 +1,13 @@
+name: filter[createdAt-start]
+in: query
+description: |
+  The starting search date in UTC.
+  
+  **Usage**: filter[createdAt-start]=2018-01-01T00:00:00Z //Note this time will not work
+  
+  **Default**: now() - 24hrs
+required: false
+style: form
+schema:
+  type: string
+  format: datetime

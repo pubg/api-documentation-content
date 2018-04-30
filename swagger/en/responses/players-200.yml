@@ -1,0 +1,21 @@
+description: Players response
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          type: array
+          description: "An array of two or more match objects"
+          items:
+            $ref: '../schemas/index.yml#player'
+        links:
+          type: object
+          description: "Pagination links"
+          properties:
+            self:
+              type: string
+              description: "Link to this match response"
+        meta:
+          type: object
+          description: "N/A"

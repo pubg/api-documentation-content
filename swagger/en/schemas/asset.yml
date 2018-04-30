@@ -1,0 +1,26 @@
+title: Asset Object
+description: "Asset objects contain a URL string that links to a telemetry.json file, which will contain an array of event objects that provide further insight into a match."
+type: object
+properties:
+  type:
+    type: string
+    description: "asset"
+  id:
+    type: string
+    description: "Asset ID"
+  attributes:
+    type: object
+    properties:
+      URL:
+        type: string
+        description: "Link to the telemetry.json file"
+      createdAt:
+        type: string
+        format: dateTime
+        description: "Time of telemetry creation"
+      description:
+        type: string
+        description: "N/A"
+      name:
+        type: string
+        description: "Telemetry"

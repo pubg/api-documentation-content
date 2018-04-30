@@ -1,0 +1,33 @@
+errors:
+  notFound:
+    $ref: './notFound.yml'
+
+  unauthorized:
+    $ref: './unauthorized.yml'
+
+  unsupportedMediaType:
+    $ref: './unsupportedMediaType.yml'
+
+  tooManyRequests:
+    $ref: './tooManyRequests.yml'
+
+status-200:
+  $ref: './status-200.yml'
+
+match-200:
+  $ref: './match-200.yml'
+
+player-200:
+  $ref: './player-200.yml'
+
+players-200:
+  $ref: './players-200.yml'
+
+samples-200:
+  $ref: './samples-200.yml'
+
+playerSeason-200:
+  $ref: './playerSeason-200.yml'
+
+seasons-200:
+  $ref: './seasons-200.yml'

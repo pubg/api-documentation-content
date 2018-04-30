@@ -1,0 +1,14 @@
+id:
+  $ref: './id.yml'
+
+seasonId:
+  $ref: './seasonId.yml'
+
+filterPlayerIds:
+  $ref: './filterPlayerIds.yml'
+
+filterPlayerNames:
+  $ref: './filterPlayerNames.yml'
+
+filterCreatedAt-start:
+  $ref: './filterCreatedAt-start.yml'

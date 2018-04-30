@@ -1,0 +1,122 @@
+title: Participant Object
+description: "Participant objects represent each player in the context of a match. Participant objects are only meaningful within the context of a match and are not exposed as a standalone resource."
+type: object
+properties:
+  type:
+    type: string
+    description: "participant"
+  id:
+    type: string
+    description: "Participant ID"
+  attributes:
+    type: object
+    properties:
+      actor:
+        type: string
+        description: "N/A"
+      shardId:
+        type: string
+        description: "Platform-region shard"
+      stats:
+        type: object
+        description: "Participant stats in the context of a match"
+        properties:
+          DBNOs:
+            type: integer
+            description: "Number of times this participant was downed"
+            minimum: 0
+          assists:
+            type: integer
+            minimum: 0
+          boosts:
+            type: integer
+            description: "Total number of boost items used"
+            minimum: 0
+          damageDealt:
+            type: number
+            minimum: 0
+          deathType:
+            type: string
+            enum: [alive, byplayer, suicide]
+          headshotKills:
+            type: integer
+            minimum: 0
+          heals:
+            type: integer
+            description: "Number of healing items used"
+            minimum: 0
+          killPlace:
+            type: integer
+            minimum: 1
+            maximum: 100
+          killPoints:
+            type: integer
+            minimum: 0
+          killPointsDelta:
+            type: number
+            description: "Change in kill points"
+          killStreaks:
+            type: integer
+            description: "Total number of kill streaks"
+            minimum: 0
+          kills:
+            type: integer
+            minimum: 0
+            maximum: 99
+          lastKillPoints:
+            type: integer
+            minimum: 0
+          lastWinPoints:
+            type: integer
+            minimum: 0
+          longestKill:
+            type: number
+            minimum: 0
+          mostDamage:
+            type: number
+            description: "Highest amount of damage dealt with a single attack"
+            minimum: 0
+          name:
+            type: string
+            description: "Username of the player associated with this participant"
+          playerId:
+            type: string
+            description: "Account ID of the player associated with this participant"
+          revives:
+            type: integer
+            description: "Number of times this participant revived others"
+            minimum: 0
+          rideDistance:
+            type: number
+            description: "Total distance traveled in vehicles"
+            minimum: 0
+          roadKills:
+            type: integer
+            description: "Number of kills while in a vehicle"
+            minimum: 0
+          teamKills:
+            type: integer
+            minimum: 0
+          timeSurvived:
+            type: number
+            minimum: 0
+          vehicleDestroys:
+            type: integer
+            minimum: 0
+          walkDistance:
+            type: number
+            minimum: 0
+          weaponsAcquired:
+            type: integer
+            description: "Total number of weapons picked up"
+            minimum: 0
+          winPlace:
+            type: integer
+            minimum: 1
+            maximum: 100
+          winPoints:
+            type: integer
+            minimum: 0
+          winPointsDelta:
+            type: number
+            description: "Change in winpoints"

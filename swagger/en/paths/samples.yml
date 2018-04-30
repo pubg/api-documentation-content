@@ -1,0 +1,18 @@
+get:
+  tags:
+  - samples
+  summary: Get a list of sample matches.
+  description: "The number of matches per shard may vary. Requests to samples need to be at least 24hrs in the past UTC time using the `filter[createdAt-start]` query parameter. The default if not specified is the latest sample."
+  parameters:
+    - $ref: '../parameters/index.yml#/filterCreatedAt-start'
+  responses:
+    200:
+      $ref: '../responses/index.yml#/samples-200'
+    401:
+      $ref: '../responses/index.yml#/errors/unauthorized'
+    404:
+      $ref: '../responses/index.yml#/errors/notFound'
+    415:
+      $ref: '../responses/index.yml#/errors/unsupportedMediaType'
+    429:
+      $ref: '../responses/index.yml#/errors/tooManyRequests'

@@ -1,0 +1,11 @@
+name: filter[playerNames]
+in: query
+description: |
+  Filters by player names.
+  
+  **Usage**: filter[playerNames]=playerName-1,playerName-2,…
+required: false
+example: "shroud"
+style: form
+schema:
+  type: string

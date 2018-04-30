@@ -1,0 +1,6 @@
+name: id
+in: path
+description: "The ID to search for."
+required: true
+schema:
+  type: string

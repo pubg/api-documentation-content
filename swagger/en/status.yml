@@ -1,0 +1,12 @@
+openapi: 3.0.0
+
+info:
+  version: 1.0.0
+  title: ""
+
+servers:
+  - url: https://api.playbattlegrounds.com/
+  
+paths:
+  /status:
+    $ref: './paths/index.yml#/status'

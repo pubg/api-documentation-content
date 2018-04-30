@@ -1,0 +1,38 @@
+description: Samples response
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          type: object 
+          properties:
+            type:
+              type: string
+              description: "sample"
+            id:
+              type: string
+              description: "Sample ID"
+            attributes:
+              type: object
+              properties:
+                createdAt:
+                  type: string
+                  description: "Time of samples list creation"
+                shardId:
+                  type: string
+                  description: "Platform-region Shard"
+                titleId:
+                  type: string
+                  description: "Identifies the studio and game"
+        relationships:
+          type: object
+          properties:
+            matches:
+              type: object
+              properties:
+                data:
+                  type: array
+                  description: "A list of sample matches (their IDs and shards)"
+                  items:
+                    $ref: '../schemas/index.yml#/sample'

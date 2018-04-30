@@ -1,0 +1,20 @@
+match:
+  $ref: './match.yml'
+
+players: 
+  $ref: './players.yml'
+
+player: 
+  $ref: './player.yml'
+
+playerSeason:
+  $ref: './playerSeason.yml'
+
+seasons:
+  $ref: './seasons.yml'
+
+status:
+  $ref: './status.yml'
+
+samples:
+  $ref: './samples.yml'

@@ -1,0 +1,80 @@
+description: "Player season response"
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            type:
+              type: string
+              description: "playerSeason"
+            attributes:
+              type: object
+              properties:
+                gameModeStats:
+                  type: object
+                  properties:
+                    duo:
+                      $ref: '../schemas/index.yml#/gameModeStats'
+                    duo-fpp:
+                      $ref: '../schemas/index.yml#/gameModeStats'
+                    solo:
+                      $ref: '../schemas/index.yml#/gameModeStats'
+                    solo-fpp:
+                      $ref: '../schemas/index.yml#/gameModeStats'
+                    squad:
+                      $ref: '../schemas/index.yml#/gameModeStats'
+                    squad-fpp:
+                      $ref: '../schemas/index.yml#/gameModeStats'
+            relationships:
+              type: object
+              description: "Lists of match IDs that this player played this season separated by game mode. If a player didn't play any matches in a season with a specific game mode, then the array for that game mode will be empty."
+              properties:
+                player:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: "player"
+                        id:
+                          type: string
+                          description: "Player ID"
+                matchesSolo:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesSoloFPP:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesDuo:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesDuoFPP:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesSquad:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesSquadFPP:
+                  $ref: '../schemas/index.yml#/matchList'
+                season:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: "season"
+                        id:
+                          type: string
+                          description: "Season ID"
+
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              description: "Link to this player season response"
+        meta:
+          type: object
+          description: "N/A"

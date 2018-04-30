@@ -1,0 +1,16 @@
+title: Season Object
+description: "Season objects each contain the ID of a season, which can be used to lookup season information for a player."
+type: object
+properties:
+  type:
+    type: string
+    description: "season"
+  id:
+    type: string
+    description: "Season ID"
+  isCurrentSeason:
+    type: boolean
+    description: "Indicates if the season is active"
+  isOffseason :
+    type: boolean
+    description: "Indicates if the season is not active"
