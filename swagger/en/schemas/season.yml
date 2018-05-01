@@ -8,9 +8,12 @@ properties:
   id:
     type: string
     description: "Season ID"
-  isCurrentSeason:
-    type: boolean
-    description: "Indicates if the season is active"
-  isOffseason :
-    type: boolean
-    description: "Indicates if the season is not active"
+  attributes:
+    type: object
+    properties:
+      isCurrentSeason:
+        type: boolean
+        description: "Indicates if the season is active"
+      isOffseason :
+        type: boolean
+        description: "Indicates if the season is not active"
