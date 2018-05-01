@@ -18,6 +18,8 @@ properties:
     type: integer
   heals:
     type: integer
+  killPoints:
+    type: number
   kills:
     type: integer
   longestKill:
@@ -52,13 +54,11 @@ properties:
     type: integer
   walkDistance:
     type: number
-  weaponAcquired:
+  weaponsAcquired:
     type: integer
   weeklyKills:
     type: integer
   winPoints:
-    type: number
-  winRatio:
     type: number
   wins:
     type: integer
