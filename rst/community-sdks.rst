@@ -23,10 +23,16 @@ NodeJS
 
 
 
+TypeScript
+----------
+- https://github.com/martinsileno/pubg-typescript-api / https://www.npmjs.com/package/pubg-typescript-api
+
+
+
 Javascript
 ----------
 - https://github.com/xF4b3r/pubgAPI
-
+- https://github.com/nulldreams/pubg-js
 
 
 Python
