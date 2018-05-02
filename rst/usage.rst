@@ -12,7 +12,7 @@ An application using the API will typically have the following components:
     This is the user facing part of the application. It takes in user input, makes a request to the backend, and displays the results for the user. This could be represented as a standalone website, Discord bot, mobile app, or anything else you can think up.
 
 **A backend server**
-    This is the core logic of the application. It receives requests from the client-side app, makes appropriate requests to the API, processes the data received, store it in the database, and returns it to the client-side app.
+    This is the core logic of the application. It receives requests from the client-side app, makes appropriate requests to the API, processes the data received, stores it in the database, and returns it to the client-side app.
 
 - **A database structure**
     This is where the aggregated data is stored. Depending on what your application does, this could be player records, match history, leaderboard standings, or anything else it needs to hold on to.
