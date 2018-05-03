@@ -37,7 +37,7 @@ properties:
             minimum: 0
           deathType:
             type: string
-            enum: [alive, byplayer, suicide]
+            enum: [alive, byplayer, suicide, logout]
           headshotKills:
             type: integer
             minimum: 0
