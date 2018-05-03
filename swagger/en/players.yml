@@ -18,6 +18,7 @@ servers:
         - "pc-jp"
         - "pc-na"
         - "pc-eu"
+        - "pc-ru"
         - "pc-oc"
         - "pc-kakao"
         - "pc-sea"
