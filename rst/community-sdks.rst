@@ -102,7 +102,8 @@ C#
 
 Ruby
 ----
-- https://github.com/dor-edras/RUBG.
+- https://github.com/dor-edras/RUBG
+- https://github.com/pubstatsg/pubg-rb
 
 
 
@@ -121,3 +122,9 @@ Drupal
 Rust
 ----
 - https://github.com/georgemarshall/pubg-api
+
+
+
+Dart
+----
+- https://pub.dartlang.org/packages/pubgapi
