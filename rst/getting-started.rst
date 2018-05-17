@@ -116,6 +116,8 @@ In the response you will see seasons listed like this::
     "isOffseason": false:
   }
 
+**Note: The list of seasons will only be changing about once per month when a new seasons is added. Applications should not be querying for the list of seasons more than once per month.**
+
 With this information, we can now query the players endpoint like this. Please be sure to replace '$platform-region-shard', '$player-id', '$season-name', and with you own information::
 
   curl -g "https://api.playbattlegrounds.com/shards/$platform-region-shard/players/$player-id/seasons/$season-name"

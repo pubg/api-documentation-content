@@ -2,6 +2,7 @@ get:
   tags:
   - Seasons
   summary: Get a list of available seasons.
+  description: "Note: The list of seasons will only be changing about once per month when a new seasons is added. Applications should not be querying for the list of seasons more than once per month."
   responses:
     200:
       $ref: '../responses/index.yml#/seasons-200'
