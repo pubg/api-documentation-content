@@ -18,6 +18,8 @@ properties:
     type: integer
   heals:
     type: integer
+  killPoints:
+    type: number
   kills:
     type: integer
   longestKill:
