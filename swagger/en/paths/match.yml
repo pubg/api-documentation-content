@@ -2,6 +2,7 @@ get:
   tags:
   - Matches
   summary: Get a single match.
+  description: "Note: The /matches endpoint is not rate limited, therefore, authorization is not required."
   parameters:
     - $ref: '../parameters/index.yml#/id'
   responses:
@@ -13,5 +14,3 @@ get:
       $ref: '../responses/index.yml#/errors/notFound'
     415:
       $ref: '../responses/index.yml#/errors/unsupportedMediaType'
-    429:
-      $ref: '../responses/index.yml#/errors/tooManyRequests'

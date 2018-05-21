@@ -74,7 +74,6 @@ Within the response from the players endpoint, you should see a list of match ID
 We can use this ID to retrieve the match from the matches endpoint like this. Please be sure the replace '$platform-region-shard' and '$match-id' with your own information::
 
   curl -g "https://api.playbattlegrounds.com/shards/$platform-region-shard/matches/$match-id" \
-  -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
 To see what match response will look like, please head over to the :ref:`matches` page.

@@ -33,14 +33,6 @@ paths:
   /matches/{id}:
     $ref: './paths/index.yml#/match'
 
-components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: http
-      description: "Enter your API key here to be used with the interactive documentation!"
-      scheme: bearer
-      bearerFormat: JWT
-
   schemas:
     match:
       $ref: 'schemas/index.yml#/match'

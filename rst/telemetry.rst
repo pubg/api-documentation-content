@@ -13,7 +13,6 @@ Note: In order to get a match object, you will need to know its ID. You can find
 .. code-block:: shell
 
   curl "https://api.playbattlegrounds.com/shards/some-region/matches/matchId" \
-  -H "Authorization: Bearer <api-key>" \
   -H "Accept: application/vnd.api+json"
 
 You need to look for an assets reference in the match relationships object, which points to (contains the ID of) the full telemetry object within the included array. Check for the following in the response::
