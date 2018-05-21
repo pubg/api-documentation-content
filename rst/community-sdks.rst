@@ -70,6 +70,7 @@ Java
 - https://github.com/JoeZwet/pubg4j
 - https://github.com/xmiolo/Wrapper4Pubg
 - https://github.com/mautini/pubgjava
+- https://github.com/SoftwareSandbox/pubg-api-client
 
 
 
