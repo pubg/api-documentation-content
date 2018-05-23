@@ -7,7 +7,7 @@ The following is a list of every telemetry object with basic schemas to show the
 
 Data dictionaries and enums can be found  `here <https://github.com/pubg/api-assets>`_.
 
-**Note**: There is a difference between the key casing for pc and xbox telemetry. pc telemetry will have keys starting with a lowercase character, while xbox telemetry will have the same keys but starting with an uppercase character.
+
 
 Common
 ------
@@ -26,9 +26,9 @@ ItemPackage
 .. code-block:: none
 
   {
-    "ItemPackageId": string,
-    "Location": Location
-    "Items": [{Item}, ...]
+    "itemPackageId": string,
+    "location": Location
+    "items": [{Item}, ...]
   }
 
 
@@ -38,11 +38,11 @@ Item
 .. code-block:: none
 
   {
-    "ItemId": string,
-    "StackCount": int,
-    "Category": string,
-    "SubCategory": string,
-    "AttachedItems": [ItemId, ...]
+    "itemId": string,
+    "stackCount": int,
+    "category": string,
+    "subCategory": string,
+    "attachedItems": [ItemId, ...]
   }
 
 
@@ -52,12 +52,12 @@ Character
 .. code-block:: none
 
   {
-    "Name": string,
-    "TeamId": int,
-    "Health": float,
-    "Location": Location,
-    "Ranking": int,
-    "AccountId": string
+    "name": string,
+    "teamId": int,
+    "health": float,
+    "location": Location,
+    "ranking": int,
+    "accountId": string
   }
 
 
@@ -67,10 +67,10 @@ Vehicle
 .. code-block:: none
 
   {
-    "VehicleType": string,
-    "VehicleId": string,
-    "HealthPercent": float,
-    "FeulPercent": float
+    "vehicleType": string,
+    "vehicleId": string,
+    "healthPercent": float,
+    "feulPercent": float
   }
 
 
@@ -80,17 +80,17 @@ GameState
 .. code-block:: none
 
   {
-    "ElapsedTime": int,
-    "NumAliveTeams": int,
-    "NumJoinPlayers": int,
-    "NumStartPlayers": int,
-    "NumAlivePlayers": int,
-    "SafetyZonePosition": Location,
-    "SafetyZoneRadius": float,
-    "PoisonGasWarningPosition": Location,
-    "PoisonGasWarningRadius": float,
-    "RedZonePosition": Location,
-    "RedZoneRadius": float
+    "elapsedTime": int,
+    "numAliveTeams": int,
+    "numJoinPlayers": int,
+    "numStartPlayers": int,
+    "numAlivePlayers": int,
+    "safetyZonePosition": Location,
+    "safetyZoneRadius": float,
+    "poisonGasWarningPosition": Location,
+    "poisonGasWarningRadius": float,
+    "redZonePosition": Location,
+    "redZoneRadius": float
   }
 
 
@@ -102,9 +102,9 @@ Location
 .. code-block:: none
 
   {
-    "X": float,
-    "Y": float,
-    "Z": float
+    "x": float,
+    "y": float,
+    "z": float
   }
 
 - The range for the X and Y axes is 0 - 816,000 for 8km maps.

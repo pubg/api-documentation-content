@@ -16,12 +16,6 @@ The following items are misspelled in the telemetry:
 
 
 
-Inconsistent Casing
--------------------
-XBOX and PC telemetry have different casing for the first letter of each key in the telemetry.
-
-
-
 Inconsistent Time Zones
 -----------------------
 LogMatchDefinition events have a different format for their timestamp. It appears as 2018-04-05T22:17:38.0817861+00:00" as opposed to "2018-04-05T22:16:10.064Z" for other events.
@@ -49,9 +43,3 @@ The following participant stats seem to always be 0:
 - WeaponsAcquired
 - lastKillPoints
 - killStreaks
-
-
-
-Delayed Xbox matches
---------------------
-Xbox matches take significantly longer than PC to become available through the API.
