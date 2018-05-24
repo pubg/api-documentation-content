@@ -9,6 +9,15 @@ No planned changes at the moment.
 
 
 
+v1.1.1
+------
+Bug fixes:
+
+- participant.attributes.stats.killStreaks is now populated correctly
+- participant.attributes.stats.weaponsAcquired is now populated correctly
+
+
+
 v1.1.0
 ------
 Bug fixes:

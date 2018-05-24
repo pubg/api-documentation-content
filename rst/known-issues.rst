@@ -40,6 +40,4 @@ The following participant stats seem to always be 0:
 
 - lastWinPoints
 - mostDamage
-- WeaponsAcquired
 - lastKillPoints
-- killStreaks
