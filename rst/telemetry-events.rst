@@ -91,7 +91,8 @@ LogVehicleRide
 .. code-block:: none
 
   "character": {Character},
-  "vehicle": {Vehicle}
+  "vehicle": {Vehicle},
+  "seatIndex": int // PC only
 
 
 
@@ -127,7 +128,9 @@ LogVehicleLeave
 .. code-block:: none
 
   "character": {Character},
-  "vehicle": {Vehicle}
+  "vehicle": {Vehicle},
+  "rideDistance": float, // PC only
+  "seatIndex": integer // PC only
 
 
 
@@ -238,3 +241,39 @@ LogMatchEnd
 .. code-block:: none
 
   "characters": [{Character}, ...]
+
+
+
+LogSwimStart
+------------
+PC only
+
+.. code-block:: none
+
+  "character": {Character}
+
+
+LogSwimEnd
+----------
+PC only
+
+.. code-block:: none
+
+  "character": {Character}
+
+
+
+LogArmorDestroy
+---------------
+PC only
+
+.. code-block:: none
+
+  "attackId": int,
+  "attacker": {Character},
+  "victim": {Character},
+  "damageTypeCategory": string,
+  "damageReason": string,
+  "damageCauserName": string,
+  "item": {Item},
+  "distance": float
