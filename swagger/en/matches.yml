@@ -33,6 +33,7 @@ paths:
   /matches/{id}:
     $ref: './paths/index.yml#/match'
 
+components:
   schemas:
     match:
       $ref: 'schemas/index.yml#/match'
