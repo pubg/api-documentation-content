@@ -15,6 +15,7 @@ Want your SDK listed here? Email us at pubgapi@bluehole.net with a link to your 
 NodeJS
 ------
 - https://github.com/Wobow/pubg_api
+- https://github.com/PaulEndri/pubg-sdk
 - https://github.com/concept-not-found/pubg-http-api / https://www.npmjs.com/package/pubg-http-api 
 - https://github.com/ickerio/pubg.js / https://www.npmjs.com/package/pubg.js
 - https://github.com/feed4rz/node-battlegrounds / https://npmjs.org/package/battlegrounds
@@ -105,6 +106,7 @@ Ruby
 ----
 - https://github.com/dor-edras/RUBG
 - https://github.com/pubstatsg/pubg-rb
+- https://github.com/marceloalves/pubg-ruby
 
 
 
