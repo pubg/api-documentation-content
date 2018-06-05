@@ -95,7 +95,7 @@ properties:
             description: "Number of kills while in a vehicle"
             minimum: 0
           swimDistance:
-            type: float
+            type: number
             minimum: 0
           teamKills:
             type: integer
