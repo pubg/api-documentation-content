@@ -26,6 +26,9 @@ properties:
         type: string
         description: "Map name"
         enum: [Desert_Main, Erangel_Main]
+      isCustomMatch:
+        type: boolean
+        description: "True if this match is a custom match"
       patchVersion:
         type: string
         description: "N/A"

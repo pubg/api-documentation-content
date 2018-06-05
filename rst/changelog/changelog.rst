@@ -9,6 +9,15 @@ No planned changes at the moment.
 
 
 
+v1.3.0
+------
+New Data:
+
+- Custom match data
+- Added isCustomMatch boolean flag to match.attributes
+
+
+
 v1.2.0
 ------
 New Data:
