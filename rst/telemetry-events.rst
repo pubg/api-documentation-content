@@ -23,9 +23,9 @@ LogPlayerLogin
 --------------
 .. code-block:: none
 
-  "result": bool,
+  "result":       bool,
   "errorMessage": string,
-  "accountId": string
+  "accountId":    string
 
 
 
@@ -41,8 +41,8 @@ LogPlayerPosition
 -----------------
 .. code-block:: none
 
-  "character": {Character},
-  "elapsedTime": float,
+  "character":       {Character},
+  "elapsedTime":     number,
   "numAlivePlayers": int
 
 
@@ -51,11 +51,11 @@ LogPlayerAttack
 ---------------
 .. code-block:: none
 
-  "attackId": int,
-  "attacker": {Character},
+  "attackId":   int,
+  "attacker":   {Character},
   "attackType": string,
-  "weapon": {Item},
-  "vehicle": {Vehicle}
+  "weapon":     {Item},
+  "vehicle":    {Vehicle}
 
 
 
@@ -64,7 +64,7 @@ LogItemPickup
 .. code-block:: none
 
   "character": {Character},
-  "item": {Item}
+  "item":      {Item}
 
 
 
@@ -73,7 +73,7 @@ LogItemEquip
 .. code-block:: none
 
   "character": {Character},
-  "item": {Item}
+  "item":      {Item}
 
 
 
@@ -82,7 +82,7 @@ LogItemUnequip
 .. code-block:: none
 
   "character": {Character},
-  "item": {Item}
+  "item":      {Item}
 
 
 
@@ -91,8 +91,8 @@ LogVehicleRide
 .. code-block:: none
 
   "character": {Character},
-  "vehicle": {Vehicle},
-  "seatIndex": int // PC only
+  "vehicle":   {Vehicle},
+  "seatIndex": int          // PC only
 
 
 
@@ -100,7 +100,7 @@ LogMatchDefinition
 ------------------
 .. code-block:: none
 
-  "MatchId": string,
+  "MatchId":     string,
   "PingQuality": string
 
 
@@ -109,9 +109,14 @@ LogMatchStart
 -------------
 .. code-block:: none
 
-  "mapName": string,
-  "weatherId": string,
-  "characters": [{Character}, ...]
+  "mapName":               string,
+  "weatherId":             string,
+  "characters":            [{Character}, ...],
+  "cameraViewBehaviour":   string,             // Custom match only
+  "teamSize":              int,                // Custom match only
+  "blueZoneCustomOptions": string              // Custom match only
+
+blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
 
 
 
@@ -127,10 +132,10 @@ LogVehicleLeave
 ---------------
 .. code-block:: none
 
-  "character": {Character},
-  "vehicle": {Vehicle},
-  "rideDistance": float, // PC only
-  "seatIndex": integer // PC only
+  "character":    {Character},
+  "vehicle":      {Vehicle},
+  "rideDistance": number,      // PC only
+  "seatIndex":    integer      // PC only
 
 
 
@@ -138,13 +143,13 @@ LogPlayerTakeDamage
 -------------------
 .. code-block:: none
 
-  "attackId": int,
-  "attacker": {Character},
-  "victim": {Character},
+  "attackId":           int,
+  "attacker":           {Character},
+  "victim":             {Character},
   "damageTypeCategory": string,
-  "damageReason": string,
-  "damage": float,
-  "damageCauserName": string
+  "damageReason":       string,
+  "damage":             number,
+  "damageCauserName":   string
 
 
 
@@ -160,9 +165,9 @@ LogItemAttach
 -------------
 .. code-block:: none
 
-  "character": {Character},
+  "character":  {Character},
   "parentItem": {Item},
-  "childItem": {Item}
+  "childItem":  {Item}
 
 
 
@@ -171,7 +176,7 @@ LogItemDrop
 .. code-block:: none
 
   "character": {Character},
-  "item": {Item}
+  "item":      {Item}
 
 
 
@@ -179,12 +184,12 @@ LogPlayerKill
 -------------
 .. code-block:: none
 
-  "attackId": int,
-  "killer": {Character},
-  "victim": {Character},
+  "attackId":           int,
+  "killer":             {Character},
+  "victim":             {Character},
   "damageTypeCategory": string,
-  "damageCauserName": string,
-  "distance": float
+  "damageCauserName":   string,
+  "distance":           number
 
 
 
@@ -192,9 +197,9 @@ LogItemDetach
 -------------
 .. code-block:: none
 
-  "character": {Character},
+  "character":  {Character},
   "parentItem": {Item},
-  "childItem": {Item}
+  "childItem":  {Item}
 
 
 
@@ -203,7 +208,7 @@ LogItemUse
 .. code-block:: none
 
   "character": {Character},
-  "item": {Item}
+  "item":      {Item}
 
 
 
@@ -219,12 +224,12 @@ LogVehicleDestroy
 -----------------
 .. code-block:: none
 
-  "atackId": int,
-  "attacker": {Character},
-  "vehicle": {Vehicle},
+  "atackId":            int,
+  "attacker":           {Character},
+  "vehicle":            {Vehicle},
   "damageTypeCategory": string,
-  "damageCauserName": string,
-  "distance": float,
+  "damageCauserName":   string,
+  "distance":           number,
 
 
 
@@ -269,11 +274,11 @@ PC only
 
 .. code-block:: none
 
-  "attackId": int,
-  "attacker": {Character},
-  "victim": {Character},
+  "attackId":           int,
+  "attacker":           {Character},
+  "victim":             {Character},
   "damageTypeCategory": string,
-  "damageReason": string,
-  "damageCauserName": string,
-  "item": {Item},
-  "distance": float
+  "damageReason":       string,
+  "damageCauserName":   string,
+  "item":               {Item},
+  "distance":           number

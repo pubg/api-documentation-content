@@ -19,7 +19,7 @@ properties:
             type: integer
             description: "This roster's placement in the match"
             minimum: 1
-            maximum: 100
+            maximum: 130
           teamId:
             type: integer
       won:

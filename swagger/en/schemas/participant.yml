@@ -48,7 +48,7 @@ properties:
           killPlace:
             type: integer
             minimum: 1
-            maximum: 100
+            maximum: 130
           killPoints:
             type: integer
             minimum: 0
@@ -62,7 +62,7 @@ properties:
           kills:
             type: integer
             minimum: 0
-            maximum: 99
+            maximum: 129
           lastKillPoints:
             type: integer
             minimum: 0
@@ -116,7 +116,7 @@ properties:
           winPlace:
             type: integer
             minimum: 1
-            maximum: 100
+            maximum: 130
           winPoints:
             type: integer
             minimum: 0
