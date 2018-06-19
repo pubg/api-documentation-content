@@ -18,3 +18,9 @@ status:
 
 samples:
   $ref: './samples.yml'
+
+tournaments:
+  $ref: './tournaments.yml'
+
+tournamentList:
+  $ref: './tournamentList.yml'

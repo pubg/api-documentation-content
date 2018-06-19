@@ -1,0 +1,30 @@
+title: Tournament Object
+description: "Tournament objects contain information about a tournament, mainly the IDs of its matches"
+type: object
+properties:
+  type:
+    type: string
+    description: Identifier for this object type ("tournament")
+  id:
+    type: string
+    description: "Tournament ID"
+  relationships:
+    type: object
+    description: "References to resource objects related to this tournament"
+    properties:
+      matches:
+        type: object
+        description: "A list of references to matches"
+        properties:
+          data:
+            type: array
+            items:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: Identifier for this object type ("match")
+                id:
+                  type: string
+                  description: "Match ID - Used to lookup the full match object on the /matches endpoint"
+  

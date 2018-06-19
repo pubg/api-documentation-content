@@ -12,6 +12,7 @@ PUBG API Documentation
   matches-endpoint
   players-endpoint
   samples-endpoint
+  tournaments-endpoint
   telemetry
   telemetry-events
   telemetry-objects
