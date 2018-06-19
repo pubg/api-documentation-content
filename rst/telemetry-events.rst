@@ -192,6 +192,7 @@ LogPlayerKill
   "victim":             {Character},
   "damageTypeCategory": string,
   "damageCauserName":   string,
+  "damageReason":       string,
   "distance":           number
 
 
@@ -267,7 +268,8 @@ PC only
 
 .. code-block:: none
 
-  "character": {Character}
+  "character": {Character},
+  "swimDistance": float
 
 
 
@@ -285,3 +287,34 @@ PC only
   "damageCauserName":   string,
   "item":               {Item},
   "distance":           number
+
+
+
+LogWheelDestroy
+---------------
+PC only
+
+.. code-block:: none
+
+  "attackId":           int,
+  "attacker":           {Character},
+  "vehicle":            {Vehicle},
+  "damageTypeCategory": string,
+  "damageCauserName":   string
+
+
+
+LogPlayerMakeGroggy
+-------------------
+PC only
+
+.. code-block:: none
+
+  "attackId":            int,
+  "attacker":            {Character},
+  "victim":              {Character},
+  "damageTypeCategory":  string,
+  "damageCauserName":    string,
+  "distance":            float,
+  "isAttackerInVehicle": bool,
+  "dBNOId":              int
