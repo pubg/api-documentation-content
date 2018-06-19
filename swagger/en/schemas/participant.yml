@@ -1,13 +1,13 @@
 title: Participant Object
-description: "Participant objects represent each player in the context of a match. Participant objects are only meaningful within the context of a match and are not exposed as a standalone resource."
+description: "Participant objects represent a player in the context of a match. Participant objects are only meaningful within the context of a match and are not exposed as a standalone resource"
 type: object
 properties:
   type:
     type: string
-    description: "participant"
+    description: Identifier for this object type ("participant")
   id:
     type: string
-    description: "Participant ID"
+    description: "A randomly generated ID assigned to this resource object for linking elsewhere in the match response"
   attributes:
     type: object
     properties:
@@ -19,58 +19,70 @@ properties:
         description: "Platform-region shard"
       stats:
         type: object
-        description: "Participant stats in the context of a match"
+        description: "Player stats in the context of a match"
         properties:
           DBNOs:
             type: integer
-            description: "Number of times this participant was downed"
+            description: "Number of enemy players knocked"
             minimum: 0
           assists:
             type: integer
+            description: "Number of enemy players this player damaged that were killed by teammates"
             minimum: 0
+            maximum: 128
           boosts:
             type: integer
-            description: "Total number of boost items used"
+            description: "Number of boost items used"
             minimum: 0
           damageDealt:
             type: number
+            description: "Total damage dealt. Note: Self inflicted damage is subtracted"
             minimum: 0
           deathType:
             type: string
+            description: "The way by which this player died, or alive if they didn't"
             enum: [alive, byplayer, suicide, logout]
           headshotKills:
             type: integer
+            description: "Number of enemy players killed with headshots"
             minimum: 0
+            maximum: 129
           heals:
             type: integer
             description: "Number of healing items used"
             minimum: 0
           killPlace:
             type: integer
+            description: "This player's rank in the match based on kills"
             minimum: 1
             maximum: 130
           killPoints:
             type: integer
+            description: "Points based on how many kills this player had"
             minimum: 0
           killPointsDelta:
             type: number
-            description: "Change in kill points"
+            description: "Change in killPoints"
           killStreaks:
             type: integer
             description: "Total number of kill streaks"
             minimum: 0
           kills:
             type: integer
+            description: "Number of enemy players killed"
             minimum: 0
             maximum: 129
           lastKillPoints:
             type: integer
+            description: ""
             minimum: 0
           lastWinPoints:
             type: integer
+            description: ""
             minimum: 0
           longestKill:
             type: number
+            description: ""
             minimum: 0
           mostDamage:
             type: number
@@ -78,17 +90,17 @@ properties:
             minimum: 0
           name:
             type: string
-            description: "Username of the player associated with this participant"
+            description: "PUBG IGN of the player associated with this participant"
           playerId:
             type: string
             description: "Account ID of the player associated with this participant"
           revives:
             type: integer
-            description: "Number of times this participant revived others"
+            description: "Number of times this player revived teammates"
             minimum: 0
           rideDistance:
             type: number
-            description: "Total distance traveled in vehicles"
+            description: "Total distance traveled in vehicles measured in meters"
             minimum: 0
           roadKills:
             type: integer
@@ -96,30 +108,37 @@ properties:
             minimum: 0
           swimDistance:
             type: number
+            description: "Total distance traveled while swimming measured in meters"
             minimum: 0
           teamKills:
             type: integer
+            description: "Number of times this player killed a teammate"
             minimum: 0
           timeSurvived:
             type: number
+            description: "Amount of time survived measured in seconds"
             minimum: 0
           vehicleDestroys:
             type: integer
+            description: "Number of vehicles destroyed"
             minimum: 0
           walkDistance:
             type: number
+            description: "Total distance traveled on foot measured in meters"
             minimum: 0
           weaponsAcquired:
             type: integer
-            description: "Total number of weapons picked up"
+            description: "Number of weapons picked up"
             minimum: 0
           winPlace:
             type: integer
+            description: "This player's placement in the match"
             minimum: 1
             maximum: 130
           winPoints:
             type: integer
+            description: ""
             minimum: 0
           winPointsDelta:
             type: number
-            description: "Change in winpoints"
+            description: "Change in winPoints"

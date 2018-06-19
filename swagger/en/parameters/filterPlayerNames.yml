@@ -1,7 +1,9 @@
 name: filter[playerNames]
 in: query
 description: |
-  Filters by player names.
+  Filters by player names. 
+
+  **Player names are case sensitive**
   
   **Usage**: filter[playerNames]=playerName-1,playerName-2,…
 required: false

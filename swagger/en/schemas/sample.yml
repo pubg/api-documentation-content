@@ -1,10 +1,10 @@
 title: Sample Object
-description: "Sample objects contain the ID and shard of a match."
+description: "Sample objects contain the ID of a match."
 type: object
 properties:
   type:
     type: string
-    description: "match"
+    description: Identifier for this object type ("match")
   id:
     type: string
-    description: "Match ID"
+    description: "Match ID - Used to lookup the full match object on the /matches endpoint"

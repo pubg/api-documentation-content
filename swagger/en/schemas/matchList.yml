@@ -9,8 +9,8 @@ properties:
       properties:
         type:
           type: string
-          description: "match"
+          description: Identifier for this object type ("match")
         id:
           type: string
-          description: "Match ID"
+          description: "Match ID - Used to lookup the full match object on the /matches endpoint"
 
