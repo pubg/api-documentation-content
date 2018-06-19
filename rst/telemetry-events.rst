@@ -148,8 +148,11 @@ LogPlayerTakeDamage
   "victim":             {Character},
   "damageTypeCategory": string,
   "damageReason":       string,
-  "damage":             number,
+  "damage":             number,      // 1.0 damage = 1.0 health 
+                                     // Net damage after armor; damage to health
   "damageCauserName":   string
+
+
 
 
 
