@@ -7,6 +7,10 @@ Upcoming Changes
 ----------------
 .. No planned changes at the moment.
 
+Planned for 6/27
+++++++++++++++++
+Announced on 6/20
+
 Deprecated:
 
 - player.attributes.createdAt
@@ -16,7 +20,6 @@ Bug Fixes:
 
 - participant.attributes.stats.timeSurvived -- int -> number
 - participant.attributes.stats.longestKill -- int -> number
-- Rosters will show highest participant rank
 
 Removed:
 
@@ -25,6 +28,15 @@ Removed:
 - (any)._V
 - LogPlayerLogin.errorMessage
 - LogPlayerLogin.result
+
+
+
+v1.3.1
+------
+Bug Fixes
+
+- Rosters will show highest participant rank
+- Existing player's that haven't played in 7 days will no longer return a 404 not found error
 
 
 
