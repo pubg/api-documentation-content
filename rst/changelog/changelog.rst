@@ -5,7 +5,26 @@ Changelog
 
 Upcoming Changes
 ----------------
-No planned changes at the moment.
+.. No planned changes at the moment.
+
+Deprecated:
+
+- player.attributes.createdAt
+- player.attributes.updatedAt
+
+Bug Fixes:
+
+- participant.attributes.stats.timeSurvived -- int -> number
+- participant.attributes.stats.longestKill -- int -> number
+- Rosters will show highest participant rank
+
+Removed:
+
+- (any).common.mapName //available in LogMatchStart
+- (any).common.matchId //available in LogMatchDefinition
+- (any)._V
+- LogPlayerLogin.errorMessage
+- LogPlayerLogin.result
 
 
 
