@@ -318,3 +318,14 @@ PC only
   "distance":            float,
   "isAttackerInVehicle": bool,
   "dBNOId":              int
+
+
+
+LogPlayerRevive
+---------------
+PC only
+
+.. code-block:: none
+
+  "reviver":             {Character},
+  "victim":              {Character}, // Yes, it's actually called victim
