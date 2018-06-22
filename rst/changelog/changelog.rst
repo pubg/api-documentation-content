@@ -31,9 +31,24 @@ Removed:
 
 
 
+v1.4.0
+------
+New Data:
+
+- LogPlayerMakeGroggy
+- LogPlayerRevive
+
+- [PC] LogWheelDestroy
+- [PC] LogSwimEnd.swimDistance
+- [PC] LogPlayerKill.damageReason
+- [PC] LogMatchStart.isCustomGame
+- [PC] LogMatchStart.isEventMode
+
+
+
 v1.3.1
 ------
-Bug Fixes
+Bug Fixes:
 
 - Rosters will show highest participant rank
 - Existing player's that haven't played in 7 days will no longer return a 404 not found error
@@ -46,6 +61,12 @@ New Data:
 
 - Custom match data
 - Added isCustomMatch boolean flag to match.attributes
+
+- [Xbox] added swimDistance to participant.attributes.stats (will appear for Xbox, but will always be 0)
+- [Xbox] added LogSwimStart and LogSwimEnd telemetry events
+- [Xbox] added LogArmorDestroy telemetry events
+- [Xbox] added rideDistance and seatIndex fields to LogVehicleLeave telemetry events
+- [Xbox] added seatIndex to LogVehicleRide telemetry events
 
 
 
