@@ -112,9 +112,11 @@ LogMatchStart
   "mapName":               string,
   "weatherId":             string,
   "characters":            [{Character}, ...],
-  "cameraViewBehaviour":   string,             // Custom match only
-  "teamSize":              int,                // Custom match only
-  "blueZoneCustomOptions": string              // Custom match only
+  "cameraViewBehaviour":   string,             
+  "teamSize":              int,
+  "isCustomGame":          bool,
+  "isEventMode":           bool,                
+  "blueZoneCustomOptions": string              
 
 blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
 
@@ -192,6 +194,7 @@ LogPlayerKill
   "victim":             {Character},
   "damageTypeCategory": string,
   "damageCauserName":   string,
+  "damageReason":       string,
   "distance":           number
 
 
@@ -267,7 +270,8 @@ PC only
 
 .. code-block:: none
 
-  "character": {Character}
+  "character": {Character},
+  "swimDistance": float
 
 
 
@@ -285,3 +289,45 @@ PC only
   "damageCauserName":   string,
   "item":               {Item},
   "distance":           number
+
+
+
+LogWheelDestroy
+---------------
+PC only
+
+.. code-block:: none
+
+  "attackId":           int,
+  "attacker":           {Character},
+  "vehicle":            {Vehicle},
+  "damageTypeCategory": string,
+  "damageCauserName":   string
+
+
+
+LogPlayerMakeGroggy
+-------------------
+PC only
+
+.. code-block:: none
+
+  "attackId":            int,
+  "attacker":            {Character},
+  "victim":              {Character},
+  "damageTypeCategory":  string,
+  "damageCauserName":    string,
+  "distance":            float,
+  "isAttackerInVehicle": bool,
+  "dBNOId":              int
+
+
+
+LogPlayerRevive
+---------------
+PC only
+
+.. code-block:: none
+
+  "reviver":             {Character},
+  "victim":              {Character}, // Yes, it's actually called victim
