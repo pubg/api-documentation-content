@@ -112,9 +112,11 @@ LogMatchStart
   "mapName":               string,
   "weatherId":             string,
   "characters":            [{Character}, ...],
-  "cameraViewBehaviour":   string,             // Custom match only
-  "teamSize":              int,                // Custom match only
-  "blueZoneCustomOptions": string              // Custom match only
+  "cameraViewBehaviour":   string,             
+  "teamSize":              int,
+  "isCustomGame":          bool,
+  "isEventMode":           bool,                
+  "blueZoneCustomOptions": string              
 
 blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
 
