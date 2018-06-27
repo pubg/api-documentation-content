@@ -24,6 +24,12 @@ properties:
         type: string
         format: dateTime
         description: "N/A"
+        deprecated: true
+      updatedAt:
+        type: string
+        format: dateTime
+        description: "N/A"
+        deprecated: true
       patchVersion:
         type: string
         description: "Version of the game"

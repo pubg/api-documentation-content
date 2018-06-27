@@ -14,8 +14,6 @@ Common
 .. code-block:: none
 
   {
-    "matchId": string,
-    "mapName": string,
     "isGame":  number
   },
 

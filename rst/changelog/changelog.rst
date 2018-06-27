@@ -5,12 +5,12 @@ Changelog
 
 Upcoming Changes
 ----------------
-.. No planned changes at the moment.
+No planned changes at the moment.
 
-Planned for 6/27
-++++++++++++++++
-Announced on 6/20
 
+
+v1.5.0
+------
 Deprecated:
 
 - player.attributes.createdAt

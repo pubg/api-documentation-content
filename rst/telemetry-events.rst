@@ -9,7 +9,6 @@ Data dictionaries and enums can be found  `here <https://github.com/pubg/api-ass
 
 Objects shown as {object-name} are not described here in an effort to conserve space. More details about the objects in events can be located in the :ref:`telemetry-objects` reference. Please also note that each event contains the following fields which have been omitted from the outlines below::
 
-  "_V": int,    // Version
   "_D": string, // Event timestamp
   "_T": string  // Event type
 
@@ -23,8 +22,6 @@ LogPlayerLogin
 --------------
 .. code-block:: none
 
-  "result":       bool,
-  "errorMessage": string,
   "accountId":    string
 
 
