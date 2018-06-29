@@ -89,7 +89,7 @@ LogVehicleRide
 
   "character": {Character},
   "vehicle":   {Vehicle},
-  "seatIndex": int          // PC only
+  "seatIndex": int
 
 
 
@@ -133,8 +133,8 @@ LogVehicleLeave
 
   "character":    {Character},
   "vehicle":      {Vehicle},
-  "rideDistance": number,      // PC only
-  "seatIndex":    integer      // PC only
+  "rideDistance": number,
+  "seatIndex":    integer
 
 
 
@@ -254,8 +254,6 @@ LogMatchEnd
 
 LogSwimStart
 ------------
-PC only
-
 .. code-block:: none
 
   "character": {Character}
@@ -263,8 +261,6 @@ PC only
 
 LogSwimEnd
 ----------
-PC only
-
 .. code-block:: none
 
   "character": {Character},
@@ -274,8 +270,6 @@ PC only
 
 LogArmorDestroy
 ---------------
-PC only
-
 .. code-block:: none
 
   "attackId":           int,
@@ -305,8 +299,6 @@ PC only
 
 LogPlayerMakeGroggy
 -------------------
-PC only
-
 .. code-block:: none
 
   "attackId":            int,
@@ -322,8 +314,6 @@ PC only
 
 LogPlayerRevive
 ---------------
-PC only
-
 .. code-block:: none
 
   "reviver":             {Character},
