@@ -18,104 +18,35 @@ Telemetry associated with pc shards will also have the following fields in each 
 
 
 
-LogPlayerLogin
---------------
-.. code-block:: none
-
-  "accountId":    string
-
-
-
-LogPlayerCreate
+LogArmorDestroy
 ---------------
+
 .. code-block:: none
 
-  "character": {Character}
+  "attackId":           int,
+  "attacker":           {Character},
+  "victim":             {Character},
+  "damageTypeCategory": string,
+  "damageReason":       string,
+  "damageCauserName":   string,
+  "item":               {Item},
+  "distance":           number
 
 
 
-LogPlayerPosition
------------------
-.. code-block:: none
-
-  "character":       {Character},
-  "elapsedTime":     number,
-  "numAlivePlayers": int
-
-
-
-LogPlayerAttack
----------------
-.. code-block:: none
-
-  "attackId":   int,
-  "attacker":   {Character},
-  "attackType": string,
-  "weapon":     {Item},
-  "vehicle":    {Vehicle}
-
-
-
-LogItemPickup
--------------
-.. code-block:: none
-
-  "character": {Character},
-  "item":      {Item}
-
-
-
-LogItemEquip
-------------
-.. code-block:: none
-
-  "character": {Character},
-  "item":      {Item}
-
-
-
-LogItemUnequip
---------------
-.. code-block:: none
-
-  "character": {Character},
-  "item":      {Item}
-
-
-
-LogVehicleRide
---------------
-.. code-block:: none
-
-  "character": {Character},
-  "vehicle":   {Vehicle},
-  "seatIndex": int
-
-
-
-LogMatchDefinition
+LogCarePackageLand
 ------------------
 .. code-block:: none
 
-  "MatchId":     string,
-  "PingQuality": string
+  "itemPackage": {ItemPackage}
 
 
 
-LogMatchStart
--------------
+LogCarePackageSpawn
+-------------------
 .. code-block:: none
 
-  "mapName":               string,
-  "weatherId":             string,
-  "characters":            [{Character}, ...],
-  "cameraViewBehaviour":   string,             
-  "teamSize":              int,
-  "isCustomGame":          bool,
-  "isEventMode":           bool,                
-  "blueZoneCustomOptions": string              
-
-blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
+  "itemPackage": {ItemPackage}
 
 
 
@@ -127,43 +58,17 @@ LogGameStatePeriodic
 
 
 
-LogVehicleLeave
----------------
-.. code-block:: none
-
-  "character":    {Character},
-  "vehicle":      {Vehicle},
-  "rideDistance": number,
-  "seatIndex":    integer
-
-
-
-LogPlayerTakeDamage
--------------------
-.. code-block:: none
-
-  "attackId":           int,
-  "attacker":           {Character},
-  "victim":             {Character},
-  "damageTypeCategory": string,
-  "damageReason":       string,
-  "damage":             number,      // 1.0 damage = 1.0 health 
-                                     // Net damage after armor; damage to health
-  "damageCauserName":   string
-
-
-
-
-
-LogPlayerLogout
----------------
-.. code-block:: none
-
-  "accountId": string
-
-
-
 LogItemAttach
+-------------
+.. code-block:: none
+
+  "character":  {Character},
+  "parentItem": {Item},
+  "childItem":  {Item}
+
+
+
+LogItemDetach
 -------------
 .. code-block:: none
 
@@ -182,27 +87,30 @@ LogItemDrop
 
 
 
-LogPlayerKill
+LogItemEquip
+------------
+.. code-block:: none
+
+  "character": {Character},
+  "item":      {Item}
+
+
+
+LogItemPickup
 -------------
 .. code-block:: none
 
-  "attackId":           int,
-  "killer":             {Character},
-  "victim":             {Character},
-  "damageTypeCategory": string,
-  "damageCauserName":   string,
-  "damageReason":       string,
-  "distance":           number
+  "character": {Character},
+  "item":      {Item}
 
 
 
-LogItemDetach
--------------
+LogItemUnequip
+--------------
 .. code-block:: none
 
-  "character":  {Character},
-  "parentItem": {Item},
-  "childItem":  {Item}
+  "character": {Character},
+  "item":      {Item}
 
 
 
@@ -215,11 +123,157 @@ LogItemUse
 
 
 
-LogCarePackageSpawn
+LogMatchDefinition
+------------------
+.. code-block:: none
+
+  "MatchId":     string,
+  "PingQuality": string
+
+
+
+LogMatchEnd
+-----------
+.. code-block:: none
+
+  "characters": [{Character}, ...]
+
+
+
+LogMatchStart
+-------------
+.. code-block:: none
+
+  "mapName":               string,
+  "weatherId":             string,
+  "characters":            [{Character}, ...],
+  "cameraViewBehaviour":   string,             
+  "teamSize":              int,
+  "isCustomGame":          bool,               // PC only
+  "isEventMode":           bool,               // PC only    
+  "blueZoneCustomOptions": string              
+
+blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
+
+
+
+LogPlayerAttack
+---------------
+.. code-block:: none
+
+  "attackId":   int,
+  "attacker":   {Character},
+  "attackType": string,
+  "weapon":     {Item},
+  "vehicle":    {Vehicle}
+
+
+
+LogPlayerCreate
+---------------
+.. code-block:: none
+
+  "character": {Character}
+
+
+
+LogPlayerKill
+-------------
+.. code-block:: none
+
+  "attackId":           int,
+  "killer":             {Character},
+  "victim":             {Character},
+  "damageTypeCategory": string,
+  "damageCauserName":   string,
+  "damageReason":       string,      // PC only
+  "distance":           number
+
+
+  
+LogPlayerLogin
+--------------
+.. code-block:: none
+
+  "accountId":    string
+
+
+
+LogPlayerLogout
+---------------
+.. code-block:: none
+
+  "accountId": string
+
+
+
+LogPlayerMakeGroggy
+-------------------
+
+.. code-block:: none
+
+  "attackId":            int,
+  "attacker":            {Character},
+  "victim":              {Character},
+  "damageTypeCategory":  string,
+  "damageCauserName":    string,
+  "distance":            float,
+  "isAttackerInVehicle": bool,
+  "dBNOId":              int
+
+
+
+LogPlayerPosition
+-----------------
+.. code-block:: none
+
+  "character":       {Character},
+  "elapsedTime":     number,
+  "numAlivePlayers": int
+
+
+
+LogPlayerRevive
+---------------
+
+.. code-block:: none
+
+  "reviver":             {Character},
+  "victim":              {Character},  // Yes, it's actually called victim
+
+
+
+LogPlayerTakeDamage
 -------------------
 .. code-block:: none
 
-  "itemPackage": {ItemPackage}
+  "attackId":           int,
+  "attacker":           {Character},
+  "victim":             {Character},
+  "damageTypeCategory": string,
+  "damageReason":       string,
+  "damage":             number,      // 1.0 damage = 1.0 health 
+                                     // Net damage after armor; damage to health
+  "damageCauserName":   string
+
+
+
+LogSwimEnd
+----------
+
+.. code-block:: none
+
+  "character": {Character},
+  "swimDistance": float     // PC only
+
+
+
+LogSwimStart
+------------
+
+.. code-block:: none
+
+  "character": {Character}
 
 
 
@@ -236,50 +290,24 @@ LogVehicleDestroy
 
 
 
-LogCarePackageLand
-------------------
-.. code-block:: none
-
-  "itemPackage": {ItemPackage}
-
-
-
-LogMatchEnd
------------
-.. code-block:: none
-
-  "characters": [{Character}, ...]
-
-
-
-LogSwimStart
-------------
-.. code-block:: none
-
-  "character": {Character}
-
-
-LogSwimEnd
-----------
-.. code-block:: none
-
-  "character": {Character},
-  "swimDistance": float
-
-
-
-LogArmorDestroy
+LogVehicleLeave
 ---------------
 .. code-block:: none
 
-  "attackId":           int,
-  "attacker":           {Character},
-  "victim":             {Character},
-  "damageTypeCategory": string,
-  "damageReason":       string,
-  "damageCauserName":   string,
-  "item":               {Item},
-  "distance":           number
+  "character":    {Character},
+  "vehicle":      {Vehicle},
+  "rideDistance": number,
+  "seatIndex":    integer
+
+
+
+LogVehicleRide
+--------------
+.. code-block:: none
+
+  "character": {Character},
+  "vehicle":   {Vehicle},
+  "seatIndex": int
 
 
 
@@ -294,27 +322,3 @@ PC only
   "vehicle":            {Vehicle},
   "damageTypeCategory": string,
   "damageCauserName":   string
-
-
-
-LogPlayerMakeGroggy
--------------------
-.. code-block:: none
-
-  "attackId":            int,
-  "attacker":            {Character},
-  "victim":              {Character},
-  "damageTypeCategory":  string,
-  "damageCauserName":    string,
-  "distance":            float,
-  "isAttackerInVehicle": bool,
-  "dBNOId":              int
-
-
-
-LogPlayerRevive
----------------
-.. code-block:: none
-
-  "reviver":             {Character},
-  "victim":              {Character}, // Yes, it's actually called victim

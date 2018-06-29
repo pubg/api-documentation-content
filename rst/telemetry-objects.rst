@@ -9,50 +9,25 @@ Data dictionaries and enums can be found  `here <https://github.com/pubg/api-ass
 
 
 
-Common
-------
-.. code-block:: none
+.. _blueZoneCustomOptions:
 
-  {
-    "isGame":  number
-  },
+blueZoneCustomOptions
+---------------------
+The blueZoneCustomOptions string contains an array of config objects for each blue zone phase with the following structure::
 
-isGame represents the phase of the game defined by the status of bluezone and safezone::
+  "phaseNum":                 int,
+  "startDelay":               int,
+  "warningDuration":          int,
+  "releaseDuration":          int,
+  "poisonGasDamagePerSecond": number,
+  "radiusRate":               number,
+  "spreadRatio":              number,
+  "landRatio":                number,
+  "circleAlgorithm":          int
 
-  isGame = 0 -> Before lift off
-  isGame = 0.1 -> On airplane
-  isGame = 0.5 -> When there’s no ‘zone’ on map(before game starts)
-  isGame = 1.0 -> First safezone and bluezone appear
-  isGame = 1.5 -> First bluezone shrinks
-  isGame = 2.0 -> Second bluezone appears
-  isGame = 2.5 -> Second bluezone shrinks
-  ...
+The array of objects is stringified to look like this::
 
-
-
-ItemPackage
------------
-.. code-block:: none
-
-  {
-    "itemPackageId": string,
-    "location":      Location
-    "items":         [{Item}, ...]
-  }
-
-
-
-Item
-----
-.. code-block:: none
-
-  {
-    "itemId":        string,
-    "stackCount":    int,
-    "category":      string,
-    "subCategory":   string,
-    "attachedItems": [ItemId, ...]
-  }
+  "[{\"phaseNum\":0,\"startDelay\":120,\"warningDuration\":300,\"releaseDuration\":300,\"poisonGasDamagePerSecond\":0.40000000596046448,\"radiusRate\":0.34999999403953552,\"spreadRatio\":0.5,\"landRatio\":0.55000001192092896,\"circleAlgorithm\":0},...]"
 
 
 
@@ -71,16 +46,24 @@ Character
 
 
 
-Vehicle
--------
+Common
+------
 .. code-block:: none
 
   {
-    "vehicleType":   string,
-    "vehicleId":     string,
-    "healthPercent": number,
-    "feulPercent":   number
-  }
+    "isGame":  number
+  },
+
+isGame represents the phase of the game defined by the status of bluezone and safezone::
+
+  isGame = 0 -> Before lift off
+  isGame = 0.1 -> On airplane
+  isGame = 0.5 -> When there’s no ‘zone’ on map(before game starts)
+  isGame = 1.0 -> First safezone and bluezone appear
+  isGame = 1.5 -> First bluezone shrinks
+  isGame = 2.0 -> Second bluezone appears
+  isGame = 2.5 -> Second bluezone shrinks
+  ...
 
 
 
@@ -104,6 +87,32 @@ GameState
 
 
 
+Item
+----
+.. code-block:: none
+
+  {
+    "itemId":        string,
+    "stackCount":    int,
+    "category":      string,
+    "subCategory":   string,
+    "attachedItems": [ItemId, ...]
+  }
+
+
+
+ItemPackage
+-----------
+.. code-block:: none
+
+  {
+    "itemPackageId": string,
+    "location":      Location
+    "items":         [{Item}, ...]
+  }
+
+
+
 .. _Location:
 
 Location
@@ -121,22 +130,13 @@ Location
 
 
 
-.. _blueZoneCustomOptions:
+Vehicle
+-------
+.. code-block:: none
 
-blueZoneCustomOptions
----------------------
-The blueZoneCustomOptions string contains an array of config objects for each blue zone phase with the following structure::
-
-  "phaseNum":                 int,
-  "startDelay":               int,
-  "warningDuration":          int,
-  "releaseDuration":          int,
-  "poisonGasDamagePerSecond": number,
-  "radiusRate":               number,
-  "spreadRatio":              number,
-  "landRatio":                number,
-  "circleAlgorithm":          int
-
-The array of objects is stringified to look like this::
-
-  "[{\"phaseNum\":0,\"startDelay\":120,\"warningDuration\":300,\"releaseDuration\":300,\"poisonGasDamagePerSecond\":0.40000000596046448,\"radiusRate\":0.34999999403953552,\"spreadRatio\":0.5,\"landRatio\":0.55000001192092896,\"circleAlgorithm\":0},...]"
+  {
+    "vehicleType":   string,
+    "vehicleId":     string,
+    "healthPercent": number,
+    "feulPercent":   number
+  }
