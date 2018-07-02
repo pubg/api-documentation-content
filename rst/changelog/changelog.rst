@@ -5,7 +5,16 @@ Changelog
 
 Upcoming Changes
 ----------------
-No planned changes at the moment.
+.. No planned changes at the moment.
+
+Planned For Release on 7/9
+++++++++++++++++++++++++++
+Posted on 7/2
+
+Data Changes:
+
+- Empty attacker objects in LogPlayerTakeDamage events will be null instead of empty
+- Empty vehicle objects in LogPlayerAttack will be null instead of empty
 
 
 
