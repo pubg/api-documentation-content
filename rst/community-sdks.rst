@@ -36,10 +36,18 @@ Javascript
 - https://github.com/nulldreams/pubg-js
 
 
+
+GraphQL
+-------
+- https://github.com/antoniojps/graphql-pubg
+
+
+
 Python
 ------
 - https://github.com/ramonsaraiva/pubg-python
 - https://github.com/Discord-ian/pubgy
+- https://github.com/crflynn/chicken-dinner
 
 
 
