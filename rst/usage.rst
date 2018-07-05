@@ -38,16 +38,7 @@ This being said, some applications may still need to analyze large amounts of ra
 
 
 
-Expected Rate Limit Usage
--------------------------
-Since the /matches and telemetry endpoints are not rate limited, the amount of rate limited requests a typical application needs to make to the API should be directly proportional to the number of users/players using it. For example, each time a player is looked up, the application needs to make two requests (if the information is not already cached):
-
-- one to "/players?filter[playerNames]={playerName}" or "/players/{accountId} if the accountId is already known"
-- one to "/players/{accountId}/seasons/{seasonId}" if season stats are required for the use case
-
-Any following requests to the /matches or telemetry endpoints will not count against the application's API key rate limit.
-
-
+.. _Caching Overview:
 
 Caching Overview
 ----------------
@@ -58,6 +49,8 @@ For example, lets say that your application takes a player's IGN as input and di
 There may also be an opportunity for caching results from the backend server depending on how your application works. This can help cut down on requests to your database or other storage structure.
 
 
+
+.. _Caching Implementation:
 
 Caching Implementation
 ----------------------

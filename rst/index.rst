@@ -7,6 +7,7 @@ PUBG API Documentation
   getting-started
   usage
   api-keys
+  rate-limits
   making-requests
   matches-endpoint
   players-endpoint
