@@ -8,7 +8,7 @@ Upcoming Changes
 No planned changes at the moment.
 
 v1.6.0
-++++++
+------
 Data Changes:
 
 - Empty attacker objects in LogPlayerTakeDamage events will be null instead of empty
