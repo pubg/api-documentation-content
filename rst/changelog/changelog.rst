@@ -7,7 +7,7 @@ Upcoming Changes
 ----------------
 No planned changes at the moment.
 
-v1.6.0
+v3.0.0
 ------
 Data Changes:
 
@@ -16,7 +16,7 @@ Data Changes:
 
 
 
-v1.5.0
+v2.0.0
 ------
 Deprecated:
 
