@@ -1,0 +1,13 @@
+get:
+  tags:
+  - Tournaments
+  summary: Get a list of tournaments
+  responses:
+    200:
+      $ref: '../responses/index.yml#/tournamentList-200'
+    401:
+      $ref: '../responses/index.yml#/errors/unauthorized'
+    404:
+      $ref: '../responses/index.yml#/errors/notFound'
+    415:
+      $ref: '../responses/index.yml#/errors/unsupportedMediaType'

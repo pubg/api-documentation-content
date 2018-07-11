@@ -24,6 +24,7 @@ servers:
         - "pc-sea"
         - "pc-sa"
         - "pc-as"
+        - "pc-tournament"
         default: pc-na
 
 security:

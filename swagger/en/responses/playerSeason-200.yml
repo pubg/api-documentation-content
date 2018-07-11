@@ -74,7 +74,7 @@ content:
           properties:
             self:
               type: string
-              description: "Link to this player season response"
+              description: "Link to this player season object"
         meta:
           type: object
           description: "N/A"

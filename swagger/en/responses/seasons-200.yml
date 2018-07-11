@@ -14,7 +14,7 @@ content:
           properties:
             self:
               type: string
-              description: "Link to this seasons response"
+              description: "Link to this seasons object"
         meta:
           type: object
           description: "N/A"
