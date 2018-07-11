@@ -76,7 +76,7 @@ We can use this ID to retrieve the match from the matches endpoint like this. Pl
   curl -g "https://api.playbattlegrounds.com/shards/$platform-region-shard/matches/$match-id" \
   -H "Accept: application/vnd.api+json"
 
-Note: Make sure to use the pc-tournaments shard when getting tournament matches.
+Note: Make sure to use the pc-tournament shard when getting tournament matches.
 
 To see what match response will look like, please head over to the :ref:`matches` page.
 
@@ -98,7 +98,7 @@ The response from the tournaments endpoint will contain an array of tournament r
 
 In response you will be given a list of match IDs that you can lookup on the matches endpoint.
 
-Note: Be sure to use the pc-tournaments shard when looking up tournament matches.
+Note: Be sure to use the pc-tournament shard when looking up tournament matches.
 
 To see exactly what the tournament responses will look like, please head over to the :ref:`tournaments` page.
 
