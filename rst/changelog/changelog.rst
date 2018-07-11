@@ -15,6 +15,16 @@ Data Changes:
 
 - Telemetry data will be compressed using gzip
 
+
+
+v3.1.0
+------
+New Data:
+
+- Tournaments endpoint and matches
+
+
+
 v3.0.0
 ------
 Data Changes:
