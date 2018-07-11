@@ -20,7 +20,11 @@ properties:
         description: "Length of the match measured in seconds"
       gameMode:
         type: string
-        description: "Game mode played"
+        description: |
+          Game mode played
+
+          For custom matches, squad size and perspective can be found in
+          the telemetry file under the LogMatchStart event.
         enum: [duo, duo-fpp, solo, solo-fpp, squad, squad-fpp]
       mapName:
         type: string
