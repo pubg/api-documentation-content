@@ -5,7 +5,15 @@ Changelog
 
 Upcoming Changes
 ----------------
-No planned changes at the moment.
+.. No planned changes at the moment.
+
+v4.0.0 (planned for 8/8/18)
++++++++++++++++++++++++++++
+Posted: 7/11/18
+
+Data Changes:
+
+- Telemetry data will be compressed using gzip
 
 v3.0.0
 ------
