@@ -87,6 +87,7 @@ The PUBG API shards data by platform and region, and therefore requires a shard 
 - **pc-sea** - South East Asia
 - **pc-sa** - South and Central America
 - **pc-as** - Asia
+- **pc-tournament** - Tournaments
   
 The shard is specified after the playbattlegrounds domain and before the endpoint like this::
 
