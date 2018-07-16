@@ -6,7 +6,7 @@ info:
   description: "Note: Any property with \"N/A\" as its description is not currently in use."
 
 servers:
-  - url: https://api.playbattlegrounds.com/shards/{platform-region}
+  - url: https://api.pubg.com/shards/{platform-region}
     variables:
       "platform-region":
         enum:
