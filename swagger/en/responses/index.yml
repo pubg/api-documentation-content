@@ -31,3 +31,9 @@ playerSeason-200:
 
 seasons-200:
   $ref: './seasons-200.yml'
+
+tournaments-200:
+  $ref: './tournaments-200.yml'
+
+tournamentList-200:
+  $ref: './tournamentList-200.yml'

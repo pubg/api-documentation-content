@@ -1,10 +1,13 @@
 title: Roster Object
-description: "Rosters track the scores of each opposing group of participants. Rosters can have one or many participants depending on the game mode. Roster objects are only meaningful within the context of a match and are not exposed as a standalone resource."
+description: "Rosters track the scores of each opposing group of participants. Rosters can have one or many participants depending on the game mode. Roster objects are only meaningful within the context of a match and are not exposed as a standalone resource"
 type: object
 properties:
+  type:
+    type: string
+    description: Identifier for this object type ("roster")
   id:
     type: string
-    description: "Roster ID"
+    description: "A randomly generated ID assigned to this resource object for linking elsewhere in the match response"
   attributes:
     type: object
     properties:
@@ -13,24 +16,24 @@ properties:
         description: "Platform-region Shard"
       stats:
         type: object
-        description: "Stats particular to rosters"
         properties:
           rank:
             type: integer
             description: "This roster's placement in the match"
             minimum: 1
-            maximum: 100
+            maximum: 130
           teamId:
             type: integer
+            description: "An arbitrary ID assigned to this roster"
       won:
         type: string
         description: "Indicates if this roster won the match"
   relationships:
     type: object
-    description: "An array of references to participant objects that can be found in the included array"
     properties:
       participants:
         type: object
+        description: "An array of references to participant objects that can be found in the included array"
         properties:
           data:
             type: array
@@ -39,10 +42,10 @@ properties:
               properties:
                 type:
                   type: string
-                  description: "participant"
+                  description: Identifier for this object type ("participant")
                 id:
                   type: string
-                  description: "Participant ID - Use to find full participant in included"
+                  description: "Participant ID - Use to find full participant object in the included array"
       team:
         type: object
         description: "N/A"

@@ -15,6 +15,7 @@ Want your SDK listed here? Email us at pubgapi@bluehole.net with a link to your 
 NodeJS
 ------
 - https://github.com/Wobow/pubg_api
+- https://github.com/PaulEndri/pubg-sdk
 - https://github.com/concept-not-found/pubg-http-api / https://www.npmjs.com/package/pubg-http-api 
 - https://github.com/ickerio/pubg.js / https://www.npmjs.com/package/pubg.js
 - https://github.com/feed4rz/node-battlegrounds / https://npmjs.org/package/battlegrounds
@@ -35,10 +36,18 @@ Javascript
 - https://github.com/nulldreams/pubg-js
 
 
+
+GraphQL
+-------
+- https://github.com/antoniojps/graphql-pubg
+
+
+
 Python
 ------
 - https://github.com/ramonsaraiva/pubg-python
 - https://github.com/Discord-ian/pubgy
+- https://github.com/crflynn/chicken-dinner
 
 
 
@@ -70,6 +79,7 @@ Java
 - https://github.com/JoeZwet/pubg4j
 - https://github.com/xmiolo/Wrapper4Pubg
 - https://github.com/mautini/pubgjava
+- https://github.com/SoftwareSandbox/pubg-api-client
 
 
 
@@ -102,7 +112,9 @@ C#
 
 Ruby
 ----
-- https://github.com/dor-edras/RUBG.
+- https://github.com/dor-edras/RUBG
+- https://github.com/pubstatsg/pubg-rb
+- https://github.com/marceloalves/pubg-ruby
 
 
 
@@ -121,3 +133,9 @@ Drupal
 Rust
 ----
 - https://github.com/georgemarshall/pubg-api
+
+
+
+Dart
+----
+- https://pub.dartlang.org/packages/pubgapi

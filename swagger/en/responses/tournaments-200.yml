@@ -1,0 +1,36 @@
+description: Tournaments response
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          $ref: '../schemas/index.yml#/tournament'
+        included:
+          type: array
+          description: "An array of resource objects related to this tournament"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: Identifier for this object type ("match")
+              id:
+                type: string
+                description: "Match ID - Used to lookup the full match object on the /matches endpoint and the included array"
+              attributes:
+                type: object
+                properties:
+                  createdAt:
+                    type: string
+                    format: datetime
+                    description: "Time the match object was stored in the API"
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              description: "Link to this tournaments response"
+        meta:
+          type: object
+          description: "N/A"

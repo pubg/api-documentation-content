@@ -1,13 +1,13 @@
 title: Season Object
-description: "Season objects each contain the ID of a season, which can be used to lookup season information for a player."
+description: "Season objects each contain the ID of a season, which can be used to lookup season information for a player"
 type: object
 properties:
   type:
     type: string
-    description: "season"
+    description: Identifier for this object type ("season")
   id:
     type: string
-    description: "Season ID"
+    description: "Season ID - Used to lookup a player's stats for this season on the /players endpoint"
   attributes:
     type: object
     properties:

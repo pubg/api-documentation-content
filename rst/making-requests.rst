@@ -81,15 +81,17 @@ The PUBG API shards data by platform and region, and therefore requires a shard 
 - **pc-jp** - Japan
 - **pc-na** - North America
 - **pc-eu** - Europe
+- **pc-ru** - Russia
 - **pc-oc** - Oceania
 - **pc-kakao** - Kakao
 - **pc-sea** - South East Asia
 - **pc-sa** - South and Central America
 - **pc-as** - Asia
+- **pc-tournament** - Tournaments
   
-The shard is specified after the playbattlegrounds domain and before the endpoint like this::
+The shard is specified after the pubg domain and before the endpoint like this::
 
-  "...playbattlegrounds.com/shards/pc-krjp/endpoint..."
+  "...pubg.com/shards/pc-krjp/endpoint..."
 
 
 
@@ -163,7 +165,7 @@ Here's a sample request sent from a browser hitting 'example.com':
 
 .. code-block:: shell
 
-  curl -i https://api.playbattlegrounds.com/status -H "Origin: http://example.com"
+  curl -i https://api.pubg.com/status -H "Origin: http://example.com"
   HTTP/1.1 200 OK
   ...
   Access-Control-Allow-Origin: *
@@ -173,7 +175,7 @@ This is what the CORS preflight request looks like:
 
 .. code-block:: shell
 
-  curl -i https://api.playbattlegrounds.com/status -H "Origin: http://example.com" -X OPTIONS
+  curl -i https://api.pubg.com/status -H "Origin: http://example.com" -X OPTIONS
   HTTP/1.1 200 OK
   ...
   Access-Control-Allow-Headers: Origin,X-Title-Id,Authorization

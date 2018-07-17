@@ -6,7 +6,7 @@ info:
   description: "Note: Any property with \"N/A\" as its description is not currently in use."
 
 servers:
-  - url: https://api.playbattlegrounds.com/shards/{platform-region}
+  - url: https://api.pubg.com/shards/{platform-region}
     variables:
       "platform-region":
         enum:
@@ -18,11 +18,13 @@ servers:
         - "pc-jp"
         - "pc-na"
         - "pc-eu"
+        - "pc-ru"
         - "pc-oc"
         - "pc-kakao"
         - "pc-sea"
         - "pc-sa"
         - "pc-as"
+        - "pc-tournament"
         default: pc-na
 
 security:
@@ -33,13 +35,6 @@ paths:
     $ref: './paths/index.yml#/match'
 
 components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: http
-      description: "Enter your API key here to be used with the interactive documentation!"
-      scheme: bearer
-      bearerFormat: JWT
-
   schemas:
     match:
       $ref: 'schemas/index.yml#/match'

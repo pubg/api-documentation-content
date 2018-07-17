@@ -9,219 +9,28 @@ Data dictionaries and enums can be found  `here <https://github.com/pubg/api-ass
 
 Objects shown as {object-name} are not described here in an effort to conserve space. More details about the objects in events can be located in the :ref:`telemetry-objects` reference. Please also note that each event contains the following fields which have been omitted from the outlines below::
 
-  "_V" - Version
-  "_D" - Event timestamp
-  "_T" - Event type
+  "_D": string, // Event timestamp
+  "_T": string  // Event type
 
 Telemetry associated with pc shards will also have the following fields in each event which have been omitted from the outlines below as well::
 
-  "Common": {Common} //Only for PC telemetry
-
-In addition, there is a difference between the key casing for pc and xbox telemetry. pc telemetry will have keys starting with a lowercase character, while xbox telemetry will have the same keys but starting with an uppercase character.
+  "common": {Common} // PC only
 
 
 
-LogPlayerLogin
---------------
-.. code-block:: none
-
-  "Result": bool,
-  "ErrorMessage": string,
-  "AccountId": string
-
-
-
-LogPlayerCreate
+LogArmorDestroy
 ---------------
+
 .. code-block:: none
 
-  "Character": {Character}
-
-
-
-LogPlayerPosition
------------------
-.. code-block:: none
-
-  "Character": {Character},
-  "ElapsedTime": float,
-  "NumAlivePlayers": int
-
-
-
-LogPlayerAttack
----------------
-.. code-block:: none
-
-  "AttackId": int,
-  "Attacker": {Character},
-  "AttackType": string,
-  "Weapon": {Item},
-  "Vehicle": {Vehicle}
-
-
-
-LogItemPickup
--------------
-.. code-block:: none
-
-  "Character": {Character},
-  "Item": {Item}
-
-
-
-LogItemEquip
-------------
-.. code-block:: none
-
-  "Character": {Character},
-  "Item": {Item}
-
-
-
-LogItemUnequip
---------------
-.. code-block:: none
-
-  "Character": {Character},
-  "Item": {Item}
-
-
-
-LogVehicleRide
---------------
-.. code-block:: none
-
-  "Character": {Character},
-  "Vehicle": {Vehicle}
-
-
-
-LogMatchDefinition
-------------------
-.. code-block:: none
-
-  "MatchId": string,
-  "PingQuality": string //Only for PC telemetry
-
-
-
-LogMatchStart
--------------
-.. code-block:: none
-
-  "Characters": [{Character}, ...]
-
-
-
-LogGameStatePeriodic
---------------------
-.. code-block:: none
-
-  "GameState": {GameState}
-
-
-
-LogVehicleLeave
----------------
-.. code-block:: none
-
-  "Character": {Character},
-  "Vehicle": {Vehicle}
-
-
-
-LogPlayerTakeDamage
--------------------
-.. code-block:: none
-
-  "AttackId": int,
-  "Attacker": {Character},
-  "Victim": {Character},
-  "DamageTypeCategory": string,
-  "DamageReason": string,
-  "Damage": float,
-  "DamageCauserName": string
-
-
-
-LogPlayerLogout
----------------
-.. code-block:: none
-
-  "AccountId": string
-
-
-
-LogItemAttach
--------------
-.. code-block:: none
-
-  "Character": {Character},
-  "ParentItem": {Item},
-  "ChildItem": {Item}
-
-
-
-LogItemDrop
------------
-.. code-block:: none
-
-  "Character": {Character},
-  "Item": {Item}
-
-
-
-LogPlayerKill
--------------
-.. code-block:: none
-
-  "AttackId": int,
-  "Killer": {Character},
-  "Victim": {Character},
-  "DamageTypeCategory": string,
-  "DamageCauserName": string,
-  "Distance": float
-
-
-
-LogItemDetach
--------------
-.. code-block:: none
-
-  "Character": {Character},
-  "ParentItem": {Item},
-  "ChildItem": {Item}
-
-
-
-LogItemUse
-----------
-.. code-block:: none
-
-  "Character": {Character},
-  "Item": {Item}
-
-
-
-LogCarePackageSpawn
--------------------
-.. code-block:: none
-
-  "ItemPackage": {ItemPackage}
-
-
-
-LogVehicleDestroy
------------------
-.. code-block:: none
-
-  "AttackId": int,
-  "Attacker": {Character},
-  "Vehicle": {Vehicle},
-  "DamageTypeCategory": string,
-  "DamageCauserName": string,
-  "Distance": float,
+  "attackId":           int,
+  "attacker":           {Character},
+  "victim":             {Character},
+  "damageTypeCategory": string,
+  "damageReason":       string,
+  "damageCauserName":   string,
+  "item":               {Item},
+  "distance":           number
 
 
 
@@ -229,7 +38,97 @@ LogCarePackageLand
 ------------------
 .. code-block:: none
 
-  "ItemPackage": {ItemPackage}
+  "itemPackage": {ItemPackage}
+
+
+
+LogCarePackageSpawn
+-------------------
+.. code-block:: none
+
+  "itemPackage": {ItemPackage}
+
+
+
+LogGameStatePeriodic
+--------------------
+.. code-block:: none
+
+  "gameState": {GameState}
+
+
+
+LogItemAttach
+-------------
+.. code-block:: none
+
+  "character":  {Character},
+  "parentItem": {Item},
+  "childItem":  {Item}
+
+
+
+LogItemDetach
+-------------
+.. code-block:: none
+
+  "character":  {Character},
+  "parentItem": {Item},
+  "childItem":  {Item}
+
+
+
+LogItemDrop
+-----------
+.. code-block:: none
+
+  "character": {Character},
+  "item":      {Item}
+
+
+
+LogItemEquip
+------------
+.. code-block:: none
+
+  "character": {Character},
+  "item":      {Item}
+
+
+
+LogItemPickup
+-------------
+.. code-block:: none
+
+  "character": {Character},
+  "item":      {Item}
+
+
+
+LogItemUnequip
+--------------
+.. code-block:: none
+
+  "character": {Character},
+  "item":      {Item}
+
+
+
+LogItemUse
+----------
+.. code-block:: none
+
+  "character": {Character},
+  "item":      {Item}
+
+
+
+LogMatchDefinition
+------------------
+.. code-block:: none
+
+  "MatchId":     string,
+  "PingQuality": string
 
 
 
@@ -237,4 +136,189 @@ LogMatchEnd
 -----------
 .. code-block:: none
 
-  "Characters": [{Character}, ...]
+  "characters": [{Character}, ...]
+
+
+
+LogMatchStart
+-------------
+.. code-block:: none
+
+  "mapName":               string,
+  "weatherId":             string,
+  "characters":            [{Character}, ...],
+  "cameraViewBehaviour":   string,             
+  "teamSize":              int,
+  "isCustomGame":          bool,               // PC only
+  "isEventMode":           bool,               // PC only    
+  "blueZoneCustomOptions": string              
+
+blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
+
+
+
+LogPlayerAttack
+---------------
+.. code-block:: none
+
+  "attackId":   int,
+  "attacker":   {Character},
+  "attackType": string,
+  "weapon":     {Item},
+  "vehicle":    {Vehicle}
+
+
+
+LogPlayerCreate
+---------------
+.. code-block:: none
+
+  "character": {Character}
+
+
+
+LogPlayerKill
+-------------
+.. code-block:: none
+
+  "attackId":           int,
+  "killer":             {Character},
+  "victim":             {Character},
+  "damageTypeCategory": string,
+  "damageCauserName":   string,
+  "damageReason":       string,      // PC only
+  "distance":           number
+
+
+  
+LogPlayerLogin
+--------------
+.. code-block:: none
+
+  "accountId":    string
+
+
+
+LogPlayerLogout
+---------------
+.. code-block:: none
+
+  "accountId": string
+
+
+
+LogPlayerMakeGroggy
+-------------------
+
+.. code-block:: none
+
+  "attackId":            int,
+  "attacker":            {Character},
+  "victim":              {Character},
+  "damageTypeCategory":  string,
+  "damageCauserName":    string,
+  "distance":            float,
+  "isAttackerInVehicle": bool,
+  "dBNOId":              int
+
+
+
+LogPlayerPosition
+-----------------
+.. code-block:: none
+
+  "character":       {Character},
+  "elapsedTime":     number,
+  "numAlivePlayers": int
+
+
+
+LogPlayerRevive
+---------------
+
+.. code-block:: none
+
+  "reviver":             {Character},
+  "victim":              {Character},  // Yes, it's actually called victim
+
+
+
+LogPlayerTakeDamage
+-------------------
+.. code-block:: none
+
+  "attackId":           int,
+  "attacker":           {Character},
+  "victim":             {Character},
+  "damageTypeCategory": string,
+  "damageReason":       string,
+  "damage":             number,      // 1.0 damage = 1.0 health 
+                                     // Net damage after armor; damage to health
+  "damageCauserName":   string
+
+
+
+LogSwimEnd
+----------
+
+.. code-block:: none
+
+  "character": {Character},
+  "swimDistance": float     // PC only
+
+
+
+LogSwimStart
+------------
+
+.. code-block:: none
+
+  "character": {Character}
+
+
+
+LogVehicleDestroy
+-----------------
+.. code-block:: none
+
+  "atackId":            int,
+  "attacker":           {Character},
+  "vehicle":            {Vehicle},
+  "damageTypeCategory": string,
+  "damageCauserName":   string,
+  "distance":           number,
+
+
+
+LogVehicleLeave
+---------------
+.. code-block:: none
+
+  "character":    {Character},
+  "vehicle":      {Vehicle},
+  "rideDistance": number,
+  "seatIndex":    integer
+
+
+
+LogVehicleRide
+--------------
+.. code-block:: none
+
+  "character": {Character},
+  "vehicle":   {Vehicle},
+  "seatIndex": int
+
+
+
+LogWheelDestroy
+---------------
+PC only
+
+.. code-block:: none
+
+  "attackId":           int,
+  "attacker":           {Character},
+  "vehicle":            {Vehicle},
+  "damageTypeCategory": string,
+  "damageCauserName":   string

@@ -24,3 +24,6 @@ participant:
 
 sample:
   $ref: './sample.yml'
+
+tournament:
+  $ref: './tournament.yml'

@@ -1,10 +1,10 @@
 title: Player Object
-description: "Player objects contain information about each player in the context of a match."
+description: "Player objects contain information about a player and a list of their recent matches (up to 14 days old). Note: player objects are specific to platform-region shards."
 type: object
 properties:
   type:
     type: string
-    description: "player"
+    description: Identifier for this object type ("player")
   id:
     type: string
     description: "Player ID"
@@ -13,7 +13,7 @@ properties:
     properties:
       name:
         type: string
-        description: "Player name"
+        description: "PUBG IGN"
       shardId:
         type: string
         description: "Platform-region shard"
@@ -24,6 +24,12 @@ properties:
         type: string
         format: dateTime
         description: "N/A"
+        deprecated: true
+      updatedAt:
+        type: string
+        format: dateTime
+        description: "N/A"
+        deprecated: true
       patchVersion:
         type: string
         description: "Version of the game"
@@ -42,16 +48,16 @@ properties:
             description: "N/A"
       matches:
         type: object
+        description: "A list of match ids."
         properties:
           data:
             type: array
-            description: "A list of match ids."
             items:
               type: object
               properties:
                 id:
                   type: string
-                  description: The ID of the match
+                  description: "Match ID - Used to lookup the full match object on the /matches endpoint"
                 type:
                   type: string
                   description: Identifier for this object type ("match")

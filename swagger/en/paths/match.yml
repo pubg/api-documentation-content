@@ -2,6 +2,10 @@ get:
   tags:
   - Matches
   summary: Get a single match.
+  description: |
+    **The /matches endpoint is not rate limited, therefore, authorization is not required.**
+
+    Remember to use the tournament shard for tournament matches.
   parameters:
     - $ref: '../parameters/index.yml#/id'
   responses:
@@ -13,5 +17,3 @@ get:
       $ref: '../responses/index.yml#/errors/notFound'
     415:
       $ref: '../responses/index.yml#/errors/unsupportedMediaType'
-    429:
-      $ref: '../responses/index.yml#/errors/tooManyRequests'

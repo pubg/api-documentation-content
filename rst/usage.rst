@@ -38,6 +38,8 @@ This being said, some applications may still need to analyze large amounts of ra
 
 
 
+.. _Caching Overview:
+
 Caching Overview
 ----------------
 Generally speaking, applications should try to avoid querying for the same data twice whenever possible. This is where caching comes into play. When the backend makes a request to the API, the results should be cached so that they can be reused for a set period of time. 
@@ -47,6 +49,8 @@ For example, lets say that your application takes a player's IGN as input and di
 There may also be an opportunity for caching results from the backend server depending on how your application works. This can help cut down on requests to your database or other storage structure.
 
 
+
+.. _Caching Implementation:
 
 Caching Implementation
 ----------------------

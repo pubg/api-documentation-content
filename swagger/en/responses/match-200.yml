@@ -20,7 +20,7 @@ content:
           properties:
             self:
               type: string
-              description: "Link to this match response"
+              description: "Link to this match object"
         meta:
           type: object
           description: "N/A"
