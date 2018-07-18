@@ -17,6 +17,17 @@ Data Changes:
 
 
 
+v3.2.0
+------
+New Data:
+
+- [Xbox] Common
+- [Xbox] LogPlayerKill.damageReason
+- [Xbox] LogSwimEnd.swimDistance
+- [Xbox] LogWheelDestroy
+
+
+
 v3.1.0
 ------
 New Data:

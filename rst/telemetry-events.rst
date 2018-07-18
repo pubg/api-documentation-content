@@ -9,12 +9,9 @@ Data dictionaries and enums can be found  `here <https://github.com/pubg/api-ass
 
 Objects shown as {object-name} are not described here in an effort to conserve space. More details about the objects in events can be located in the :ref:`telemetry-objects` reference. Please also note that each event contains the following fields which have been omitted from the outlines below::
 
-  "_D": string, // Event timestamp
-  "_T": string  // Event type
-
-Telemetry associated with pc shards will also have the following fields in each event which have been omitted from the outlines below as well::
-
-  "common": {Common} // PC only
+  "_D": string,      // Event timestamp
+  "_T": string,      // Event type
+  "common": {Common}
 
 
 
@@ -186,7 +183,7 @@ LogPlayerKill
   "victim":             {Character},
   "damageTypeCategory": string,
   "damageCauserName":   string,
-  "damageReason":       string,      // PC only
+  "damageReason":       string,
   "distance":           number
 
 
@@ -264,7 +261,7 @@ LogSwimEnd
 .. code-block:: none
 
   "character": {Character},
-  "swimDistance": float     // PC only
+  "swimDistance": float
 
 
 
@@ -313,8 +310,6 @@ LogVehicleRide
 
 LogWheelDestroy
 ---------------
-PC only
-
 .. code-block:: none
 
   "attackId":           int,
