@@ -18,3 +18,9 @@ This service is designed to implement the required features of the JSON-API spec
 OpenAPI
 -------
 We created the API's endpoint documentation using the `OpenAPI specification <https://swagger.io/specification/>`_. This means that users can interact with the endpoint documentation to see how it works in action, generate commands, and get a feel for what the returned data will look like with no technical experience or coding knowledge required! On an endpoint documentation page, click the green "Authorize" button with the lock symbol and enter your API key. With that done, just click "Try it out" on any endpoint and use the "Execute" button to send a request.
+
+
+
+Getting Help
+------------
+We recommend taking a look at the `FAQ <https://developer.playbattlegrounds.com/faq>`_ for the answers to some common questions. You can also visit the `forums <https://forums.playbattlegrounds.com/forum/246-pubg-api-community-developers/>`_ or join the `official PUBG Developer API Discord server <https://discord.gg/FcsT7t3>`_ to meet, chat, troubleshoot, and collaborate with other community developers and designers.
