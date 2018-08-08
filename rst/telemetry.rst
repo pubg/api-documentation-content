@@ -6,7 +6,9 @@ Telemetry provides further insight into a match.
 
 To retrieve Telemetry Data
 ---------------------------
-You start by pulling a match from the matches endpoint. Remember to replace "some-region" and "matchId" with the appropriate region and matchId respectively.
+Telemetry data is compressed using gzip. Many browsers and libraries support this without any extra work being necessary, but clients using the API should specify that they accept gzip compressed responses. Make sure that you pass the "Accept-Encoding: gzip" header.
+
+You will need to start by pulling a match from the matches endpoint. Remember to replace "some-region" and "matchId" with the appropriate region and matchId respectively.
 
 Note: In order to get a match object, you will need to know its ID. You can find match IDs inside of player objects returned from the players endpoint. For more information about the players endpoint check out :ref:`players`. There is also a tutorial that may be helpful on the :ref:`getting-started` page.
 
@@ -15,7 +17,7 @@ Note: In order to get a match object, you will need to know its ID. You can find
   curl "https://api.pubg.com/shards/some-region/matches/matchId" \
   -H "Accept: application/vnd.api+json"
 
-You need to look for an assets reference in the match relationships object, which points to (contains the ID of) the full telemetry object within the included array. Check for the following in the response::
+Next, look for an assets reference in the match relationships object, which points to (contains the ID of) the full telemetry object within the included array. Check for the following in the response::
 
   "relationships": {
     ...
@@ -45,7 +47,7 @@ Once you have located this ID, you now have to search for the object with that I
 
 You can download the data with following command. Please note that you do not need an API Key to get this data::
 
-  curl "https://telemetry-cdn.pubg.com/pc-krjp/2018/01/01/0/0/1ad97f85-cf9b-11e7-b84e-0a586460f004-telemetry.json" \
+  curl --compressed "https://telemetry-cdn.pubg.com/pc-krjp/2018/01/01/0/0/1ad97f85-cf9b-11e7-b84e-0a586460f004-telemetry.json" \
  	-H "Accept: application/vnd.api+json"
 
 The telemetry file will contain an array of event objects, each with varying structure based on their type. For information about the included events, please see :ref:`telemetry-events`.

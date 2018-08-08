@@ -119,6 +119,10 @@ Note: Calling samples without filter[createdAt-start] will return the most recen
 In the response there will be an array of abbreviated match objects containing IDs and shards to look them up on the matches endpoint. This can be done as shown in the `Getting a Match`_ section.
 
 
+Getting Telemetry Data
+----------------------
+Telemetry data will provide you with additional information for each match. This data is compressed using gzip and clients using the API should specify that they accept gzip compressed responses. The URL string that links to the telemetry file for a match can be found in the Asset Object of that match. For additional information, please refer to the :ref:`telemetry` page.
+
 
 Getting Player Season Stats
 -----------------------------
