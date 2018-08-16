@@ -30,12 +30,14 @@ Since the /matches and telemetry endpoints are not rate limited, the amount of r
 
 
 
-Requesting a Higher Limit
--------------------------
+Requesting a Higher Rate Limit
+------------------------------
 If you find that the default (base tier) rate limit is not sufficient for your application, you can request a higher limit by selecting "I NEED A HIGHER LIMIT" in "MY APPS".
 
 Please make sure that you fill out the form completely with as much detail as possible, and we will work with you to provide a more appropriate limit.
 
 In order to determine an appropriate rate limit for your application, we need to know how many API requests your application makes, when it makes them, and analytics showing the number of users if you have active users. We will also want to know about the caching and optimization strategies you are using in order to help reduce the number of API requests that your application requires. Please take a look at our :ref:`Caching Overview` and :ref:`Caching Implementation` sections for additional information.
+
+If the project you are working on has a barrier to entry, please provide all the necessary information on how to access your site as well as login credentials if applicable.
 
 If your rate limit request is approved, you will receive a notice that a new API key has been created for you. You can find it under "MY APPS" where your old key used to be. Be sure to update your application with the new key within 24 hours before the old key is deactivated.
