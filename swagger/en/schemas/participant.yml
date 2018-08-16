@@ -1,5 +1,5 @@
 title: Participant Object
-description: "Participant objects represent a player in the context of a match. Participant objects are only meaningful within the context of a match and are not exposed as a standalone resource"
+description: "Participant objects represent a player in the context of a match. Participant objects are only meaningful within the context of a match and are not exposed as a standalone resource."
 type: object
 properties:
   type:

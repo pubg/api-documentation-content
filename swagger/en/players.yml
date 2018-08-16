@@ -33,10 +33,10 @@ paths:
   /players:
     $ref: './paths/index.yml#/players'
 
-  /players/{id}:
+  /players/{accountId}:
     $ref: './paths/index.yml#/player'
 
-  /players/{id}/seasons/{seasonId}:
+  /players/{accountId}/seasons/{seasonId}:
     $ref: './paths/index.yml#/playerSeason'
 
   /seasons:

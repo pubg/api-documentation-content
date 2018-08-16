@@ -1,5 +1,5 @@
 title: Season Object
-description: "Season objects each contain the ID of a season, which can be used to lookup season information for a player"
+description: "Season objects each contain the ID of a season, which can be used to lookup season information for a player."
 type: object
 properties:
   type:

@@ -3,7 +3,7 @@ get:
   - Players
   summary: Get season information for a single player.
   parameters:
-    - $ref: '../parameters/index.yml#/id'
+    - $ref: '../parameters/index.yml#/accountId'
     - $ref: '../parameters/index.yml#/seasonId'
   responses:
     200:

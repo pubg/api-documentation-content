@@ -1,11 +1,14 @@
 id:
   $ref: './id.yml'
 
+accountId:
+  $ref: './accountId.yml'
+
 seasonId:
   $ref: './seasonId.yml'
 
-filterPlayerIds:
-  $ref: './filterPlayerIds.yml'
+filterAccountIds:
+  $ref: './filterAccountIds.yml'
 
 filterPlayerNames:
   $ref: './filterPlayerNames.yml'

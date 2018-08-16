@@ -1,5 +1,5 @@
 title: Tournament Object
-description: "Tournament objects contain information about a tournament, mainly the IDs of its matches"
+description: "Tournament objects contain information about a tournament, mainly the IDs of its matches."
 type: object
 properties:
   type:

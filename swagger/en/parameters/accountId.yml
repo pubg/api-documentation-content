@@ -1,0 +1,6 @@
+name: accountId
+in: path
+description: "The account ID to search for."
+required: true
+schema:
+  type: string

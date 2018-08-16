@@ -1,5 +1,5 @@
 title: Match List
-description: "Contains a list of match IDs"
+description: "Contains a list of match IDs."
 type: object
 properties:
   data:

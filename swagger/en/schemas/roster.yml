@@ -1,5 +1,5 @@
 title: Roster Object
-description: "Rosters track the scores of each opposing group of participants. Rosters can have one or many participants depending on the game mode. Roster objects are only meaningful within the context of a match and are not exposed as a standalone resource"
+description: "Rosters track the scores of each opposing group of participants. Rosters can have one or many participants depending on the game mode. Roster objects are only meaningful within the context of a match and are not exposed as a standalone resource."
 type: object
 properties:
   type:

@@ -3,7 +3,7 @@ get:
   - Players
   summary: Get a single player.
   parameters:
-    - $ref: '../parameters/index.yml#/id'
+    - $ref: '../parameters/index.yml#/accountId'
   responses:
     200:
       $ref: '../responses/index.yml#/player-200'

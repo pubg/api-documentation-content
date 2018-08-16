@@ -1,5 +1,5 @@
 title: Match Object
-description: "Match objects contain the results of a completed match such as the game mode played, duration, and which players participated"
+description: "Match objects contain the results of a completed match such as the game mode played, duration, and which players participated."
 type: object
 properties:
   type:
