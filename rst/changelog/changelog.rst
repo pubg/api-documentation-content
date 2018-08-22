@@ -4,8 +4,16 @@ Changelog
 =========
 
 Upcoming Changes
-++++++++++++++++
-No planned changes at the moment.
+----------------
+.. No planned changes at the moment.
+
+v5.0.0 (planned for 8/29/18)
+++++++++++++++++++++++++++++
+Posted 8/22/18
+
+Data Changes:
+
+- Squad size and perspective for custom matches will be added to attributes.gameMode in the Match object. Example: normal -> normal-squad-fpp
 
 
 
