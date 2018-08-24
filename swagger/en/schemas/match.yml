@@ -22,10 +22,7 @@ properties:
         type: string
         description: |
           Game mode played
-
-          For custom matches, squad size and perspective can be found in
-          the telemetry file under the LogMatchStart event.
-        enum: [duo, duo-fpp, solo, solo-fpp, squad, squad-fpp]
+        enum: [duo, duo-fpp, solo, solo-fpp, squad, squad-fpp, normal-duo, normal-duo-fpp, normal-solo, normal-solo-fpp, normal-squad, normal-squad-fpp]
       mapName:
         type: string
         description: "Map name"

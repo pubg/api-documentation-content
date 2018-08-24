@@ -4,12 +4,13 @@ Changelog
 =========
 
 Upcoming Changes
-----------------
-.. No planned changes at the moment.
+++++++++++++++++
+No planned changes at the moment.
 
-v5.0.0 (planned for 8/29/18)
-++++++++++++++++++++++++++++
-Posted 8/22/18
+
+
+v5.0.0
+------
 
 Data Changes:
 
