@@ -13,9 +13,9 @@ Posted 9/5/18
 
 Bug Fixes:
 
-- Fixed an issue where there were sometimes duplicate attackIds within a single telemetry file
-- Fixed an issue where the killDistance was not always accurate for knocked kills
-- Health and location will now show values other than "0" for the attacker in LogPlayerTakeDamage events
+- [PC] Fixed an issue where there were sometimes duplicate attackIds within a single telemetry file
+- [PC] Fixed an issue where the killDistance was not always accurate for knocked kills
+- [PC] Health and location will now show values other than "0" for the attacker in LogPlayerTakeDamage events
 
 v5.0.0
 ------
