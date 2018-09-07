@@ -7,7 +7,7 @@ Upcoming Changes
 ----------------
 .. No planned changes at the moment.
 
-v5.0.1 (planned for 9/12/18)
+v5.0.2 (planned for 9/12/18)
 ++++++++++++++++++++++++++++
 Posted 9/5/18
 
@@ -16,6 +16,17 @@ Bug Fixes:
 - [PC] Fixed an issue where there were sometimes duplicate attackIds within a single telemetry file
 - [PC] Fixed an issue where the killDistance was not always accurate for knocked kills
 - [PC] Health and location will now show values other than "0" for the attacker in LogPlayerTakeDamage events
+
+
+
+v5.0.1
+------
+
+Bug Fix:
+
+- The /players/{accountId}/seasons/{seasonId} endpoint will now return a 404 for season stats if the player did not play during that season.
+
+
 
 v5.0.0
 ------
