@@ -6,19 +6,17 @@ Changelog
 
 
 Upcoming Changes
-----------------
-.. No planned changes at the moment. Click `here <http://eepurl.com/dFPTNL>`_ to subscribe to our mailing list for changelog updates.
+++++++++++++++++
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
-v5.0.3 (planned for 9/17/18)
-++++++++++++++++++++++++++++
-Posted 9/12/18
+
+v5.0.3
+------
 
 Bug Fix:
 
 - The /players/{accountId}/seasons/{seasonId} endpoint will now return empty season stats if the player did not play during that season rather than a 404.
-
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
