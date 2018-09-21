@@ -15,15 +15,15 @@ Posted 9/20/18
 
 New Data:
 
-- participant.attributes.stats.RankPoint
-- LogMatchDefinition.SeasonState
+- [PC] participant.attributes.stats.RankPoint
+- [PC] LogMatchDefinition.SeasonState
 
 Removed:
 
-- participant.attributes.stats.killPoints
-- participant.attributes.stats.killPointsDelta
-- participant.attributes.stats.winPoints
-- participant.attributes.stats.winPointsDelta
+- [PC] participant.attributes.stats.killPoints
+- [PC] participant.attributes.stats.killPointsDelta
+- [PC] participant.attributes.stats.winPoints
+- [PC] participant.attributes.stats.winPointsDelta
 
 To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
