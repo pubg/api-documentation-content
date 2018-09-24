@@ -1,9 +1,9 @@
-name: filter[accountIds]
+name: filter[playerIds]
 in: query
 description: |
-  Filters by account IDs.
+  Filters by player IDs.
   
-  **Usage**: filter[accountIds]=accountId-1,accountId-2,…
+  **Usage**: filter[playerIds]=playerId-1,playerId-2,…
 required: false
 example: "account.d50fdc18fcad49c691d38466bed6f8fd"
 style: form
