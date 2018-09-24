@@ -15,8 +15,8 @@ Posted 9/20/18
 
 New Data:
 
-- participant.attributes.stats.RankPoint
-- LogMatchDefinition.SeasonState
+- participant.attributes.stats.rankPoint
+- LogMatchDefinition.seasonState
 
 Deprecated:
 
