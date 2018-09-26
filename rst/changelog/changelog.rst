@@ -15,10 +15,10 @@ Posted 9/20/18
 
 New Data:
 
-- participant.attributes.stats.rankPoint
-- LogMatchDefinition.seasonState
+- [PC] participant.attributes.stats.RankPoint
+- [PC] LogMatchDefinition.SeasonState
 
-Deprecated:
+Removed:
 
 - [PC] participant.attributes.stats.killPoints
 - [PC] participant.attributes.stats.killPointsDelta
