@@ -2,9 +2,9 @@ get:
   tags:
   - Players
   summary: Get a collection of up to 6 players.
-  description: "Note: Either filter[accountIds] or filter[playerNames] must be specified, however, it is not necessary to use both"
+  description: "Note: Either filter[playerIds] or filter[playerNames] must be specified, however, it is not necessary to use both."
   parameters:
-    - $ref: '../parameters/index.yml#/filterAccountIds'
+    - $ref: '../parameters/index.yml#/filterPlayerIds'
     - $ref: '../parameters/index.yml#/filterPlayerNames'
   responses:
     200:

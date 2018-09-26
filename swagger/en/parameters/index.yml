@@ -7,8 +7,8 @@ accountId:
 seasonId:
   $ref: './seasonId.yml'
 
-filterAccountIds:
-  $ref: './filterAccountIds.yml'
+filterPlayerIds:
+  $ref: './filterPlayerIds.yml'
 
 filterPlayerNames:
   $ref: './filterPlayerNames.yml'
