@@ -11,19 +11,32 @@ Upcoming Changes
 
 v6.0.0 (planned for 10/03/18)
 -----------------------------
-Posted 9/20/18
+Posted 9/20/18, Updated 9/28/18
+
+Data Changes:
+
+- [PC] Season stats from 10/3 onwards will be global and sharded by platform. Data prior to 10/3 will still be accessible with the old URL format.
 
 New Data:
 
-- [PC] participant.attributes.stats.RankPoint
+- [PC] participant.attributes.stats.rankPoints
+- [PC] match.attributes.seasonState
 - [PC] LogMatchDefinition.SeasonState
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.bestRankPoints
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.dailyWins
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.swimDistance
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.weeklyWins
+- [PC] Season stats records will also include lifetimeStats per gameMode: playerSeason.attributes.lifetimeStats (same info as gameModeStats but across all seasons)
 
-Removed:
+Deprecated:
 
 - [PC] participant.attributes.stats.killPoints
 - [PC] participant.attributes.stats.killPointsDelta
 - [PC] participant.attributes.stats.winPoints
 - [PC] participant.attributes.stats.winPointsDelta
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.killPoints
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.winPoints
 
 To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
