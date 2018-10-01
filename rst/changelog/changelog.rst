@@ -15,7 +15,7 @@ Posted 9/20/18, Updated 9/28/18
 
 Data Changes:
 
-- [PC] Season stats from 10/3 onwards will be global and sharded by platform. PC Data prior to 10/3 and Xbox data will still be accessible with the old URL format.
+- [PC] Matches and season stats from 10/3 onwards will be global and sharded by platform. PC Data prior to 10/3 and Xbox data will still be accessible with the old URL format.
 
 New Data:
 
@@ -27,7 +27,6 @@ New Data:
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.swimDistance
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.weeklyWins
-- [PC] Season stats records will also include lifetimeStats per gameMode: playerSeason.attributes.lifetimeStats (same info as gameModeStats but across all seasons)
 
 Deprecated:
 
