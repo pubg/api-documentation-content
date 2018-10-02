@@ -14,7 +14,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
     
 - The PUBG API shards data by platform and region, and therefore requires a shard to be specified in the URL for most requests. For more information about shards, please see :ref:`regions`
 
-Note: Use the steam or kakao shard when making requests for PC players' season stats for seasons after and including division.bro.official.2018-09.
+Note: Use the steam or kakao shard when making requests for PC players' season stats for seasons after and including division.bro.official.2018-10.
 
 **players** - *the endpoint to query*
 

@@ -49,4 +49,3 @@ components:
       $ref: 'schemas/index.yml#/player'
     matchList:
       $ref: 'schemas/index.yml#/matchList'
-    
