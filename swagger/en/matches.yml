@@ -3,8 +3,9 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: "Note: Any property with \"N/A\" as its description is not currently in use."
-
+  description: Notes:<br>
+    - Both "https://api.pubg.com/shards/{platform}" and "https://api.pubg.com/shards/{platform-region}" can be used to get matches.<br>
+    - Any property with \"N/A\" as its description is not currently in use."
 servers:
   - url: https://api.pubg.com/shards/{platform-region}
     variables:
@@ -26,6 +27,13 @@ servers:
         - "pc-as"
         - "pc-tournament"
         default: pc-na
+  - url: https://api.pubg.com/shards/{platform}
+    variables:
+      "platform":
+        enum:
+        - "kakao"
+        - "steam"
+        default: steam
 
 security:
   - ApiKeyAuth: []
