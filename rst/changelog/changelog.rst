@@ -21,7 +21,7 @@ New Data:
 - [PC] participant.attributes.stats.rankPoints
 - [PC] match.attributes.seasonState
 - [PC] LogMatchDefinition.SeasonState
-- [PC] playerSeason.attributes.gameModeStats.{gameMode}.bestRankPoints
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.bestRankPoint
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.dailyWins
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.swimDistance
