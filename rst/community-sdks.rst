@@ -40,6 +40,7 @@ Javascript
 GraphQL
 -------
 - https://github.com/antoniojps/graphql-pubg
+- https://github.com/JadTermsani/PubgRecords-server
 
 
 
@@ -55,7 +56,6 @@ C#/.Net
 -------
 - https://github.com/GavinPower747/pubg-dotnet
 - https://github.com/EpicKitten/PUBGLibrary
-- https://github.com/cywq/pubg-dotnet
 
 
 

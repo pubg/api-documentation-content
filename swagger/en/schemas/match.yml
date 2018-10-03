@@ -9,6 +9,10 @@ properties:
     type: string
     description: "Match ID"
   attributes:
+    seasonState:
+      type: string
+      description: "The state of the season"
+      enum: [closed, prepare, progress]
     type: object
     properties:
       createdAt:

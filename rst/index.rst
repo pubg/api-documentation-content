@@ -9,10 +9,11 @@ PUBG API Documentation
   api-keys
   rate-limits
   making-requests
-  matches-endpoint
   players-endpoint
-  samples-endpoint
+  seasons-endpoint
+  matches-endpoint
   tournaments-endpoint
+  samples-endpoint
   telemetry
   telemetry-events
   telemetry-objects

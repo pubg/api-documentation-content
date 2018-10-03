@@ -36,12 +36,6 @@ paths:
   /players/{accountId}:
     $ref: './paths/index.yml#/player'
 
-  /players/{accountId}/seasons/{seasonId}:
-    $ref: './paths/index.yml#/playerSeason'
-
-  /seasons:
-    $ref: './paths/index.yml#/seasons'
-
 components:
   securitySchemes:
     ApiKeyAuth:
@@ -53,10 +47,5 @@ components:
   schemas:
     player:
       $ref: 'schemas/index.yml#/player'
-    season:
-      $ref: 'schemas/index.yml#/season'
-    gameModeStats:
-      $ref: 'schemas/index.yml#/gameModeStats'
     matchList:
       $ref: 'schemas/index.yml#/matchList'
-    

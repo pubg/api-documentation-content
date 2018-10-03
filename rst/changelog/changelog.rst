@@ -7,11 +7,10 @@ Changelog
 
 Upcoming Changes
 ++++++++++++++++
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-v6.0.0 (planned for 10/03/18)
------------------------------
-Posted 9/20/18, Updated 9/28/18
+v6.0.0
+-------
 
 Data Changes:
 
@@ -36,8 +35,6 @@ Deprecated:
 - [PC] participant.attributes.stats.winPointsDelta
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.killPoints
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.winPoints
-
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 

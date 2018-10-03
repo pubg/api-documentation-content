@@ -1,0 +1,62 @@
+openapi: 3.0.0
+
+info:
+  version: 1.0.0
+  title: ""
+  description:  Notes:<br>
+    - Use "https://api.pubg.com/shards/{platform}" for PC players' season stats for seasons after "division.bro.official.2018-09".<br>
+    - Use "https://api.pubg.com/shards/{platform-region}" for Xbox, and to get season stats for PC players' prior to and including "division.bro.official.2018-09".<br>
+    - Any property with \"N/A\" as its description is not currently in use.
+servers:
+  - url: https://api.pubg.com/shards/{platform}
+    variables:
+      "platform":
+        enum:
+        - "kakao"
+        - "steam"
+        default: steam
+  - url: https://api.pubg.com/shards/{platform-region}
+    variables:
+      "platform-region":
+        enum:
+        - "xbox-as"
+        - "xbox-eu"
+        - "xbox-na"
+        - "xbox-oc"
+        - "pc-krjp"
+        - "pc-jp"
+        - "pc-na"
+        - "pc-eu"
+        - "pc-ru"
+        - "pc-oc"
+        - "pc-kakao"
+        - "pc-sea"
+        - "pc-sa"
+        - "pc-as"
+        default: pc-na
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /seasons:
+    $ref: './paths/index.yml#/seasons'
+    
+  /players/{accountId}/seasons/{seasonId}:
+    $ref: './paths/index.yml#/playerSeason'
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: http
+      description: "Enter your API key here to be used with the interactive documentation!"
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    season:
+      $ref: 'schemas/index.yml#/season'
+    gameModeStats:
+      $ref: 'schemas/index.yml#/gameModeStats'
+    matchList:
+      $ref: 'schemas/index.yml#/matchList'

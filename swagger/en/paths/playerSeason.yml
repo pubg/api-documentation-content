@@ -1,6 +1,6 @@
 get:
   tags:
-  - Players
+  - Season Stats
   summary: Get season information for a single player.
   parameters:
     - $ref: '../parameters/index.yml#/accountId'
