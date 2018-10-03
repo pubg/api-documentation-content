@@ -91,7 +91,7 @@ The PUBG API shards data by platform and region, and therefore requires a shard 
 - **steam** - Steam Platform
 - **kakao** - Kakao Platform
   
-Either "steam" or "kakao" must be used to get PC players' season stats for seasons after and including "division.bro.official.2018-10". The other PC shards are deprecated as of October 3, 2018 for season stats beginning with "division.bro.official.2018-10". The shard is specified after the pubg domain and before the endpoint like this::
+Either "steam" or "kakao" must be used to get PC players' season stats for seasons after and including "division.bro.official.2018-01". The other PC shards are deprecated as of October 3, 2018 for season stats beginning with "division.bro.official.2018-01". The shard is specified after the pubg domain and before the endpoint like this::
 
   "...pubg.com/shards/pc-krjp/endpoint..."
 

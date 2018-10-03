@@ -11,8 +11,8 @@ PUBG API Documentation
   making-requests
   players-endpoint
   seasons-endpoint
-  tournaments-endpoint
   matches-endpoint
+  tournaments-endpoint
   samples-endpoint
   telemetry
   telemetry-events

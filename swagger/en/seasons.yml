@@ -4,12 +4,11 @@ info:
   version: 1.0.0
   title: ""
   description:  Notes:<br>
-    - Use "https://api.pubg.com/shards/{platform}" for PC players' season stats for seasons after and including "division.bro.official.2018-10".<br>
-    - Use "https://api.pubg.com/shards/{platform-region}" for Xbox, and to get season stats for PC players' prior to "division.bro.official.2018-10".<br>
+    - Use "https://api.pubg.com/shards/{platform}" for PC players' season stats for seasons after and including "division.bro.official.2018-01".<br>
+    - Use "https://api.pubg.com/shards/{platform-region}" for Xbox, and to get season stats for PC players' prior to "division.bro.official.2018-01".<br>
     - Any property with \"N/A\" as its description is not currently in use.
 servers:
   - url: https://api.pubg.com/shards/{platform}
-    description: "[PC Only] Get season stats for seasons that began after October 3rd, 2018."
     variables:
       "platform":
         enum:
@@ -17,7 +16,6 @@ servers:
         - "steam"
         default: steam
   - url: https://api.pubg.com/shards/{platform-region}
-    description: "Get season stats for Xbox, and PC seasons that began prior to October 3rd, 2018."
     variables:
       "platform-region":
         enum:

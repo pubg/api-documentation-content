@@ -125,7 +125,8 @@ LogMatchDefinition
 .. code-block:: none
 
   "MatchId":     string,
-  "PingQuality": string
+  "PingQuality": string,
+  "SeasonState": string
 
 
 

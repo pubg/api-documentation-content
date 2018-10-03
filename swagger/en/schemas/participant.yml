@@ -56,22 +56,13 @@ properties:
             description: "This player's rank in the match based on kills"
             minimum: 1
             maximum: 130
-          killPoints [PC]:
+          killPoints:
             type: integer
-            description: "Points based on how many kills this player had"
+            description: "[Deprecated for PC] Points based on how many kills this player had"
             minimum: 0
-            deprecated: true
-          killPoints [Xbox]:
-            type: integer
-            description: "Points based on how many kills this player had"
-            minimum: 0
-          killPointsDelta [PC]:
+          killPointsDelta:
             type: number
-            description: "Change in killPoints"
-            deprecated: true
-          killPointsDelta [Xbox]:
-            type: number
-            description: "Change in killPoints"
+            description: "[Deprecated for PC] Change in killPoints"
           killStreaks:
             type: integer
             description: "Total number of kill streaks"
@@ -105,7 +96,7 @@ properties:
             description: "Account ID of the player associated with this participant"
           rankPoints:
             type: number
-            description: "Number of rank points before the match began"
+            description: "[PC only] Number of rank points before the match began"
             minimum: 0
           revives:
             type: integer
@@ -148,19 +139,10 @@ properties:
             description: "This player's placement in the match"
             minimum: 1
             maximum: 130
-          winPoints [PC]:
+          winPoints:
             type: integer
-            description: ""
+            description: "[Deprecated for PC]"
             minimum: 0
-            deprecated: true
-          winPoints [Xbox]:
-            type: integer
-            description: ""
-            minimum: 0
-          winPointsDelta [PC]:
+          winPointsDelta:
             type: number
-            description: "Change in winPoints"
-            deprecated: true
-          winPointsDelta [Xbox]:
-            type: number
-            description: "Change in winPoints"
+            description: "[Deprecated for PC] Change in winPoints"

@@ -14,7 +14,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
     
 - The PUBG API shards data by platform and region, and therefore requires a shard to be specified in the URL for most requests. For more information about shards, please see :ref:`regions`
 
-Note: Use the steam or kakao shard when making requests for PC players' season stats for seasons after and including division.bro.official.2018-10.
+Note: Use the steam or kakao shard when making requests for PC players' season stats for seasons after and including division.bro.official.2018-01.
 
 **players** - *the endpoint to query*
 
@@ -57,6 +57,39 @@ We now have all of the pieces that we need to make our first request! Just make 
   -H "Accept: application/vnd.api+json"
 
 To see what the player response will look like, please head over to the :ref:`players` page.
+
+
+
+Getting Player Season Stats
+-----------------------------
+The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season.
+
+We start by querying the seasons endpoint to get a list of seasons like this. Please be sure to replace '$platform-region-shard' with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform-region-shard/seasons" \
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+Note: Use the steam or kakao shard when making requests for PC players' season stats for seasons after division.bro.official.2018-09. Seasons after division.bro.official.2018-09 will be in the format division.bro.official.{Year}-{Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-09 is division.bro.official.2018-01.
+
+In the response you will see seasons listed like this::
+
+  {
+    "type": "season",
+    "id": "$season-name"
+    "isCurrentSeason" true:
+    "isOffseason": false:
+  }
+
+**Note: The list of seasons will only be changing about once per month when a new seasons is added. Applications should not be querying for the list of seasons more than once per month.**
+
+With this information, we can now query the players endpoint like this. Please be sure to replace '$platform-region-shard', '$player-id', '$season-name', and with you own information::
+
+  curl -g "https://api.pubg.com/shards/$platform-region-shard/players/$player-id/seasons/$season-name"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+To see what the season stats response will look like, please head over to the :ref:`seasons` page.
 
 
 
@@ -124,33 +157,3 @@ In the response there will be an array of abbreviated match objects containing I
 Getting Telemetry Data
 ----------------------
 Telemetry data will provide you with additional information for each match. This data is compressed using gzip and clients using the API should specify that they accept gzip compressed responses. The URL string that links to the telemetry file for a match can be found in the Asset Object of that match. For additional information, please refer to the :ref:`telemetry` page.
-
-
-Getting Player Season Stats
------------------------------
-The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season.
-
-We start by querying the seasons endpoint to get a list of seasons like this. Please be sure to replace '$platform-region-shard' with your own information::
-
-  curl -g "https://api.pubg.com/shards/$platform-region-shard/seasons" \
-  -H "Authorization: Bearer $api-key" \
-  -H "Accept: application/vnd.api+json"
-
-In the response you will see seasons listed like this::
-
-  {
-    "type": "season",
-    "id": "$season-name"
-    "isCurrentSeason" true:
-    "isOffseason": false:
-  }
-
-**Note: The list of seasons will only be changing about once per month when a new seasons is added. Applications should not be querying for the list of seasons more than once per month.**
-
-With this information, we can now query the players endpoint like this. Please be sure to replace '$platform-region-shard', '$player-id', '$season-name', and with you own information::
-
-  curl -g "https://api.pubg.com/shards/$platform-region-shard/players/$player-id/seasons/$season-name"
-  -H "Authorization: Bearer $api-key" \
-  -H "Accept: application/vnd.api+json"
-
-To see what the season stats response will look like, please head over to the :ref:`players` page.

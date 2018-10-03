@@ -6,9 +6,9 @@ properties:
     type: integer
     description: "Number of enemy players this player damaged that were killed by teammates"
     minimum: 0
-  bestRankPoints [PC]:
+  bestRankPoint:
     type: number
-    description: "Highest number of rank points the player was awarded"
+    description: "[PC only] Highest number of rank points the player was awarded"
     minimum: 0
   boosts:
     type: integer
@@ -30,9 +30,9 @@ properties:
     type: integer
     description: ""
     minimum: 0
-  dailyWins [PC]:
+  dailyWins:
     type: integer
-    description: "Number of daily wins"
+    description: "[PC only] Number of daily wins"
     minimum: 0
   headshotKills:
     type: integer
@@ -42,14 +42,9 @@ properties:
     type: integer
     description: "Number of healing items used"
     minimum: 0
-  killPoints [PC]:
+  killPoints:
     type: number
-    description: "Points based on how many kills this player had"
-    minimum: 0
-    deprecated: true
-  killPoints [Xbox]:
-    type: number
-    description: "Points based on how many kills this player had"
+    description: "[Deprecated for PC] Points based on how many kills this player had."
     minimum: 0
   kills:
     type: integer
@@ -75,9 +70,9 @@ properties:
     type: number
     description: "Longest time survived in a match"
     minimum: 0
-  rankPoints [PC]:
+  rankPoints:
     type: number
-    description: "Number of rank points the player was awarded"
+    description: "[PC only] Number of rank points the player was awarded"
     minimum: 0
   revives:
     type: integer
@@ -103,9 +98,9 @@ properties:
     type: integer
     description: "Number of self-inflicted deaths"
     minimum: 0
-  swimDistance [PC]:
+  swimDistance:
     type: number
-    description:  "Total distance traveled while swimming measured in meters"
+    description:  "[PC only] Total distance traveled while swimming measured in meters"
     minimum: 0
   teamKills:
     type: integer
@@ -135,18 +130,13 @@ properties:
     type: integer
     description: ""
     minimum: 0
-  weeklyWins [PC]:
+  weeklyWins:
     type: integer
-    description: "Number of weekly wins"
+    description: "[PC only] Number of weekly wins"
     minimum: 0
-  winPoints [PC]:
+  winPoints:
     type: number
-    description: ""
-    minimum: 0
-    deprecated: true
-  winPoints [Xbox]:
-    type: number
-    description: ""
+    description: "[Deprecated for PC]"
     minimum: 0
   wins:
     type: integer
