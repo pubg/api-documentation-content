@@ -9,10 +9,6 @@ properties:
     type: string
     description: "Match ID"
   attributes:
-    seasonState:
-      type: string
-      description: "The state of the season"
-      enum: [closed, prepare, progress]
     type: object
     properties:
       createdAt:
@@ -37,6 +33,10 @@ properties:
       patchVersion:
         type: string
         description: "N/A"
+      seasonState:
+        type: string
+        description: "The state of the season"
+        enum: [closed, prepare, progress]
       shardId:
         type: string
         description: "Platform-region shard"
