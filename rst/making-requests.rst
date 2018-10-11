@@ -77,6 +77,7 @@ The PUBG API shards data by platform and region, and therefore requires a shard 
 - **xbox-eu** - Europe
 - **xbox-na** - North America
 - **xbox-oc** - Oceania
+- **xbox-sa** - South America
 - **pc-krjp** - Korea
 - **pc-jp** - Japan
 - **pc-na** - North America

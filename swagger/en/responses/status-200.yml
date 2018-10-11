@@ -4,15 +4,12 @@ content:
     schema:
       type: object
       properties:
-        id:
-          type: string
-        attributes:
+        data:
           type: object
           properties:
-            releasedAt:
+            type:
               type: string
-              format: dateTime
-              description: "The most recent release date"
-            version:
+              format: "status"
+            id:
               type: string
-              description: "The version of the API service"
+              format: "pubg-api"
