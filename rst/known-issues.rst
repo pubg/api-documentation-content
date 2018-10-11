@@ -16,24 +16,6 @@ The following items are misspelled in the telemetry:
 
 
 
-Inconsistent Time Zones
------------------------
-LogMatchDefinition events have a different format for their timestamp. It appears as 2018-04-05T22:17:38.0817861+00:00" as opposed to "2018-04-05T22:16:10.064Z" for other events.
-
-
-
-Missing Attacker Info
----------------------
-Attacker ID and location are always 0 in LogPlayerTakeDamage events.
-
-
-
-Duplicate Ranks
----------------
-Sometimes multiple rosters in a match have the same rank.
-
-
-
 Empty Participant stats
 -----------------------
 The following participant stats seem to always be 0:
@@ -41,3 +23,27 @@ The following participant stats seem to always be 0:
 - lastWinPoints
 - mostDamage
 - lastKillPoints
+
+
+
+Missing LogItemDrop Events
+--------------------------
+LogItemDrop events are missing for attachments that are dropped at the same time as detaching them from a weapon. Attachments that are not attached to a weapon are logged normally when dropped.
+
+
+
+[Xbox] Missing Attacker Info
+-----------------------------
+Attacker ID and location are always 0 in LogPlayerTakeDamage events.
+
+
+
+[Xbox] Incorrect Kill Distance For Knocked Kills
+-------------------------------------------------
+killDistance is not always accurate for knocked kills.
+
+
+
+[Xbox] Duplcate Attack IDs
+--------------------------
+Sometimes there are duplicate attackIds in a single telemetry file.
