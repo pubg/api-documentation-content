@@ -9,6 +9,25 @@ Upcoming Changes
 ++++++++++++++++
 No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
+
+
+v7.0.0
+------
+
+New Data:
+
+- [Xbox] New region xbox-sa has been added for South America
+
+Removed:
+
+- status.id
+- status.attributes
+
+Added:
+
+- status.data.type
+- status.data.id
+
 v6.0.0
 -------
 
