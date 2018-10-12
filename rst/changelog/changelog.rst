@@ -17,6 +17,8 @@ Deprecated:
 
 - [PC] participant.attributes.stats.rankPoints
 
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
 
 
 v7.1.0
