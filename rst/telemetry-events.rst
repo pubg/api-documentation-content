@@ -159,11 +159,12 @@ LogPlayerAttack
 ---------------
 .. code-block:: none
 
-  "attackId":   int,
-  "attacker":   {Character},
-  "attackType": string,
-  "weapon":     {Item},
-  "vehicle":    {Vehicle}
+  "attackId":             int,
+  "fireWeaponStackCount": int,
+  "attacker":             {Character},
+  "attackType":           string,
+  "weapon":               {Item},
+  "vehicle":              {Vehicle}
 
 
 

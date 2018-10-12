@@ -7,7 +7,27 @@ Changelog
 
 Upcoming Changes
 ++++++++++++++++
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+v7.2.0 (planned for 10/19/18)
+-----------------------------
+Posted: 10/12/18
+
+Deprecated:
+
+- [PC] participant.attributes.stats.rankPoints
+
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v7.1.0
+------
+
+New Data:
+
+- [PC] Added LogPlayerAttack.fireWeaponStackCount
+- The /seasons endpoint can now be queried by platform in addition to platform-region
 
 
 
