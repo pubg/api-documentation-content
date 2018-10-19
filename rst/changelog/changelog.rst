@@ -9,9 +9,9 @@ Upcoming Changes
 ++++++++++++++++
 .. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-v7.2.0 (planned for 10/19/18)
+v7.2.0 (planned for 10/24/18)
 -----------------------------
-Posted: 10/12/18
+Posted: 10/12/18, Updated: 10/19/18 (changed planned date to 10/24/18)
 
 Deprecated:
 
