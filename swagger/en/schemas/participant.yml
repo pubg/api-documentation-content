@@ -97,7 +97,7 @@ properties:
           rankPoints:
             type: number
             description: "[PC only] Number of rank points before the match began"
-            minimum: 0
+            deprecated: true
           revives:
             type: integer
             description: "Number of times this player revived teammates"
