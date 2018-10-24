@@ -72,7 +72,7 @@ properties:
     minimum: 0
   rankPoints:
     type: number
-    description: "[PC only] Number of rank points the player was awarded"
+    description: "[PC only] Number of rank points the player was awarded. This value will be 0 when roundsPlayed < 10"
     minimum: 0
   revives:
     type: integer

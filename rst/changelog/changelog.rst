@@ -19,6 +19,10 @@ Deprecated:
 
 - [PC] participant.attributes.stats.rankPoints
 
+Data Changes:
+
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints will be 0 when roundsPlayed < 10
+
 
 
 v7.1.0
