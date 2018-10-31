@@ -3,8 +3,8 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: Notes:<br>
-    - Both "https://api.pubg.com/shards/{platform}" and "https://api.pubg.com/shards/{platform-region}" can be used to get matches.<br>
+  description: Notes:<br><br>
+    - Both "https://api.pubg.com/shards/{platform}" and "https://api.pubg.com/shards/{platform-region}" can be used to get matches.<br><br>
     - Any property with \"N/A\" as its description is not currently in use."
 servers:
   - url: https://api.pubg.com/shards/{platform-region}

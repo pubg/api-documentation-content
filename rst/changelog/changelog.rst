@@ -12,6 +12,15 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v7.3.0
+------
+
+New Data:
+
+- [PC] Lifetime Stats as of division.bro.official.pc-2018-01 are available per gameMode by using "lifetime" as the seasonId at the /players/{accountId}/seasons/{seasonId} endpoint.
+
+
+
 v7.2.0
 ------
 

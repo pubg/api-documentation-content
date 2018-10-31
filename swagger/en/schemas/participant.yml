@@ -96,7 +96,7 @@ properties:
             description: "Account ID of the player associated with this participant"
           rankPoints:
             type: number
-            description: "[PC only] Number of rank points before the match began"
+            description: "N/A"
             deprecated: true
           revives:
             type: integer
