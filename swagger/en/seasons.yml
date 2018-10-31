@@ -3,10 +3,10 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description:  Notes:<br>
-    - Use "https://api.pubg.com/shards/{platform}" for PC players' season stats for seasons after "division.bro.official.2018-09".<br>
-    - Use "https://api.pubg.com/shards/{platform-region}" for Xbox, and to get season stats for PC players' prior to and including "division.bro.official.2018-09".<br>
-    - The list of seasons for both PC and Xbox can be queried using either URL.
+  description:  Notes:<br><br>
+    - Use "https://api.pubg.com/shards/{platform}" for PC players' season stats for seasons after "division.bro.official.2018-09".<br><br>
+    - Use "https://api.pubg.com/shards/{platform-region}" for Xbox, and to get season stats for PC players' prior to and including "division.bro.official.2018-09".<br><br>
+    - The list of seasons for both PC and Xbox can be queried using either URL.<br><br>
     - Any property with \"N/A\" as its description is not currently in use.
 servers:
   - url: https://api.pubg.com/shards/{platform}

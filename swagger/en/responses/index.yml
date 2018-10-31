@@ -11,8 +11,8 @@ errors:
   tooManyRequests:
     $ref: './tooManyRequests.yml'
 
-status-200:
-  $ref: './status-200.yml'
+lifetime-200:
+  $ref: './match-200.yml'
 
 match-200:
   $ref: './match-200.yml'
@@ -31,6 +31,9 @@ playerSeason-200:
 
 seasons-200:
   $ref: './seasons-200.yml'
+
+status-200:
+  $ref: './status-200.yml'
 
 tournaments-200:
   $ref: './tournaments-200.yml'

@@ -13,6 +13,9 @@ playerSeason:
 seasons:
   $ref: './seasons.yml'
 
+lifetime:
+  $ref: './lifetime.yml'
+
 status:
   $ref: './status.yml'
 

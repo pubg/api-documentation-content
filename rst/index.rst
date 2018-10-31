@@ -11,6 +11,7 @@ PUBG API Documentation
   making-requests
   players-endpoint
   seasons-endpoint
+  lifetime-stats
   matches-endpoint
   tournaments-endpoint
   samples-endpoint
