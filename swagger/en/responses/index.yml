@@ -12,7 +12,7 @@ errors:
     $ref: './tooManyRequests.yml'
 
 lifetime-200:
-  $ref: './match-200.yml'
+  $ref: './lifetime-200.yml'
 
 match-200:
   $ref: './match-200.yml'
