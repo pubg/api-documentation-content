@@ -29,21 +29,3 @@ The following participant stats seem to always be 0:
 Missing LogItemDrop Events
 --------------------------
 LogItemDrop events are missing for attachments that are dropped at the same time as detaching them from a weapon. Attachments that are not attached to a weapon are logged normally when dropped.
-
-
-
-[Xbox] Missing Attacker Info
------------------------------
-Attacker ID and location are always 0 in LogPlayerTakeDamage events.
-
-
-
-[Xbox] Incorrect Kill Distance For Knocked Kills
--------------------------------------------------
-killDistance is not always accurate for knocked kills.
-
-
-
-[Xbox] Duplcate Attack IDs
---------------------------
-Sometimes there are duplicate attackIds in a single telemetry file.

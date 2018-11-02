@@ -12,6 +12,21 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v7.4.0
+------
+
+Bug Fixes:
+
+- [Xbox] Fixed an issue where there were sometimes duplicate attackIds within a single telemetry file
+- [Xbox] Fixed an issue where the killDistance was not always accurate for knocked kills
+- [Xbox] Health and location will now show values other than "0" for the attacker in LogPlayerTakeDamage events
+
+New Data:
+
+- Added LogPlayerPosition.vehicle
+
+
+
 v7.3.0
 ------
 
@@ -24,13 +39,13 @@ New Data:
 v7.2.0
 ------
 
-Deprecated:
-
-- [PC] participant.attributes.stats.rankPoints
-
 Data Changes:
 
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints will be 0 when roundsPlayed < 10
+
+Deprecated:
+
+- [PC] participant.attributes.stats.rankPoints
 
 
 
@@ -50,24 +65,18 @@ v7.0.0
 New Data:
 
 - [Xbox] New region xbox-sa has been added for South America
+- status.data.type
+- status.data.id
 
 Removed:
 
 - status.id
 - status.attributes
 
-Added:
 
-- status.data.type
-- status.data.id
 
 v6.0.0
 -------
-
-Data Changes:
-
-- [PC] Matches and season stats from 10/3 onwards will be global and sharded by platform. PC Data prior to 10/3 and Xbox data will still be accessible with the old URL format.
-- [PC] PC seasons after division.bro.official.2018-09 will be in the format division.bro.official.pc-{Year-Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-09 is division.bro.official.pc-2018-01.
 
 New Data:
 
@@ -79,6 +88,11 @@ New Data:
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.swimDistance
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.weeklyWins
+
+Data Changes:
+
+- [PC] Matches and season stats from 10/3 onwards will be global and sharded by platform. PC Data prior to 10/3 and Xbox data will still be accessible with the old URL format.
+- [PC] PC seasons after division.bro.official.2018-09 will be in the format division.bro.official.pc-{Year-Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-09 is division.bro.official.pc-2018-01.
 
 Deprecated:
 
@@ -167,15 +181,16 @@ Data Changes:
 
 v2.0.0
 ------
-Deprecated:
-
-- player.attributes.createdAt
-- player.attributes.updatedAt
 
 Bug Fixes:
 
 - participant.attributes.stats.timeSurvived -- int -> number
 - participant.attributes.stats.longestKill -- int -> number
+
+Deprecated:
+
+- player.attributes.createdAt
+- player.attributes.updatedAt
 
 Removed:
 
