@@ -160,7 +160,7 @@ LogPlayerAttack
 .. code-block:: none
 
   "attackId":             int,
-  "fireWeaponStackCount": int,
+  "fireWeaponStackCount": int,                // PC only
   "attacker":             {Character},
   "attackType":           string,
   "weapon":               {Item},
@@ -227,6 +227,7 @@ LogPlayerPosition
 .. code-block:: none
 
   "character":       {Character},
+  "vehicle":         {Vehicle},
   "elapsedTime":     number,
   "numAlivePlayers": int
 
