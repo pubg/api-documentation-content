@@ -52,7 +52,7 @@ properties:
               type: string
               description: "The player's IGN"
             rank:
-              type: int
+              type: integer
               description: "The player's current rank"
             stats:
               type: object
@@ -60,7 +60,7 @@ properties:
               properties:
                 rankPoints:
                   type: number
-                  description: "N/A"
+                  description: "Number of rank points the player was awarded."
                 wins:
                   type: integer
                   description: "Number of matches won"
@@ -74,7 +74,7 @@ properties:
                   description: "Win ratio"
                   minimum: 0
                 averageDamage:
-                  type: int
+                  type: integer
                   description: "Average amount of damage dealt per match"
                   minimum: 0
                 kills:
