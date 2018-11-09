@@ -6,9 +6,36 @@ Changelog
 
 
 Upcoming Changes
-++++++++++++++++
+----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+v8.0.0 (Planned for Nov 30, 2018)
++++++++++++++++++++++++++++++++++
+Posted Nov 9, 2018
+
+Removed:
+
+- The /players endpoint can no longer be queried by platform-region.
+
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v7.5.0
+------
+
+Bug Fix:
+
+- [PC] Fixed an issue where the timeSurvived and duration were sometimes a timestamp instead of seconds if a player logged out and then reconnected to the game before the match started.
+
+New Data:
+
+- [PC] The leaderboards endpoint has been added and will return the top 100 players for each game mode.
+
+Data Changes:
+
+- The /players endpoint can now be queried by platform in addition to platform-region.
 
 
 

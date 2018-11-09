@@ -11,6 +11,9 @@ errors:
   tooManyRequests:
     $ref: './tooManyRequests.yml'
 
+leaderboards-200:
+  $ref: './leaderboards-200.yml'
+
 lifetime-200:
   $ref: './lifetime-200.yml'
 

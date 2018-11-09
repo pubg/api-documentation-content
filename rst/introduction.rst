@@ -21,6 +21,13 @@ We created the API's endpoint documentation using the `OpenAPI specification <ht
 
 
 
+Finding Assets, Data Dictionaries, and Enums
+--------------------------------------------
+
+Data dictionaries and enums can be found `on GitHub <https://github.com/pubg/api-assets>`_.
+
+
+
 Getting Help
 ------------
 We recommend taking a look at the `FAQ <https://developer.pubg.com/faq>`_ for the answers to some common questions. You can also visit the `forums <https://forums.pubg.com/forum/246-pubg-api-community-developers/>`_ or join the `official PUBG Developer API Discord server <https://discord.gg/FcsT7t3>`_ to meet, chat, troubleshoot, and collaborate with other community developers and designers.

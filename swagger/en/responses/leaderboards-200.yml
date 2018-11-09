@@ -1,0 +1,8 @@
+description: Leaderboards response
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          $ref: '../schemas/index.yml#/leaderboards'

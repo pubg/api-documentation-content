@@ -1,0 +1,17 @@
+get:
+  tags:
+  - Leaderboards
+  summary: Get the leaderboard for a game mode.
+  parameters:
+    - $ref: '../parameters/index.yml#/gameMode'
+  responses:
+    200:
+      $ref: '../responses/index.yml#/leaderboards-200'
+    401:
+      $ref: '../responses/index.yml#/errors/unauthorized'
+    404:
+      $ref: '../responses/index.yml#/errors/notFound'
+    415:
+      $ref: '../responses/index.yml#/errors/unsupportedMediaType'
+    429:
+      $ref: '../responses/index.yml#/errors/tooManyRequests'

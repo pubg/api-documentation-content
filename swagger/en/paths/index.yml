@@ -1,29 +1,32 @@
-match:
-  $ref: './match.yml'
-
-players: 
-  $ref: './players.yml'
-
-player: 
-  $ref: './player.yml'
-
-playerSeason:
-  $ref: './playerSeason.yml'
-
-seasons:
-  $ref: './seasons.yml'
+leaderboards:
+  $ref: './leaderboards.yml'
 
 lifetime:
   $ref: './lifetime.yml'
 
-status:
-  $ref: './status.yml'
+match:
+  $ref: './match.yml'
+
+player: 
+  $ref: './player.yml'
+
+players: 
+  $ref: './players.yml'
+
+playerSeason:
+  $ref: './playerSeason.yml'
 
 samples:
   $ref: './samples.yml'
+  
+seasons:
+  $ref: './seasons.yml'
 
-tournaments:
-  $ref: './tournaments.yml'
+status:
+  $ref: './status.yml'
 
 tournamentList:
   $ref: './tournamentList.yml'
+
+tournaments:
+  $ref: './tournaments.yml'

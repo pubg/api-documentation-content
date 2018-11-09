@@ -7,6 +7,14 @@ info:
     - Both "https://api.pubg.com/shards/{platform}" and "https://api.pubg.com/shards/{platform-region}" can be used to get matches.<br><br>
     - Any property with \"N/A\" as its description is not currently in use."
 servers:
+  - url: https://api.pubg.com/shards/{platform}
+    variables:
+      "platform":
+        enum:
+        - "steam"
+        - "xbox"
+        - "kakao"
+        default: steam
   - url: https://api.pubg.com/shards/{platform-region}
     variables:
       "platform-region":
@@ -28,13 +36,6 @@ servers:
         - "pc-as"
         - "pc-tournament"
         default: pc-na
-  - url: https://api.pubg.com/shards/{platform}
-    variables:
-      "platform":
-        enum:
-        - "kakao"
-        - "steam"
-        default: steam
 
 security:
   - ApiKeyAuth: []
