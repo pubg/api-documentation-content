@@ -1,29 +1,32 @@
+asset:
+  $ref: './asset.yml'
+
+gameModeStats:
+  $ref: './gameModeStats.yml'
+
+leaderboards:
+  $ref: './leaderboards.yml'
+
 match:
   $ref: './match.yml'
 
 matchList:
   $ref: './matchList.yml'
 
+participant:
+  $ref: './participant.yml'
+
 player:
   $ref: './player.yml'
-
-gameModeStats:
-  $ref: './gameModeStats.yml'
-
-season:
-  $ref: './season.yml'
 
 roster:
   $ref: './roster.yml'
 
-asset:
-  $ref: './asset.yml'
-
-participant:
-  $ref: './participant.yml'
-
 sample:
   $ref: './sample.yml'
+
+season:
+  $ref: './season.yml'
 
 tournament:
   $ref: './tournament.yml'

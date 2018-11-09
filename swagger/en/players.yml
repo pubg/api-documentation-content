@@ -3,9 +3,19 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: "Note: Any property with \"N/A\" as its description is not currently in use."
+  description: Notes:<br><br>
+    - Both "https://api.pubg.com/shards/{platform}" and "https://api.pubg.com/shards/{platform-region}" can be used to search for players, but the first URL will only show matches that were played after November 8, 2018.<br><br>
+    - Any property with \"N/A\" as its description is not currently in use."
 
 servers:
+  - url: https://api.pubg.com/shards/{platform}
+    variables:
+      "platform":
+        enum:
+        - "steam"
+        - "xbox"
+        - "kakao"
+        default: steam
   - url: https://api.pubg.com/shards/{platform-region}
     variables:
       "platform-region":

@@ -132,6 +132,23 @@ To see what match response will look like, please head over to the :ref:`matches
 
 
 
+Getting Leaderboard Data
+-------------------------
+
+You can get the current leaderboard data for each game mode like this::
+
+  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$gameMode \
+  -H "Authorization: Bearer api-key" \
+  -H "Accept: application/vnd.api+json"
+
+Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. The leaderboard includes the top 100 players for the specified game mode.
+
+**Note: Leaderboard data is currently only available for PC**
+
+To see what match response will look like, please head over to the :ref:`leaderboards` page.
+
+
+
 Getting Tournament Matches
 --------------------------
 Start by getting the list of tournaments to obtain the ID for the tournament you want to lookup like this::

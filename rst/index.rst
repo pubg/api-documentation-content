@@ -13,6 +13,7 @@ PUBG API Documentation
   seasons-endpoint
   lifetime-stats
   matches-endpoint
+  leaderboards-endpoint
   tournaments-endpoint
   samples-endpoint
   telemetry

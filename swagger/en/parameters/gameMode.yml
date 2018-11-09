@@ -1,0 +1,13 @@
+name: gameMode
+in: path
+description: "The game mode to search for."
+required: true
+schema:
+  type: string
+  enum:
+    - "duo"
+    - "duo-fpp"
+    - "solo"
+    - "solo-fpp"
+    - "squad"
+    - "squad-fpp"

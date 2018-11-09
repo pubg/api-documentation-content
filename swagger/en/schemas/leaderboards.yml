@@ -1,0 +1,99 @@
+title: Leaderboard Object
+description: "Leaderboard objects show the current rank of the top 100 players for a game mode."
+type: object
+properties:
+  type:
+    type: string
+    description: Identifier for this object type ("leaderboard")
+  id:
+    type: string
+    description: "A randomly generated ID assigned to this resource object for linking elsewhere in the leaderboard response"
+  attributes:
+    type: object
+    properties:
+      shardId:
+        type: string
+        description: "Platform shard"
+      gameMode:
+        type: string
+        description: "The game mode"
+  relationships:
+    type: object
+    properties:
+      players:
+        type: object
+        properties:
+          data:
+            type: array
+            items:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: Identifier for this object type ("player")
+                id:
+                  type: string
+                  description: "The accountId of the player"
+  included:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Identifier for this object type ("player")
+        id:
+          type: string
+          description: "The accountId of the player"
+        atributes:
+          type: object
+          properties:
+            name:
+              type: string
+              description: "The player's IGN"
+            rank:
+              type: int
+              description: "The player's current rank"
+            stats:
+              type: object
+              description: "Player stats in the context of a season"
+              properties:
+                rankPoints:
+                  type: number
+                  description: "N/A"
+                wins:
+                  type: integer
+                  description: "Number of matches won"
+                  minimum: 0
+                games:
+                  type: integer
+                  description: "Number of games played"
+                  minimum: 0
+                winRatio:
+                  type: number
+                  description: "Win ratio"
+                  minimum: 0
+                averageDamage:
+                  type: int
+                  description: "Average amount of damage dealt per match"
+                  minimum: 0
+                kills:
+                  type: integer
+                  description: "Number of enemy players killed"
+                  minimum: 0
+                killDeathRatio:
+                  type: number
+                  description: "Kill death ratio"
+                  minimum: 0
+                averageRank:
+                  type: number
+                  description: "Average rank"
+                  minimum: 0
+  links:
+    type: object
+    properties:
+      self:
+        type: string
+        description: "Link to this object"
+      meta:
+        type: object
