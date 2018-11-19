@@ -147,7 +147,7 @@ LogMatchStart
   "characters":            [{Character}, ...],
   "cameraViewBehaviour":   string,             
   "teamSize":              int,
-  "isCustomGame":          bool,               // PC only
+  "isCustomGame":          bool,
   "isEventMode":           bool,               // PC only    
   "blueZoneCustomOptions": string              
 
