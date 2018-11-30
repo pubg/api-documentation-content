@@ -13,7 +13,7 @@ properties:
     properties:
       shardId:
         type: string
-        description: "Platform-region Shard"
+        description: "platform-region or platform shard"
       stats:
         type: object
         properties:

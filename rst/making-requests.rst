@@ -69,32 +69,47 @@ To specify the headers, use this code:
 
 .. _regions:
 
-Regions
--------
-The PUBG API shards data by platform and region, and therefore requires a shard to be specified in the URL for most requests. The current shards are:
+Platforms and Regions
+---------------------
+The PUBG API shards data by either `platform` or `platform-region` depending on the request, and therefore requires a shard to be specified in the URL for most requests. The current shards are:
 
+**shards/$platform** - *the platform shard*
+
+- **kakao** - Kakao
+- **psn** - PS4
+- **steam** - Steam
+- **xbox** - Xbox
+
+**shards/$platform-region** - *the platform-region shard*
+
+- **pc-as** - Asia
+- **pc-eu** - Europe
+- **pc-jp** - Japan
+- **pc-kakao** - Kakao
+- **pc-krjp** - Korea
+- **pc-na** - North America
+- **pc-oc** - Oceania
+- **pc-ru** - Russia
+- **pc-sa** - South and Central America
+- **pc-sea** - South East Asia
+- **pc-tournament** - Tournaments
+- **psn-as** - Asia
+- **psn-eu** - Europe
+- **psn-na** - North America
+- **psn-oc** - Oceania
 - **xbox-as** - Asia
 - **xbox-eu** - Europe
 - **xbox-na** - North America
 - **xbox-oc** - Oceania
 - **xbox-sa** - South America
-- **pc-krjp** - Korea
-- **pc-jp** - Japan
-- **pc-na** - North America
-- **pc-eu** - Europe
-- **pc-ru** - Russia
-- **pc-oc** - Oceania
-- **pc-kakao** - Kakao
-- **pc-sea** - South East Asia
-- **pc-sa** - South and Central America
-- **pc-as** - Asia
-- **pc-tournament** - Tournaments
-- **steam** - Steam Platform
-- **kakao** - Kakao Platform
-  
-Either "steam" or "kakao" must be used to get PC players' season stats for seasons after "division.bro.official.2018-09". The other PC shards are deprecated as of October 3, 2018 for season stats beginning with "division.bro.official.pc-2018-01". The shard is specified after the pubg domain and before the endpoint like this::
 
-  "...pubg.com/shards/pc-krjp/endpoint..."
+The shard is specified after the pubg domain and before the endpoint like this::
+
+  "...pubg.com/shards/steam/endpoint..."
+
+**The platform shard should be used to get PC players' season stats for seasons after "division.bro.official.2018-09". The platform-region shard is deprecated for PC as of October 3, 2018 for season stats beginning with "division.bro.official.pc-2018-01".**
+
+**The platform shard should be used at the players endpoint. The platform-region shard is deprecated as of November 30, 2018 for the players endpoint.**
 
 
 

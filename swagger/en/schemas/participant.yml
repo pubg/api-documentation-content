@@ -16,7 +16,7 @@ properties:
         description: "N/A"
       shardId:
         type: string
-        description: "Platform-region shard"
+        description: "platform-region or platform shard"
       stats:
         type: object
         description: "Player stats in the context of a match"

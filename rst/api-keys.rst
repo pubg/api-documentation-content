@@ -5,7 +5,7 @@ API Keys
 
 Authorization
 -------------
-We require that a JSON Web Token `JWT <https://jwt.io/>`_ be sent along with requests via the `Authorization` header. There's no need to create JWTs manually since they will be created for you when you register for the API - Register at |dev_portal_url|
+We require that a JSON Web Token `JWT <https://jwt.io/>`_ be sent along with requests via the `Authorization` header. There's no need to create JWTs manually since they will be created for you when you register for the API - Register at |dev_portal_url| to receive a free API key with a rate limit of 10 requests per minute. You can find more information about rate limits on the :ref:`rate-limits` page. 
 
 JWTs are passed as bearer tokens in the `Authorization` header, and look like the following::
 

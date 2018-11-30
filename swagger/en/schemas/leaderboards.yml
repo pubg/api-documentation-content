@@ -13,7 +13,7 @@ properties:
     properties:
       shardId:
         type: string
-        description: "Platform shard"
+        description: "platform shard"
       gameMode:
         type: string
         description: "The game mode"
@@ -45,7 +45,7 @@ properties:
         id:
           type: string
           description: "The accountId of the player"
-        atributes:
+        attributes:
           type: object
           properties:
             name:

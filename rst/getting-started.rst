@@ -8,13 +8,11 @@ The URL
 -------
 When making a request to the PUBG API, the URL controls what data you will get back and how it will be displayed. Let's take a look at this example URL and break down the interesting bits::
 
-  "https://api.pubg.com/shards/$platform-region/players?filter[playerNames]=$playerName"    
+  "https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName"    
 
-**shards/$platform-region** - *the platform region shard*
+**shards/$platform** - *the platform shard*
     
-- The PUBG API shards data by platform and region, and therefore requires a shard to be specified in the URL for most requests. For more information about shards, please see :ref:`regions`
-
-**Note: Use the steam or kakao shard when making requests for PC players' season stats for seasons after division.bro.official.2018-09.**
+- The PUBG API shards data by platform and region, and therefore requires a shard to be specified in the URL for most requests. In some cases, only the platform is required for the shard. In others, the `platform-region` shard is required. You can determine which is the case for your particular request to the PUBG API by checking the endpoint's documentation page. For more information about shards, please see :ref:`regions`
 
 **players** - *the endpoint to query*
 
@@ -22,7 +20,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
 
 **filter[playerNames]=$playerName** - *a filter specifying which players to search for*
 
-- There are a variety of filters and options that can narrow down a search, organize results, and more! More information about each available filter can be found within each endpoint documentation page.
+- There are a variety of filters and options that can narrow down a search, organize results, and more! More information about each available filter can be found within each endpoint's documentation page.
 
 This URL will return a player object containing information about the requested player including a list of their recent match IDs. We will get into that more later in the tutorial.
 
@@ -50,9 +48,9 @@ The content type string will look like this::
 
 Putting the Request Together
 ----------------------------
-We now have all of the pieces that we need to make our first request! Just make sure that you replace '$platform-region' and '$playerName' with your own information. Using CURL as an example, it will look like this::
+We now have all of the pieces that we need to make our first request! Just make sure that you replace '$platform' and '$playerName' with your own information. Using CURL as an example, it will look like this::
 
-  curl -g "https://api.pubg.com/shards/$platform-region/players?filter[playerNames]=$playerName" \
+  curl -g "https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName" \
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
@@ -64,13 +62,13 @@ Getting Player Season Stats
 -----------------------------
 The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season.
 
-We start by querying the seasons endpoint to get a list of seasons like this. Please be sure to replace '$platform-region' with your own information::
+**Note: The list of seasons will only be changing about once every two months when a new seasons is added. Applications should not be querying for the list of seasons more than once per month.**
 
-  curl -g "https://api.pubg.com/shards/$platform-region/seasons" \
+We start by querying the seasons endpoint to get a list of seasons like this. Please be sure to replace '$platform' with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/seasons" \
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
-
-**Note: Use the steam or kakao shard when making requests for PC players' season stats for seasons after division.bro.official.2018-09. PC seasons after division.bro.official.2018-09 will be in the format division.bro.official.pc-{Year-Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-09 is division.bro.official.pc-2018-01.**
 
 In the response you will see seasons listed like this::
 
@@ -81,13 +79,23 @@ In the response you will see seasons listed like this::
     "isOffseason": false:
   }
 
-**Note: The list of seasons will only be changing about once per month when a new seasons is added. Applications should not be querying for the list of seasons more than once per month.**
+**Note: PC seasons after division.bro.official.2018-09 will be in the format division.bro.official.pc-{Year-Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-09 is division.bro.official.pc-2018-01.**
 
-With this information, we can now query the players endpoint like this. Please be sure to replace '$platform-region', '$playerId', and '$seasonId' with you own information::
+With this information, we can now query the API for season stats like this. Please be sure to replace '$platform-region', '$playerId', and '$seasonId' with you own information::
 
   curl -g "https://api.pubg.com/shards/$platform-region/players/$playerId/seasons/$seasonId"
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
+
+**shards/$platform** - *the platform shard*
+
+**shards/$platform-region** - *the platform-region shard*
+
+**Note: Use the platform shard when making requests for PC players' season stats for seasons after division.bro.official.2018-09. Use the platform-region shard for making any other requests for players' season stats.**
+
+For more information about shards, please see :ref:`regions`
+
+The match IDs for matches that count toward season stats will also be available. Custom matches and matches older than 14 days will not be available.
 
 To see what the season stats response will look like, please head over to the :ref:`seasons` page.
 
@@ -96,9 +104,9 @@ To see what the season stats response will look like, please head over to the :r
 Getting Player Lifetime Stats
 -----------------------------
 
-Lifetime stats can be obtained for PC players by querying the seasons endpoint and using "lifetime" as the '$seasonId'. Please be sure to replace '$platform-region', and '$playerId' with you own information::
+Lifetime stats can be obtained for PC players by querying the seasons endpoint and using "lifetime" as the '$seasonId'. Please be sure to replace '$platform', and '$playerId' with you own information::
 
-  curl -g "https://api.pubg.com/shards/$platform-region/players/$playerId/seasons/lifetime"
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/lifetime"
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
@@ -121,14 +129,16 @@ Within the response from the players endpoint, you should see a list of match ID
     ]
   }
 
-We can use this ID to retrieve the match from the matches endpoint like this. Please be sure the replace '$platform-region' and '$matchId' with your own information::
+We can use this ID to retrieve the match from the matches endpoint like this. Please be sure the replace '$platform' and '$matchId' with your own information::
 
-  curl -g "https://api.pubg.com/shards/$platform-region/matches/$matchId" \
+  curl -g "https://api.pubg.com/shards/$platform/matches/$matchId" \
   -H "Accept: application/vnd.api+json"
 
 **Note: Make sure to use the pc-tournament shard when getting tournament matches.**
 
-To see what match response will look like, please head over to the :ref:`matches` page.
+**The data retention period is 14 days. Match data older than 14 days will not be available.**
+
+To see what match responses look like, please head over to the :ref:`matches` page.
 
 
 
@@ -143,7 +153,7 @@ You can get the current leaderboard data for each game mode like this::
 
 Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. The leaderboard includes the top 100 players for the specified game mode.
 
-**Note: Leaderboard data is currently only available for PC**
+**Note: Leaderboard data is currently only available for PC.**
 
 To see what match response will look like, please head over to the :ref:`leaderboards` page.
 

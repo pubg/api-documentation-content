@@ -10,15 +10,28 @@ Upcoming Changes
 
 .. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-v8.0.0 (Planned for Nov 30, 2018)
-+++++++++++++++++++++++++++++++++
-Posted Nov 9, 2018
+v7.7.0 (TBD)
+++++++++++++
+Posted Nov 30, 2018
 
-Removed:
+New Data:
 
-- The /players endpoint can no longer be queried by platform-region.
+- [PS4] The PS4 platform is supported.
 
 To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v7.6.0
+------
+
+Bug Fixes:
+
+- Fixed an issue where if there were two accounts with the same IGN, the most recent accountId was not returned for queries to the /players endpoint.
+
+Deprecated:
+
+- The platform-region shard is deprecated for the /players endpoint and the API will respond by returning data for all regions for the platform as if queried using the platform shard.
 
 
 

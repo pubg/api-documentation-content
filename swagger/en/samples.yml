@@ -9,21 +9,25 @@ servers:
     variables:
       "platform-region":
         enum:
+        - "pc-as"
+        - "pc-eu"
+        - "pc-jp"
+        - "pc-krjp"
+        - "pc-kakao"
+        - "pc-na"
+        - "pc-oc"
+        - "pc-ru"
+        - "pc-sa"
+        - "pc-sea"
+        - "psn-as"
+        - "psn-eu"
+        - "psn-na"
+        - "psn-oc"
         - "xbox-as"
         - "xbox-eu"
         - "xbox-na"
         - "xbox-oc"
         - "xbox-sa"
-        - "pc-krjp"
-        - "pc-jp"
-        - "pc-na"
-        - "pc-eu"
-        - "pc-ru"
-        - "pc-oc"
-        - "pc-kakao"
-        - "pc-sea"
-        - "pc-sa"
-        - "pc-as"
         default: pc-na
 
 security:

@@ -1,5 +1,5 @@
 title: Player Object
-description: "Player objects contain information about a player and a list of their recent matches (up to 14 days old). Note: player objects are specific to platform-region shards."
+description: "Player objects contain information about a player and a list of their recent matches (up to 14 days old). Note: player objects are specific to platform shards."
 type: object
 properties:
   type:
@@ -16,7 +16,7 @@ properties:
         description: "PUBG IGN"
       shardId:
         type: string
-        description: "Platform-region shard"
+        description: "platform shard"
       stats:
         type: object
         description: "N/A"
