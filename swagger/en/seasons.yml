@@ -14,6 +14,8 @@ servers:
       "platform":
         enum:
         - "steam"
+        - "psn"
+        - "xbox"
         - "kakao"
         default: steam
   - url: https://api.pubg.com/shards/{platform-region}
