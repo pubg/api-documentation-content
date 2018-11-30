@@ -1,7 +1,7 @@
 get:
   tags:
   - Status
-  summary: Check the status of the API
+  summary: Check the status of the API.
   description: "The status endpoint can be called to verify that the API is up and running. It also provides the most recent release date and version of the API service itself."
   responses:
     200:

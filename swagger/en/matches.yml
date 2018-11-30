@@ -4,7 +4,8 @@ info:
   version: 1.0.0
   title: ""
   description: Notes:<br><br>
-    - Both "https://api.pubg.com/shards/{platform}" and "https://api.pubg.com/shards/{platform-region}" can be used to get matches.<br><br>
+    - Both the plaform shard and the platform-region shard can be used to get matches.<br><br>
+    - The data retention period is 14 days. Match data older than 14 days will not be available.<br><br>
     - Any property with \"N/A\" as its description is not currently in use."
 servers:
   - url: https://api.pubg.com/shards/{platform}
@@ -12,6 +13,7 @@ servers:
       "platform":
         enum:
         - "steam"
+        - "psn"
         - "xbox"
         - "kakao"
         default: steam
@@ -19,22 +21,26 @@ servers:
     variables:
       "platform-region":
         enum:
+        - "pc-as"
+        - "pc-eu"
+        - "pc-jp"
+        - "pc-krjp"
+        - "pc-kakao"
+        - "pc-na"
+        - "pc-oc"
+        - "pc-ru"
+        - "pc-sa"
+        - "pc-sea"
+        - "pc-tournament"
+        - "psn-as"
+        - "psn-eu"
+        - "psn-na"
+        - "psn-oc"
         - "xbox-as"
         - "xbox-eu"
         - "xbox-na"
         - "xbox-oc"
         - "xbox-sa"
-        - "pc-krjp"
-        - "pc-jp"
-        - "pc-na"
-        - "pc-eu"
-        - "pc-ru"
-        - "pc-oc"
-        - "pc-kakao"
-        - "pc-sea"
-        - "pc-sa"
-        - "pc-as"
-        - "pc-tournament"
         default: pc-na
 
 security:

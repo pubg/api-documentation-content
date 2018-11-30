@@ -1,7 +1,7 @@
 get:
   tags:
   - Tournaments
-  summary: Get a single tournament.
+  summary: Get information for a single tournament.
   description: "Tournament matches can be retreived from the /matches endpoint using the pc-tournament shard"
   parameters:
     - $ref: '../parameters/index.yml#/id'

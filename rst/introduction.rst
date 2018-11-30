@@ -23,8 +23,7 @@ We created the API's endpoint documentation using the `OpenAPI specification <ht
 
 Finding Assets, Data Dictionaries, and Enums
 --------------------------------------------
-
-Data dictionaries and enums can be found `on GitHub <https://github.com/pubg/api-assets>`_.
+Data dictionaries and enums can be found on `GitHub <https://github.com/pubg/api-assets>`_.
 
 
 

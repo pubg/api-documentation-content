@@ -1,7 +1,7 @@
 get:
   tags:
   - Tournaments
-  summary: Get a list of tournaments
+  summary: Get the list of available tournaments.
   responses:
     200:
       $ref: '../responses/index.yml#/tournamentList-200'

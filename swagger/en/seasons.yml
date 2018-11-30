@@ -4,9 +4,9 @@ info:
   version: 1.0.0
   title: ""
   description:  Notes:<br><br>
-    - Use "https://api.pubg.com/shards/{platform}" for PC players' season stats for seasons after "division.bro.official.2018-09".<br><br>
-    - Use "https://api.pubg.com/shards/{platform-region}" for Xbox, and to get season stats for PC players' prior to and including "division.bro.official.2018-09".<br><br>
-    - The list of seasons for both PC and Xbox can be queried using either URL.<br><br>
+    - Use the platform shard for PC players' season stats for seasons after division.bro.official.2018-09. The platform-region shard is deprecated for PC for seasons after division.bro.official.2018-09 and the API will respond by returning data for all regions for the platform.<br><br>
+    - Use the platform-region shard for PS4, Xbox, and to get season stats for PC players' prior to and including division.bro.official.2018-09.<br><br>
+    - The list of seasons can be queried using both the plaform shard and the platform-region shard.<br><br>
     - Any property with \"N/A\" as its description is not currently in use.
 servers:
   - url: https://api.pubg.com/shards/{platform}
@@ -14,28 +14,31 @@ servers:
       "platform":
         enum:
         - "steam"
-        - "xbox"
         - "kakao"
         default: steam
   - url: https://api.pubg.com/shards/{platform-region}
     variables:
       "platform-region":
         enum:
+        - "pc-as"
+        - "pc-eu"
+        - "pc-jp"
+        - "pc-krjp"
+        - "pc-kakao"
+        - "pc-na"
+        - "pc-oc"
+        - "pc-ru"
+        - "pc-sa"
+        - "pc-sea"
+        - "psn-as"
+        - "psn-eu"
+        - "psn-na"
+        - "psn-oc"
         - "xbox-as"
         - "xbox-eu"
         - "xbox-na"
         - "xbox-oc"
         - "xbox-sa"
-        - "pc-krjp"
-        - "pc-jp"
-        - "pc-na"
-        - "pc-eu"
-        - "pc-ru"
-        - "pc-oc"
-        - "pc-kakao"
-        - "pc-sea"
-        - "pc-sa"
-        - "pc-as"
         default: pc-na
 
 security:

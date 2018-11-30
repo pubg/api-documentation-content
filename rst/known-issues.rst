@@ -29,3 +29,9 @@ The following participant stats seem to always be 0:
 Missing LogItemDrop Events
 --------------------------
 LogItemDrop events are missing for attachments that are dropped at the same time as detaching them from a weapon. Attachments that are not attached to a weapon are logged normally when dropped.
+
+
+
+Content Decoding Fails For Some Telemetry Files
+-----------------------------------------------
+Occassionally content decoding will fail for a telemetry file.
