@@ -27,8 +27,6 @@ v7.6.0
 
 Bug Fixes:
 
-- [Xbox] Fixed an issue where season.attributes.isOffSeason was always "true" for the current Xbox season. 
-
 - Fixed an issue where if there were two accounts with the same IGN, the most recent accountId was not returned for queries to the /players endpoint.
 
 Deprecated:
