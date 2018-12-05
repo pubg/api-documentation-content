@@ -10,9 +10,9 @@ Upcoming Changes
 
 .. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-v7.7.0 (TBD)
-++++++++++++
-Posted Nov 30, 2018
+v7.7.0 (Planned for Dec 7, 2018)
+++++++++++++++++++++++++++++++++
+Posted Nov 30, 2018, Updated Dec 5, 2018
 
 New Data:
 
