@@ -6,19 +6,22 @@ Changelog
 
 
 Upcoming Changes
-----------------
++++++++++++++++++
 
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-v7.7.0 (Planned for Dec 7, 2018)
-++++++++++++++++++++++++++++++++
-Posted Nov 30, 2018, Updated Dec 5, 2018
+
+
+v7.7.0
+------
+
+Bug Fixes:
+
+- [Xbox] Fixed an issue where attributes.isOffSeason would be "true" for an active season.
 
 New Data:
 
 - [PS4] The PS4 platform is supported.
-
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
