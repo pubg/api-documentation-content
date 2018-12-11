@@ -250,7 +250,7 @@ LogPlayerKill
   "damageCauserAdditionalInfo": [string],     // PC Only, Available Dec 19, 2018
   "damageReason":               string,
   "distance":                   number,
-  "victimGameResult":           {Character}   // PC Only, Available Dec 19, 2018
+  "victimGameResult":           {GameResult}   // PC Only, Available Dec 19, 2018
 
 
 

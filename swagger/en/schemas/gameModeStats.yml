@@ -77,7 +77,6 @@ properties:
   rankPointsTitle:
     type: string
     description: "[PC Only, Available Dec 19, 2018] Rank title in the form title-level"
-    minimum: "0-0"
   revives:
     type: integer
     description: "Number of times this player revived teammates"

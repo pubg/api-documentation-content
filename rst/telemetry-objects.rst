@@ -80,7 +80,7 @@ GameResult
     "rank":       int,
     "gameResult": string,
     "teamId":     int,
-    "stats":      Stats,
+    "stats":      {Stats},
     "accountId":  string
   }
 
@@ -96,11 +96,11 @@ GameState
     "numJoinPlayers":           int,
     "numStartPlayers":          int,
     "numAlivePlayers":          int,
-    "safetyZonePosition":       Location,
+    "safetyZonePosition":       {Location},
     "safetyZoneRadius":         number,
-    "poisonGasWarningPosition": Location,
+    "poisonGasWarningPosition": {Location},
     "poisonGasWarningRadius":   number,
-    "redZonePosition":          Location,
+    "redZonePosition":          {Location},
     "redZoneRadius":            number
   }
 
@@ -115,7 +115,7 @@ Item
     "stackCount":    int,
     "category":      string,
     "subCategory":   string,
-    "attachedItems": [ItemId, ...]
+    "attachedItems": [itemId, ...]
   }
 
 
@@ -126,7 +126,7 @@ ItemPackage
 
   {
     "itemPackageId": string,
-    "location":      Location
+    "location":      {Location}
     "items":         [{Item}, ...]
   }
 
@@ -182,7 +182,7 @@ RewardDetail
 
   {
     "accountId":      string,
-    "playTimeRecord": PlayTimeRecord
+    "playTimeRecord": {PlayTimeRecord}
   }
 
 
