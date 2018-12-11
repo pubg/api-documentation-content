@@ -55,6 +55,18 @@ LogGameStatePeriodic
 
 
 
+LogHeal
+-------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  "character":  {Character},
+  "item":       {Item},
+  "healAmount": number
+
+
+
 LogItemAttach
 -------------
 .. code-block:: none
@@ -102,6 +114,29 @@ LogItemPickup
 
 
 
+LogItemPickupFromCarePackage
+----------------------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  "character":   {Character},
+  "item":        {Item}
+
+
+
+LogItemPickupFromLootbox
+------------------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  "character":   {Character},
+  "item":        {Item},
+  "ownerTeamId": int
+
+
+
 LogItemUnequip
 --------------
 .. code-block:: none
@@ -134,7 +169,9 @@ LogMatchEnd
 -----------
 .. code-block:: none
 
-  "characters": [{Character}, ...]
+  "characters":           [{Character}, ...],
+  "gameResultOnFinished": {GameResultOnFinished},  // PC Only, Available Dec 19, 2018
+  "rewardDetail":         [{RewardDetail}, ...]    // PC Only, Available Dec 19, 2018
 
 
 
@@ -148,10 +185,33 @@ LogMatchStart
   "cameraViewBehaviour":   string,             
   "teamSize":              int,
   "isCustomGame":          bool,
-  "isEventMode":           bool,               // PC only    
+  "isEventMode":           bool,                // PC only    
   "blueZoneCustomOptions": string              
 
 blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
+
+
+
+LogObjectDestroy
+----------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+  
+  "character":      {Character},
+  "objectType":     string,
+  "objectLocation": {Location}
+
+
+
+LogParachuteLanding
+-------------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  "character": {Character},
+  "distance":  number
 
 
 
@@ -180,16 +240,20 @@ LogPlayerKill
 -------------
 .. code-block:: none
 
-  "attackId":           int,
-  "killer":             {Character},
-  "victim":             {Character},
-  "damageTypeCategory": string,
-  "damageCauserName":   string,
-  "damageReason":       string,
-  "distance":           number
+  "attackId":                   int,
+  "killer":                     {Character},
+  "victim":                     {Character},
+  "assistant":                  {Character},  // PC Only, Available Dec 19, 2018
+  "dBNOId":                     int           // PC Only, Available Dec 19, 2018
+  "damageTypeCategory":         string,
+  "damageCauserName":           string,
+  "damageCauserAdditionalInfo": [string],     // PC Only, Available Dec 19, 2018
+  "damageReason":               string,
+  "distance":                   number,
+  "victimGameResult":           {Character}   // PC Only, Available Dec 19, 2018
 
 
-  
+
 LogPlayerLogin
 --------------
 .. code-block:: none
@@ -211,14 +275,16 @@ LogPlayerMakeGroggy
 
 .. code-block:: none
 
-  "attackId":            int,
-  "attacker":            {Character},
-  "victim":              {Character},
-  "damageTypeCategory":  string,
-  "damageCauserName":    string,
-  "distance":            float,
-  "isAttackerInVehicle": bool,
-  "dBNOId":              int
+  "attackId":                   int,
+  "attacker":                   {Character},
+  "victim":                     {Character},
+  "damageReason":               string,       // PC Only, Available Dec 19, 2018
+  "damageTypeCategory":         string,
+  "damageCauserName":           string,
+  "damageCauserAdditionalInfo": [string],     // PC Only, Available Dec 19, 2018
+  "distance":                   number,
+  "isAttackerInVehicle":        bool,
+  "dBNOId":                     int
 
 
 
@@ -239,8 +305,8 @@ LogPlayerRevive
 .. code-block:: none
 
   "reviver":             {Character},
-  "victim":              {Character},  // Yes, it's actually called victim
-
+  "victim":              {Character},
+  "dBNOId":              int          // PC Only, Available Dec 19, 2018
 
 
 LogPlayerTakeDamage
@@ -258,18 +324,39 @@ LogPlayerTakeDamage
 
 
 
+LogRedZoneEnded
+---------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  "drivers": [{Character}, ...]
+
+
+
 LogSwimEnd
 ----------
 
 .. code-block:: none
 
-  "character": {Character},
-  "swimDistance": float
+  "character":           {Character},
+  "swimDistance":        number,
+  "maxSwimDepthOfWater": number  // PC Only, Available Dec 19, 2018
 
 
 
 LogSwimStart
 ------------
+
+.. code-block:: none
+
+  "character": {Character}
+
+
+
+LogVaultStart
+-------------
+[PC Only, Available Dec 19, 2018]
 
 .. code-block:: none
 
@@ -307,7 +394,20 @@ LogVehicleRide
 
   "character": {Character},
   "vehicle":   {Vehicle},
-  "seatIndex": int
+  "seatIndex": int,
+  "maxSpeed":  number       // PC Only, Available Dec 19, 2018
+
+
+
+LogWeaponFireCount
+------------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  "character": {Character},
+  "weaponId":  string,
+  "fireCount": int          // Increments of 10
 
 
 
@@ -320,3 +420,4 @@ LogWheelDestroy
   "vehicle":            {Vehicle},
   "damageTypeCategory": string,
   "damageCauserName":   string
+  

@@ -6,9 +6,56 @@ Changelog
 
 
 Upcoming Changes
-+++++++++++++++++
+----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v7.8.0 (Planned for December 19, 2018)
++++++++++++++++++++++++++++++++++++++++
+Posted: Dec 11
+
+Bug Fix:
+
+- Fixed an issue where roster.attributes.won was sometimes false for the winning team.
+
+New Data:
+
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPointsTitle
+- [PC] GameResult
+- [PC] GameResultOnFinished
+- [PC] PlayTimeRecord
+- [PC] RewardDetail
+- [PC] Stats
+- [PC] LogHeal
+- [PC] LogItemPickupFromCarePackage
+- [PC] LogItemPickupFromLootbox
+- [PC] LogObjectDestroy
+- [PC] LogParachuteLanding
+- [PC] LogRedZoneEnded
+- [PC] LogVaultStart
+- [PC] LogWeaponFireCount
+- [PC] Character.isInBlueZone
+- [PC] Character.isInRedZone
+- [PC] Character.zone
+- [PC] LogMatchEnd.gameResultOnFinished.results
+- [PC] LogMatchEnd.rewardDetail
+- [PC] LogSwimEnd.maxSwimDepthOfWater
+- [PC] LogPlayerKill.assistant
+- [PC] LogPlayerKill.damageCauserAdditionalInfo
+- [PC] LogPlayerKill.dBNOId
+- [PC] LogPlayerKill.victimGameResult
+- [PC] LogPlayerMakeGroggy.damageCauserAdditionalInfo
+- [PC] LogPlayerMakeGroggy.damageReason
+- [PC] LogPlayerRevive.dBNOId
+- [PC] LogVehicleLeave.maxSpeed
+
+Data Changes:
+
+- [PC] The leaderboards endpoint will be capable of responding with the top 1000 players for each game mode in increments of 100.
+
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 

@@ -8,7 +8,7 @@ API wrappers made by community developers.
 
 How to Contribute
 -----------------
-Want your SDK listed here? Email us at pubgapi@bluehole.net with a link to your wrapper!
+Want your SDK listed here? Email us at pubgapi@pubg.com with a link to your wrapper!
 
 
 
