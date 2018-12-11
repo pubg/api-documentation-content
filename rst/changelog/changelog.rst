@@ -10,6 +10,8 @@ Upcoming Changes
 
 .. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
 
 
 v7.8.0 (Planned for December 19, 2018)
@@ -50,12 +52,6 @@ New Data:
 - [PC] LogPlayerMakeGroggy.damageReason
 - [PC] LogPlayerRevive.dBNOId
 - [PC] LogVehicleLeave.maxSpeed
-
-Data Changes:
-
-- [PC] The leaderboards endpoint will be capable of responding with the top 1000 players for each game mode in increments of 100.
-
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
