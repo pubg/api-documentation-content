@@ -11,7 +11,7 @@ Data dictionaries and enums can be found  `here <https://github.com/pubg/api-ass
 
 .. _blueZoneCustomOptions:
 
-blueZoneCustomOptions
+BlueZoneCustomOptions
 ---------------------
 The blueZoneCustomOptions string contains an array of config objects for each blue zone phase with the following structure::
 
@@ -36,12 +36,15 @@ Character
 .. code-block:: none
 
   {
-    "name":      string,
-    "teamId":    int,
-    "health":    number,
-    "location":  Location,
-    "ranking":   int,
-    "accountId": string
+    "name":         string,
+    "teamId":       int,
+    "health":       number,
+    "location":     Location,
+    "ranking":      int,
+    "accountId":    string
+    "isInBlueZone": bool,
+    "isInRedZone":  bool,
+    "zone":         [regionId, ...]
   }
 
 
@@ -67,6 +70,22 @@ isGame represents the phase of the game defined by the status of bluezone and sa
 
 
 
+GameResult
+----------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  {
+    "rank":       int,
+    "gameResult": string,
+    "teamId":     int,
+    "stats":      {Stats},
+    "accountId":  string
+  }
+
+
+
 GameState
 ---------
 .. code-block:: none
@@ -77,11 +96,11 @@ GameState
     "numJoinPlayers":           int,
     "numStartPlayers":          int,
     "numAlivePlayers":          int,
-    "safetyZonePosition":       Location,
+    "safetyZonePosition":       {Location},
     "safetyZoneRadius":         number,
-    "poisonGasWarningPosition": Location,
+    "poisonGasWarningPosition": {Location},
     "poisonGasWarningRadius":   number,
-    "redZonePosition":          Location,
+    "redZonePosition":          {Location},
     "redZoneRadius":            number
   }
 
@@ -96,7 +115,7 @@ Item
     "stackCount":    int,
     "category":      string,
     "subCategory":   string,
-    "attachedItems": [ItemId, ...]
+    "attachedItems": [itemId, ...]
   }
 
 
@@ -107,7 +126,7 @@ ItemPackage
 
   {
     "itemPackageId": string,
-    "location":      Location
+    "location":      {Location}
     "items":         [{Item}, ...]
   }
 
@@ -130,6 +149,61 @@ Location
 
 
 
+PlayTimeRecord
+--------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  {
+    "survivalTime":        int,
+    "teamSpectatingTime":  int
+  }
+
+
+
+GameResultOnFinished
+--------------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  {
+    "results": [{GameResult}, ...]
+  }
+
+
+
+RewardDetail
+------------
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  {
+    "accountId":      string,
+    "playTimeRecord": {PlayTimeRecord}
+  }
+
+
+
+Stats
+-----
+[PC Only, Available Dec 19, 2018]
+
+.. code-block:: none
+
+  {
+    "killCount":           int,
+    "distanceOnFoot":      number,
+    "distanceOnSwim":      number,
+    "distanceOnVehicle":   number,
+    "distanceOnParachute": number,
+    "distanceOnFreefall":  number
+  }
+
+
+
 Vehicle
 -------
 .. code-block:: none
@@ -140,3 +214,4 @@ Vehicle
     "healthPercent": number,
     "feulPercent":   number
   }
+  
