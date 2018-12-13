@@ -20,7 +20,7 @@ properties:
     minimum: 0
   dailyKills:
     type: integer
-    description: ""
+    description: "Number of kills during the most recent day played."
     minimum: 0
   damageDealt:
     type: number
@@ -32,7 +32,7 @@ properties:
     minimum: 0
   dailyWins:
     type: integer
-    description: "[PC only] Number of daily wins"
+    description: "Number of wins during the most recent day played."
     minimum: 0
   headshotKills:
     type: integer
@@ -103,7 +103,7 @@ properties:
     minimum: 0
   swimDistance:
     type: number
-    description:  "[PC only] Total distance traveled while swimming measured in meters"
+    description:  "Total distance traveled while swimming measured in meters"
     minimum: 0
   teamKills:
     type: integer
@@ -131,11 +131,11 @@ properties:
     minimum: 0
   weeklyKills:
     type: integer
-    description: ""
+    description: "Number of kills during the most recent week played"
     minimum: 0
   weeklyWins:
     type: integer
-    description: "[PC only] Number of weekly wins"
+    description: "Number of wins during the most recent week played."
     minimum: 0
   winPoints:
     type: number
