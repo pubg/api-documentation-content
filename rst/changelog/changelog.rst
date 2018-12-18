@@ -6,19 +6,18 @@ Changelog
 
 
 Upcoming Changes
-----------------
+++++++++++++++++
 
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
-v7.8.0 (Planned for December 19, 2018)
-+++++++++++++++++++++++++++++++++++++++
-Posted: Dec 11, Updated: Dec 18
+v7.8.0
+-------
 
-Bug Fix:
+Bug Fixes:
 
 - Fixed an issue where roster.attributes.won was sometimes false for the winning team.
 
