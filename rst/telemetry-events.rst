@@ -170,7 +170,6 @@ LogMatchEnd
 .. code-block:: none
 
   "characters":           [{Character}, ...],
-  "gameResultOnFinished": {GameResultOnFinished},  // PC Only, Available Dec 19, 2018
   "rewardDetail":         [{RewardDetail}, ...]    // PC Only, Available Dec 19, 2018
 
 
