@@ -57,7 +57,7 @@ LogGameStatePeriodic
 
 LogHeal
 -------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -116,7 +116,7 @@ LogItemPickup
 
 LogItemPickupFromCarePackage
 ----------------------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -127,7 +127,7 @@ LogItemPickupFromCarePackage
 
 LogItemPickupFromLootbox
 ------------------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -170,7 +170,7 @@ LogMatchEnd
 .. code-block:: none
 
   "characters":           [{Character}, ...],
-  "rewardDetail":         [{RewardDetail}, ...]    // PC Only, Available Dec 19, 2018
+  "rewardDetail":         [{RewardDetail}, ...]    // PC Only
 
 
 
@@ -184,7 +184,7 @@ LogMatchStart
   "cameraViewBehaviour":   string,             
   "teamSize":              int,
   "isCustomGame":          bool,
-  "isEventMode":           bool,                // PC only    
+  "isEventMode":           bool,                // PC Only    
   "blueZoneCustomOptions": string              
 
 blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
@@ -193,7 +193,7 @@ blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCusto
 
 LogObjectDestroy
 ----------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
   
@@ -205,7 +205,7 @@ LogObjectDestroy
 
 LogParachuteLanding
 -------------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -219,7 +219,7 @@ LogPlayerAttack
 .. code-block:: none
 
   "attackId":             int,
-  "fireWeaponStackCount": int,                // PC only
+  "fireWeaponStackCount": int,                // PC Only
   "attacker":             {Character},
   "attackType":           string,
   "weapon":               {Item},
@@ -242,14 +242,14 @@ LogPlayerKill
   "attackId":                   int,
   "killer":                     {Character},
   "victim":                     {Character},
-  "assistant":                  {Character},  // PC Only, Available Dec 19, 2018
-  "dBNOId":                     int           // PC Only, Available Dec 19, 2018
+  "assistant":                  {Character},  // PC Only
+  "dBNOId":                     int           // PC Only
   "damageTypeCategory":         string,
   "damageCauserName":           string,
-  "damageCauserAdditionalInfo": [string],     // PC Only, Available Dec 19, 2018
+  "damageCauserAdditionalInfo": [string],     // PC Only
   "damageReason":               string,
   "distance":                   number,
-  "victimGameResult":           {GameResult}   // PC Only, Available Dec 19, 2018
+  "victimGameResult":           {GameResult}   // PC Only
 
 
 
@@ -277,10 +277,10 @@ LogPlayerMakeGroggy
   "attackId":                   int,
   "attacker":                   {Character},
   "victim":                     {Character},
-  "damageReason":               string,       // PC Only, Available Dec 19, 2018
+  "damageReason":               string,       // PC Only
   "damageTypeCategory":         string,
   "damageCauserName":           string,
-  "damageCauserAdditionalInfo": [string],     // PC Only, Available Dec 19, 2018
+  "damageCauserAdditionalInfo": [string],     // PC Only
   "distance":                   number,
   "isAttackerInVehicle":        bool,
   "dBNOId":                     int
@@ -305,7 +305,7 @@ LogPlayerRevive
 
   "reviver":             {Character},
   "victim":              {Character},
-  "dBNOId":              int          // PC Only, Available Dec 19, 2018
+  "dBNOId":              int          // PC Only
 
 
 LogPlayerTakeDamage
@@ -325,7 +325,7 @@ LogPlayerTakeDamage
 
 LogRedZoneEnded
 ---------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -340,7 +340,7 @@ LogSwimEnd
 
   "character":           {Character},
   "swimDistance":        number,
-  "maxSwimDepthOfWater": number  // PC Only, Available Dec 19, 2018
+  "maxSwimDepthOfWater": number  // PC Only
 
 
 
@@ -355,7 +355,7 @@ LogSwimStart
 
 LogVaultStart
 -------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -394,13 +394,13 @@ LogVehicleRide
   "character": {Character},
   "vehicle":   {Vehicle},
   "seatIndex": int,
-  "maxSpeed":  number       // PC Only, Available Dec 19, 2018
+  "maxSpeed":  number       // PC Only
 
 
 
 LogWeaponFireCount
 ------------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -419,4 +419,3 @@ LogWheelDestroy
   "vehicle":            {Vehicle},
   "damageTypeCategory": string,
   "damageCauserName":   string
-  

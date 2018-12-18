@@ -72,7 +72,7 @@ isGame represents the phase of the game defined by the status of bluezone and sa
 
 GameResult
 ----------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -151,7 +151,7 @@ Location
 
 PlayTimeRecord
 --------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -164,7 +164,7 @@ PlayTimeRecord
 
 RewardDetail
 ------------
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -177,7 +177,7 @@ RewardDetail
 
 Stats
 -----
-[PC Only, Available Dec 19, 2018]
+[PC Only]
 
 .. code-block:: none
 
@@ -202,4 +202,3 @@ Vehicle
     "healthPercent": number,
     "feulPercent":   number
   }
-  
