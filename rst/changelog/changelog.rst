@@ -16,7 +16,7 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 v7.8.0 (Planned for December 19, 2018)
 +++++++++++++++++++++++++++++++++++++++
-Posted: Dec 11
+Posted: Dec 11, Updated: Dec 18
 
 Bug Fix:
 
@@ -26,7 +26,6 @@ New Data:
 
 - [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPointsTitle
 - [PC] GameResult
-- [PC] GameResultOnFinished
 - [PC] PlayTimeRecord
 - [PC] RewardDetail
 - [PC] Stats
@@ -41,7 +40,6 @@ New Data:
 - [PC] Character.isInBlueZone
 - [PC] Character.isInRedZone
 - [PC] Character.zone
-- [PC] LogMatchEnd.gameResultOnFinished.results
 - [PC] LogMatchEnd.rewardDetail
 - [PC] LogSwimEnd.maxSwimDepthOfWater
 - [PC] LogPlayerKill.assistant

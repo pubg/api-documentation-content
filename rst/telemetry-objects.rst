@@ -162,18 +162,6 @@ PlayTimeRecord
 
 
 
-GameResultOnFinished
---------------------
-[PC Only, Available Dec 19, 2018]
-
-.. code-block:: none
-
-  {
-    "results": [{GameResult}, ...]
-  }
-
-
-
 RewardDetail
 ------------
 [PC Only, Available Dec 19, 2018]
