@@ -78,6 +78,7 @@ The PUBG API shards data by either `platform` or `platform-region` depending on 
 - **kakao** - Kakao
 - **psn** - PS4
 - **steam** - Steam
+- **tournament** - Tournaments
 - **xbox** - Xbox
 
 **shards/$platform-region** - *the platform-region shard*
@@ -109,7 +110,7 @@ The shard is specified after the pubg domain and before the endpoint like this::
 
 **The platform shard should be used to get PC players' season stats for seasons after "division.bro.official.2018-09". The platform-region shard is deprecated for PC as of October 3, 2018 for season stats beginning with "division.bro.official.pc-2018-01".**
 
-**The platform shard should be used at the players endpoint. The platform-region shard is deprecated as of November 30, 2018 for the players endpoint.**
+**The platform shard should be used at the matches and players endpoints. The platform-region shard is deprecated for these endpoints.**
 
 
 

@@ -149,32 +149,6 @@ Location
 
 
 
-PlayTimeRecord
---------------
-[PC Only]
-
-.. code-block:: none
-
-  {
-    "survivalTime":        int,
-    "teamSpectatingTime":  int
-  }
-
-
-
-RewardDetail
-------------
-[PC Only]
-
-.. code-block:: none
-
-  {
-    "accountId":      string,
-    "playTimeRecord": {PlayTimeRecord}
-  }
-
-
-
 Stats
 -----
 [PC Only]

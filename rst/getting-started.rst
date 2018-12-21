@@ -134,7 +134,7 @@ We can use this ID to retrieve the match from the matches endpoint like this. Pl
   curl -g "https://api.pubg.com/shards/$platform/matches/$matchId" \
   -H "Accept: application/vnd.api+json"
 
-**Note: Make sure to use the pc-tournament shard when getting tournament matches.**
+**Note: Make sure to use the tournament shard when getting tournament matches.**
 
 **The data retention period is 14 days. Match data older than 14 days will not be available.**
 
@@ -147,15 +147,19 @@ Getting Leaderboard Data
 
 You can get the current leaderboard data for each game mode like this::
 
-  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$gameMode \
+  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$gameMode?page[number]=$page \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
-Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. The leaderboard includes the top 100 players for the specified game mode.
+**shards/$platform** - *the platform shard*
+
+**page[number]=$page** - *a filter specifying which page of the leaderboard to check*
+
+Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. You will also need to specify which page of the leaderboard you would like by replacing '$page'. The leaderboard includes the top 1000 players for the specified game mode separated into 10 pages of 100 players each, numbered 0-9. The leaderboards will be updated every 2 hours.
 
 **Note: Leaderboard data is currently only available for PC.**
 
-To see what match response will look like, please head over to the :ref:`leaderboards` page.
+To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.
 
 
 
@@ -175,7 +179,7 @@ The response from the tournaments endpoint will contain an array of tournament r
 
 In response you will be given a list of match IDs that you can lookup on the matches endpoint.
 
-**Note: Be sure to use the pc-tournament shard when looking up tournament matches.**
+**Note: Be sure to use the tournament shard when looking up tournament matches.**
 
 To see exactly what the tournament responses will look like, please head over to the :ref:`tournaments` page.
 
