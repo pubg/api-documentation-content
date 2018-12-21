@@ -14,6 +14,29 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v8.0.0
+-------
+
+Bug Fixes:
+
+- [PC] Fixed an issue where attributes.shardId in the match object for tournaments was "steam" rather than "tournament".
+
+New Data:
+
+- The "tournament" shard is now available to use to get matches.
+
+Deprecated:
+
+- Using the platform-region shard at the /matches endpoint is deprecated.
+
+Removed:
+
+- [PC] LogMatchEnd.rewardDetail
+- [PC] PlayTimeRecord
+- [PC] RewardDetail
+
+
+
 v7.8.0
 -------
 
@@ -87,7 +110,7 @@ Bug Fix:
 
 New Data:
 
-- [PC] The leaderboards endpoint has been added and will return the top 100 players for each game mode.
+- [PC] The /leaderboards endpoint has been added and will return the top 100 players for each game mode.
 
 Data Changes:
 

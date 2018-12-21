@@ -170,7 +170,6 @@ LogMatchEnd
 .. code-block:: none
 
   "characters":           [{Character}, ...],
-  "rewardDetail":         [{RewardDetail}, ...]    // PC Only
 
 
 

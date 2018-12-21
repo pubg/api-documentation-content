@@ -16,5 +16,8 @@ gameMode:
 id:
   $ref: './id.yml'
 
+pageNumber:
+  $ref: './pageNumber.yml'
+
 seasonId:
   $ref: './seasonId.yml'
