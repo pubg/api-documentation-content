@@ -14,6 +14,15 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v8.0.1
+------
+
+Bug Fixes:
+
+- [PC] Fixed an issue where walkDistance, rideDistance, and swimDistance were all 0 for stats at the /matches endpoint.
+
+
+
 v8.0.0
 -------
 
