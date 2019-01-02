@@ -218,7 +218,7 @@ LogPlayerAttack
 .. code-block:: none
 
   "attackId":             int,
-  "fireWeaponStackCount": int,                // PC Only
+  "fireWeaponStackCount": int,          // PC Only
   "attacker":             {Character},
   "attackType":           string,
   "weapon":               {Item},
@@ -304,7 +304,7 @@ LogPlayerRevive
 
   "reviver":             {Character},
   "victim":              {Character},
-  "dBNOId":              int          // PC Only
+  "dBNOId":              int           // PC Only
 
 
 LogPlayerTakeDamage
@@ -316,8 +316,8 @@ LogPlayerTakeDamage
   "victim":             {Character},
   "damageTypeCategory": string,
   "damageReason":       string,
-  "damage":             number,      // 1.0 damage = 1.0 health 
-                                     // Net damage after armor; damage to health
+  "damage":             number,        // 1.0 damage = 1.0 health 
+                                       // Net damage after armor; damage to health
   "damageCauserName":   string
 
 
@@ -339,7 +339,7 @@ LogSwimEnd
 
   "character":           {Character},
   "swimDistance":        number,
-  "maxSwimDepthOfWater": number  // PC Only
+  "maxSwimDepthOfWater": number        // PC Only
 
 
 
@@ -382,7 +382,8 @@ LogVehicleLeave
   "character":    {Character},
   "vehicle":      {Vehicle},
   "rideDistance": number,
-  "seatIndex":    integer
+  "seatIndex":    integer,
+  "maxSpeed":     number          // PC Only
 
 
 
@@ -392,8 +393,7 @@ LogVehicleRide
 
   "character": {Character},
   "vehicle":   {Vehicle},
-  "seatIndex": int,
-  "maxSpeed":  number       // PC Only
+  "seatIndex": int
 
 
 
@@ -405,7 +405,7 @@ LogWeaponFireCount
 
   "character": {Character},
   "weaponId":  string,
-  "fireCount": int          // Increments of 10
+  "fireCount": int            // Increments of 10
 
 
 
