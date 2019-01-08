@@ -32,7 +32,6 @@ TypeScript
 
 Javascript
 ----------
-- https://github.com/xF4b3r/pubgAPI
 - https://github.com/nulldreams/pubg-js
 
 
