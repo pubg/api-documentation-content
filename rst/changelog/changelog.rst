@@ -6,11 +6,70 @@ Changelog
 
 
 Upcoming Changes
-++++++++++++++++
+-----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v9.0.0 (planned for Jan 22, 2019)
+++++++++++++++++++++++++++++++++++
+Posted Jan 15, 2019
+
+New Data:
+
+- [PS4, Xbox] Character.isInBlueZone
+- [PS4, Xbox] Character.isInRedZone
+- [PS4, Xbox] Character.zone
+- [PS4, Xbox] GameResult
+- [PS4, Xbox] LogHeal
+- [PS4, Xbox] LogItemPickupFromCarePackage
+- [PS4, Xbox] LogItemPickupFromLootbox
+- [PS4, Xbox] LogMatchDefinition.SeasonState
+- [PS4, Xbox] LogObjectDestroy
+- [PS4, Xbox] LogParachuteLanding
+- [PS4, Xbox] LogPlayerAttack.fireWeaponStackCount
+- [PS4, Xbox] LogPlayerKill.assistant
+- [PS4, Xbox] LogPlayerKill.damageCauserAdditionalInfo
+- [PS4, Xbox] LogPlayerKill.dBNOId
+- [PS4, Xbox] LogPlayerKill.victimGameResult
+- [PS4, Xbox] LogPlayerMakeGroggy.damageCauserAdditionalInfo
+- [PS4, Xbox] LogPlayerMakeGroggy.damageReason
+- [PS4, Xbox] LogPlayerRevive.dBNOId
+- [PS4, Xbox] LogRedZoneEnded
+- [PS4, Xbox] LogSwimEnd.maxSwimDepthOfWater
+- [PS4, Xbox] LogVaultStart
+- [PS4, Xbox] LogVehicleLeave.maxSpeed
+- [PS4, Xbox] LogWeaponFireCount
+- [PS4, Xbox] Stats
+- [PS4, Xbox] match.attributes.seasonState
+- [PS4, Xbox] participant.attributes.stats.rankPoints
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.bestRankPoint
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.dailyWins
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.swimDistance
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.weeklyWins
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.rankPointsTitle
+- [PS4] Lifetime Stats as of division.bro.official.playstation-01 are available per gameMode by using "lifetime" as the seasonId at the /players/{accountId}/seasons/{seasonId} endpoint.
+- [Xbox] Lifetime Stats as of division.bro.official.xbox-01 are available per gameMode by using "lifetime" as the seasonId at the /players/{accountId}/seasons/{seasonId} endpoint.
+
+Data Changes:
+
+- [PS4, Xbox] Season stats from Jan 22,2019 onwards will be global and sharded by platform. PS4 and Xbox data prior to Jan 22,2019 will still only be accessible using the old URL format.
+- [PS4] PS4 seasons after division.bro.official.2018-09 will be in the format division.bro.official.playstation-{Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-09 is division.bro.official.playstation-01.
+- [Xbox] Xbox seasons after division.bro.official.2018-08 will be in the format division.bro.official.xbox-{Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-089 is division.bro.official.xbox-01.
+
+Deprecated:
+
+- [PS4, Xbox] participant.attributes.stats.rankPoints
+- [PS4, Xbox] participant.attributes.stats.killPoints
+- [PS4, Xbox] participant.attributes.stats.killPointsDelta
+- [PS4, Xbox] participant.attributes.stats.winPoints
+- [PS4, Xbox] participant.attributes.stats.winPointsDelta
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.killPoints
+- [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.winPoints
 
 
 
@@ -90,6 +149,10 @@ New Data:
 - [PC] LogPlayerMakeGroggy.damageReason
 - [PC] LogPlayerRevive.dBNOId
 - [PC] LogVehicleLeave.maxSpeed
+
+Data Changes:
+
+- [PC] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints will no longer be 0 when roundsPlayed < 10
 
 
 
