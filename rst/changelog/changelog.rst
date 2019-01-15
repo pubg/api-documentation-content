@@ -45,7 +45,6 @@ New Data:
 - [PS4, Xbox] LogWeaponFireCount
 - [PS4, Xbox] Stats
 - [PS4, Xbox] match.attributes.seasonState
-- [PS4, Xbox] participant.attributes.stats.rankPoints
 - [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.bestRankPoint
 - [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.dailyWins
 - [PS4, Xbox] playerSeason.attributes.gameModeStats.{gameMode}.rankPoints
@@ -63,7 +62,6 @@ Data Changes:
 
 Deprecated:
 
-- [PS4, Xbox] participant.attributes.stats.rankPoints
 - [PS4, Xbox] participant.attributes.stats.killPoints
 - [PS4, Xbox] participant.attributes.stats.killPointsDelta
 - [PS4, Xbox] participant.attributes.stats.winPoints
