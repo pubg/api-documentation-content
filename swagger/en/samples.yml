@@ -11,7 +11,6 @@ servers:
         enum:
         - "pc-as"
         - "pc-eu"
-        - "pc-jp"
         - "pc-krjp"
         - "pc-kakao"
         - "pc-na"
@@ -19,15 +18,10 @@ servers:
         - "pc-ru"
         - "pc-sa"
         - "pc-sea"
-        - "psn-as"
-        - "psn-eu"
         - "psn-na"
-        - "psn-oc"
-        - "xbox-as"
         - "xbox-eu"
         - "xbox-na"
         - "xbox-oc"
-        - "xbox-sa"
         default: pc-na
 
 security:
