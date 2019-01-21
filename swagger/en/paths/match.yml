@@ -2,10 +2,7 @@ get:
   tags:
   - Matches
   summary: Get a single match.
-  description: |
-    **The /matches endpoint is not rate limited, therefore, authorization is not required.**
-
-    Remember to use the tournament shard for tournament matches.
+  description: Authorization is not required for the /matches endpoint because it is not rate-limited.
   parameters:
     - $ref: '../parameters/index.yml#/id'
   responses:
