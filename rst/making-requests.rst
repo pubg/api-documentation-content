@@ -108,7 +108,7 @@ The shard is specified after the pubg domain and before the endpoint like this::
 
   "...pubg.com/shards/steam/endpoint..."
 
-**The platform shard should be used to get PC players' season stats for seasons after "division.bro.official.2018-09". The platform-region shard is deprecated for PC as of October 3, 2018 for season stats beginning with "division.bro.official.pc-2018-01".**
+**Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
 
 **The platform shard should be used at the matches and players endpoints. The platform-region shard is deprecated for these endpoints.**
 

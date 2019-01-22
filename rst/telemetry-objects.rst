@@ -72,7 +72,6 @@ isGame represents the phase of the game defined by the status of bluezone and sa
 
 GameResult
 ----------
-[PC Only]
 
 .. code-block:: none
 
@@ -151,7 +150,6 @@ Location
 
 Stats
 -----
-[PC Only]
 
 .. code-block:: none
 

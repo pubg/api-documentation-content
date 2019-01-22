@@ -4,10 +4,8 @@ info:
   version: 1.0.0
   title: ""
   description:  Notes:<br><br>
-    - Use the platform shard for PC players' season stats for seasons after division.bro.official.2018-09. The platform-region shard is deprecated for PC for seasons after division.bro.official.2018-09 and the API will respond by returning data for all regions for the platform.<br><br>
-    - Use the platform-region shard for PS4, Xbox, and to get season stats for PC players' prior to and including division.bro.official.2018-09.<br><br>
+    - Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.<br><br>
     - The list of seasons can be queried using both the plaform shard and the platform-region shard.<br><br>
-    - Any property with \"N/A\" as its description is not currently in use.
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:

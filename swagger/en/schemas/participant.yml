@@ -58,11 +58,12 @@ properties:
             maximum: 130
           killPoints:
             type: integer
-            description: "[Deprecated for PC] Points based on how many kills this player had"
-            minimum: 0
+            description: "N/A"
+            deprecated: true
           killPointsDelta:
             type: number
-            description: "[Deprecated for PC] Change in killPoints"
+            description: "N/A"
+            deprecated: true
           killStreaks:
             type: integer
             description: "Total number of kill streaks"
@@ -74,20 +75,20 @@ properties:
             maximum: 129
           lastKillPoints:
             type: integer
-            description: ""
-            minimum: 0
+            description: "N/A"
+            deprecated: true
           lastWinPoints:
             type: integer
-            description: ""
-            minimum: 0
+            description: "N/A"
+            deprecated: true
           longestKill:
             type: number
             description: ""
             minimum: 0
           mostDamage:
             type: number
-            description: "Highest amount of damage dealt with a single attack"
-            minimum: 0
+            description: "N/A"
+            deprecated: true
           name:
             type: string
             description: "PUBG IGN of the player associated with this participant"
@@ -141,8 +142,9 @@ properties:
             maximum: 130
           winPoints:
             type: integer
-            description: "[Deprecated for PC]"
-            minimum: 0
+            description: "N/A"
+            deprecated: true
           winPointsDelta:
             type: number
-            description: "[Deprecated for PC] Change in winPoints"
+            description: "N/A"
+            deprecated: true
