@@ -57,7 +57,6 @@ LogGameStatePeriodic
 
 LogHeal
 -------
-[PC Only]
 
 .. code-block:: none
 
@@ -116,7 +115,6 @@ LogItemPickup
 
 LogItemPickupFromCarePackage
 ----------------------------
-[PC Only]
 
 .. code-block:: none
 
@@ -127,7 +125,6 @@ LogItemPickupFromCarePackage
 
 LogItemPickupFromLootbox
 ------------------------
-[PC Only]
 
 .. code-block:: none
 
@@ -183,7 +180,7 @@ LogMatchStart
   "cameraViewBehaviour":   string,             
   "teamSize":              int,
   "isCustomGame":          bool,
-  "isEventMode":           bool,                // PC Only    
+  "isEventMode":           bool,  
   "blueZoneCustomOptions": string              
 
 blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCustomOptions`.
@@ -192,7 +189,6 @@ blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCusto
 
 LogObjectDestroy
 ----------------
-[PC Only]
 
 .. code-block:: none
   
@@ -204,7 +200,6 @@ LogObjectDestroy
 
 LogParachuteLanding
 -------------------
-[PC Only]
 
 .. code-block:: none
 
@@ -218,7 +213,7 @@ LogPlayerAttack
 .. code-block:: none
 
   "attackId":             int,
-  "fireWeaponStackCount": int,          // PC Only
+  "fireWeaponStackCount": int,
   "attacker":             {Character},
   "attackType":           string,
   "weapon":               {Item},
@@ -241,14 +236,14 @@ LogPlayerKill
   "attackId":                   int,
   "killer":                     {Character},
   "victim":                     {Character},
-  "assistant":                  {Character},  // PC Only
-  "dBNOId":                     int           // PC Only
+  "assistant":                  {Character},
+  "dBNOId":                     int
   "damageTypeCategory":         string,
   "damageCauserName":           string,
-  "damageCauserAdditionalInfo": [string],     // PC Only
+  "damageCauserAdditionalInfo": [string],
   "damageReason":               string,
   "distance":                   number,
-  "victimGameResult":           {GameResult}   // PC Only
+  "victimGameResult":           {GameResult}
 
 
 
@@ -276,10 +271,10 @@ LogPlayerMakeGroggy
   "attackId":                   int,
   "attacker":                   {Character},
   "victim":                     {Character},
-  "damageReason":               string,       // PC Only
+  "damageReason":               string,
   "damageTypeCategory":         string,
   "damageCauserName":           string,
-  "damageCauserAdditionalInfo": [string],     // PC Only
+  "damageCauserAdditionalInfo": [string],
   "distance":                   number,
   "isAttackerInVehicle":        bool,
   "dBNOId":                     int
@@ -304,7 +299,7 @@ LogPlayerRevive
 
   "reviver":             {Character},
   "victim":              {Character},
-  "dBNOId":              int           // PC Only
+  "dBNOId":              int
 
 
 LogPlayerTakeDamage
@@ -324,7 +319,6 @@ LogPlayerTakeDamage
 
 LogRedZoneEnded
 ---------------
-[PC Only]
 
 .. code-block:: none
 
@@ -339,7 +333,7 @@ LogSwimEnd
 
   "character":           {Character},
   "swimDistance":        number,
-  "maxSwimDepthOfWater": number        // PC Only
+  "maxSwimDepthOfWater": number
 
 
 
@@ -354,7 +348,6 @@ LogSwimStart
 
 LogVaultStart
 -------------
-[PC Only]
 
 .. code-block:: none
 
@@ -383,7 +376,7 @@ LogVehicleLeave
   "vehicle":      {Vehicle},
   "rideDistance": number,
   "seatIndex":    integer,
-  "maxSpeed":     number          // PC Only
+  "maxSpeed":     number
 
 
 
@@ -399,7 +392,6 @@ LogVehicleRide
 
 LogWeaponFireCount
 ------------------
-[PC Only]
 
 .. code-block:: none
 

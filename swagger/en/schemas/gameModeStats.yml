@@ -8,7 +8,7 @@ properties:
     minimum: 0
   bestRankPoint:
     type: number
-    description: "[PC only] Highest number of rank points the player was awarded"
+    description: "Highest number of rank points the player was awarded"
     minimum: 0
   boosts:
     type: integer
@@ -44,8 +44,8 @@ properties:
     minimum: 0
   killPoints:
     type: number
-    description: "[Deprecated for PC] Points based on how many kills this player had."
-    minimum: 0
+    description: "N/A"
+    deprecated: true
   kills:
     type: integer
     description: "Number of enemy players killed"
@@ -72,11 +72,11 @@ properties:
     minimum: 0
   rankPoints:
     type: number
-    description: "[PC only] Number of rank points the player was awarded. This value will be 0 when roundsPlayed < 10"
+    description: "Number of rank points the player was awarded. This value will be 0 when roundsPlayed < 10"
     minimum: 0
   rankPointsTitle:
     type: string
-    description: "[PC Only] Rank title in the form title-level"
+    description: "Rank title in the form title-level"
   revives:
     type: integer
     description: "Number of times this player revived teammates"
@@ -103,7 +103,7 @@ properties:
     minimum: 0
   swimDistance:
     type: number
-    description:  "Total distance traveled while swimming measured in meters"
+    description: "Total distance traveled while swimming measured in meters"
     minimum: 0
   teamKills:
     type: integer
@@ -139,8 +139,8 @@ properties:
     minimum: 0
   winPoints:
     type: number
-    description: "[Deprecated for PC]"
-    minimum: 0
+    description: "N/A"
+    deprecated: true
   wins:
     type: integer
     description: "Number of matches won"

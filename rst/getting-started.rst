@@ -79,11 +79,9 @@ In the response you will see seasons listed like this::
     "isOffseason": false:
   }
 
-**Note: PC seasons after division.bro.official.2018-09 will be in the format division.bro.official.pc-{Year-Season number} rather than division.bro.official.{Year-Month}. The first season after division.bro.official.2018-09 is division.bro.official.pc-2018-01.**
-
 With this information, we can now query the API for season stats like this. Please be sure to replace '$platform-region', '$playerId', and '$seasonId' with you own information::
 
-  curl -g "https://api.pubg.com/shards/$platform-region/players/$playerId/seasons/$seasonId"
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/$seasonId"
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
@@ -91,7 +89,7 @@ With this information, we can now query the API for season stats like this. Plea
 
 **shards/$platform-region** - *the platform-region shard*
 
-**Note: Use the platform shard when making requests for PC players' season stats for seasons after division.bro.official.2018-09. Use the platform-region shard for making any other requests for players' season stats.**
+**Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
 
 For more information about shards, please see :ref:`regions`
 
@@ -104,13 +102,13 @@ To see what the season stats response will look like, please head over to the :r
 Getting Player Lifetime Stats
 -----------------------------
 
-Lifetime stats can be obtained for PC players by querying the seasons endpoint and using "lifetime" as the '$seasonId'. Please be sure to replace '$platform', and '$playerId' with you own information::
+Lifetime stats can be obtained for players by querying the seasons endpoint and using "lifetime" as the '$seasonId'. Please be sure to replace '$platform', and '$playerId' with you own information::
 
   curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/lifetime"
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
-**Note: The first season for lifetime stats is division.bro.official.pc-2018-01.**
+**Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
 
 To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
 
@@ -156,8 +154,6 @@ You can get the current leaderboard data for each game mode like this::
 **page[number]=$page** - *a filter specifying which page of the leaderboard to check*
 
 Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. You will also need to specify which page of the leaderboard you would like by replacing '$page'. The leaderboard includes the top 1000 players for the specified game mode separated into 10 pages of 100 players each, numbered 0-9. The leaderboards will be updated every 2 hours.
-
-**Note: Leaderboard data is currently only available for PC.**
 
 To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.
 

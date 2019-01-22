@@ -16,16 +16,6 @@ The following items are misspelled in the telemetry:
 
 
 
-Empty Participant stats
------------------------
-The following participant stats seem to always be 0:
-
-- lastWinPoints
-- mostDamage
-- lastKillPoints
-
-
-
 Missing LogItemDrop Events
 --------------------------
 LogItemDrop events are missing for attachments that are dropped at the same time as detaching them from a weapon. Attachments that are not attached to a weapon are logged normally when dropped.

@@ -3,13 +3,15 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: "Note: Lifetime stats are only available for PC players and begin with season division.bro.official.pc-2018-01."
+  description: ""
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:
       "platform":
         enum:
         - "steam"
+        - "psn"
+        - "xbox"
         - "kakao"
         default: steam
 

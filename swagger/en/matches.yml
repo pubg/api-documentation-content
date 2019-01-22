@@ -3,10 +3,7 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: Notes:<br><br>
-    - The plaform shard should be used to get matches. The platform-region shard is deprecated for the matches endpoint.<br><br>
-    - The data retention period is 14 days. Match data older than 14 days will not be available.<br><br>
-    - Any property with \"N/A\" as its description is not currently in use."
+  description: Authorization is not required for the /matches endpoint because it is not rate-limited.
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:
@@ -18,14 +15,9 @@ servers:
         - "tournament"
         - "kakao"
         default: steam
-
-security:
-  - ApiKeyAuth: []
-
 paths:
   /matches/{id}:
     $ref: './paths/index.yml#/match'
-
 components:
   schemas:
     match:
