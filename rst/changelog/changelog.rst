@@ -5,12 +5,24 @@ Changelog
 
 
 
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
 Upcoming Changes
-+++++++++++++++++
+----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+v9.1.0 (planned for Jan 30, 2019)
++++++++++++++++++++++++++++++++++
+Posted: Jan 23, 2019
+
+Deprecated:
+
+- Using the platform-region shard at the /samples endpoint is deprecated and the API will respond by returning data for all regions for the platform as if queried using the platform shard.
 
 
 
