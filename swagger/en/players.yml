@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: The platform shard should be used at the /players endpoint. The platform-region shard is deprecated for the /players endpoint and the API will respond by returning data for all regions for the platform.
+
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:

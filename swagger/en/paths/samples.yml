@@ -2,7 +2,7 @@ get:
   tags:
   - samples
   summary: Get a list of sample matches.
-  description: "The number of matches per shard may vary. Requests to samples need to be at least 24hrs in the past UTC time using the `filter[createdAt-start]` query parameter. The default if not specified is the latest sample."
+  description: "The number of matches per shard may vary. Requests for samples need to be at least 24hrs in the past UTC time using the `filter[createdAt-start]` query parameter. The default if not specified is the latest sample."
   parameters:
     - $ref: '../parameters/index.yml#/filterCreatedAt-start'
   responses:

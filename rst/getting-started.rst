@@ -12,7 +12,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
 
 **shards/$platform** - *the platform shard*
     
-- The PUBG API shards data by platform and region, and therefore requires a shard to be specified in the URL for most requests. In some cases, only the platform is required for the shard. In others, the `platform-region` shard is required. You can determine which is the case for your particular request to the PUBG API by checking the endpoint's documentation page. For more information about shards, please see :ref:`regions`
+- The PUBG API shards data by platform, and therefore requires a shard to be specified in the URL for most requests. In most cases, only the platform is required for the shard. However, the `platform-region` shard is required when making requests for PC and PS4 players' season stats for seasons prior to division.bro.official.2018-09, and for Xbox season stats for seasons before division.bro.official.2018-08. For more information about shards, please see :ref:`regions`
 
 **players** - *the endpoint to query*
 
@@ -79,7 +79,7 @@ In the response you will see seasons listed like this::
     "isOffseason": false:
   }
 
-With this information, we can now query the API for season stats like this. Please be sure to replace '$platform-region', '$playerId', and '$seasonId' with you own information::
+With this information, we can now query the API for season stats like this. Please be sure to replace '$platform', '$playerId', and '$seasonId' with you own information::
 
   curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/$seasonId"
   -H "Authorization: Bearer $api-key" \
@@ -183,15 +183,15 @@ To see exactly what the tournament responses will look like, please head over to
 
 Getting Match Samples
 ---------------------
-The samples endpoint offers a large set of random match references that is updated for each region every 24 hours.
+The samples endpoint offers a large set of random match references that is updated for each platform every 24 hours.
 
-A samples request looks like this. Please be sure to replace '$platform-region' with your own information::
+A samples request looks like this. Please be sure to replace '$platform' with your own information::
 
-  curl -g "https://api.pubg.com/shards/$platform-region/samples" \
+  curl -g "https://api.pubg.com/shards/$platform/samples" \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
-**Note: Calling samples without filter[createdAt-start] will return the most recent samples list for that region. You can fetch older samples up to 14 days using the filter.**
+**Note: Calling samples without filter[createdAt-start] will return the most recent samples list for that platform. You can fetch older samples up to 14 days using the filter.**
 
 In the response there will be an array of abbreviated match objects containing IDs and shards to look them up on the matches endpoint. This can be done as shown in the `Getting a Match`_ section.
 

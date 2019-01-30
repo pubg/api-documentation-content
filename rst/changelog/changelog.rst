@@ -5,20 +5,17 @@ Changelog
 
 
 
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
-
-
-
 Upcoming Changes
-----------------
+++++++++++++++++
 
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
-v9.1.0 (planned for Jan 30, 2019)
-+++++++++++++++++++++++++++++++++
-Posted: Jan 23, 2019
+v9.1.0
+-------
 
 Deprecated:
 

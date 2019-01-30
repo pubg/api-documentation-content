@@ -21,7 +21,7 @@ content:
                   description: "Time of samples list creation"
                 shardId:
                   type: string
-                  description: "Platform-region Shard"
+                  description: "Platform shard"
                 titleId:
                   type: string
                   description: "Identifies the studio and game"
