@@ -3,26 +3,17 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-
+  
 servers:
-  - url: https://api.pubg.com/shards/{platform-region}
+  - url: https://api.pubg.com/shards/{platform}
     variables:
-      "platform-region":
+      "platform":
         enum:
-        - "pc-as"
-        - "pc-eu"
-        - "pc-krjp"
-        - "pc-kakao"
-        - "pc-na"
-        - "pc-oc"
-        - "pc-ru"
-        - "pc-sa"
-        - "pc-sea"
-        - "psn-na"
-        - "xbox-eu"
-        - "xbox-na"
-        - "xbox-oc"
-        default: pc-na
+        - "steam"
+        - "psn"
+        - "xbox"
+        - "kakao"
+        default: steam
 
 security:
   - ApiKeyAuth: []

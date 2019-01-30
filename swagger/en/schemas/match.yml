@@ -39,7 +39,7 @@ properties:
         enum: [closed, prepare, progress]
       shardId:
         type: string
-        description: "platform-region or platform shard"
+        description: "Platform shard"
       stats:
         type: object
         description: "N/A"
