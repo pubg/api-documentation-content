@@ -2,7 +2,7 @@
 
 Known Issues
 ============
-The following is a list of issues with the API that we are aware of. If you find a bug that isn't listed here, please report it using the "Report an API Bug" widget on the developer portal - |dev_portal_url|
+The following is a list of issues with the API that we are aware of. If you find a bug that isn't listed here, please report it by sending an email to pubgapi@pubg.com.
 
 **Note**: We will not be providing updates on these issues on this page. When fixed, they will be removed from this page and added to the changelog.
 
@@ -13,7 +13,7 @@ The following items are misspelled in the telemetry:
 - Item.ItemID: Cowbar_C
 - Item.ItemID: ItemAmmo12GuageC
 - Vehicle.FeulPercent
-
+- ItemPackage.itemPackageId.Carapackage_RedBox_C
 
 
 Missing LogItemDrop Events
