@@ -6,11 +6,21 @@ Changelog
 
 
 Upcoming Changes
-++++++++++++++++
+----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v10.0.0 (planned for March 11)
++++++++++++++++++++++++++++++++
+Posted March 4
+
+Data Changes:
+
+- [PC] The /leaderboards endpoint will return up to 500 lone survivors per page requested.
 
 
 
