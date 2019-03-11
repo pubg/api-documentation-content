@@ -14,7 +14,7 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
-v10.0.0 (planned for March 11)
+v10.0.0 (planned for TBD)
 +++++++++++++++++++++++++++++++
 Posted March 4
 
