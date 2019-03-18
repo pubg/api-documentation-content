@@ -113,7 +113,7 @@ LogItemPickup
 
 
 
-LogItemPickupFromCarePackage
+LogItemPickupFromCarepackage
 ----------------------------
 
 .. code-block:: none

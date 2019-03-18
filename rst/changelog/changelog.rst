@@ -43,7 +43,7 @@ New Data:
 - [PS4, Xbox] Character.zone
 - [PS4, Xbox] GameResult
 - [PS4, Xbox] LogHeal
-- [PS4, Xbox] LogItemPickupFromCarePackage
+- [PS4, Xbox] LogItemPickupFromCarepackage
 - [PS4, Xbox] LogItemPickupFromLootbox
 - [PS4, Xbox] LogMatchDefinition.SeasonState
 - [PS4, Xbox] LogObjectDestroy
@@ -145,7 +145,7 @@ New Data:
 - [PC] RewardDetail
 - [PC] Stats
 - [PC] LogHeal
-- [PC] LogItemPickupFromCarePackage
+- [PC] LogItemPickupFromCarepackage
 - [PC] LogItemPickupFromLootbox
 - [PC] LogObjectDestroy
 - [PC] LogParachuteLanding
