@@ -153,7 +153,7 @@ You can get the current leaderboard data for each game mode like this::
 
 **page[number]=$page** - *a filter specifying which page of the leaderboard to check*
 
-Please be sure to replace $platform and $gameMode with the appropriate platform and game mode that you would like the leaderboard for. You will also need to specify which page of the leaderboard you would like by replacing '$page'. The leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. The leaderboards will be updated every 2 hours.
+Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. You will also need to specify which page of the leaderboard you would like by replacing '$page'. The leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. The leaderboards will be updated every 2 hours.
 
 To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.
 
@@ -167,7 +167,7 @@ Start by getting the list of tournaments to obtain the ID for the tournament you
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
-The response from the tournaments endpoint will contain an array of tournament references, showing their IDs and createdAt timestamps. Grab the ID of the desired tournament and use it to lookup the tournament like this. Be sure to replace '$tournamentId with your own information::
+The response from the tournaments endpoint will contain an array of tournament references, showing their IDs and createdAt timestamps. Grab the ID of the desired tournament and use it to lookup the tournament like this. Be sure to replace '$tournamentId' with your own information::
 
   curl -g "https://api.pubg.com/tournaments/$tournamentId" \
   -H "Authorization: Bearer api-key" \
