@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: "Note: Leaderboard stats are only available for PC players."
+  description: "Note: Leaderboard stats are only available for PC players. Leaderboards are updated every 2 hours."
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:

@@ -20,7 +20,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
 
 **filter[playerNames]=$playerName** - *a filter specifying which players to search for*
 
-- There are a variety of filters and options that can narrow down a search, organize results, and more! More information about each available filter can be found within each endpoint's documentation page.
+- There are a variety of filters and options that can narrow down a search, organize results, and more! Additional information about each available filter can be found within each endpoint's documentation page.
 
 This URL will return a player object containing information about the requested player including a list of their recent match IDs. We will get into that more later in the tutorial.
 
@@ -153,7 +153,7 @@ You can get the current leaderboard data for each game mode like this::
 
 **page[number]=$page** - *a filter specifying which page of the leaderboard to check*
 
-Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. You will also need to specify which page of the leaderboard you would like by replacing '$page'. The leaderboard includes the top 1000 players for the specified game mode separated into 10 pages of 100 players each, numbered 0-9. The leaderboards will be updated every 2 hours.
+Please be sure to replace $platform and $gameMode with the appropriate platform and game mode that you would like the leaderboard for. You will also need to specify which page of the leaderboard you would like by replacing '$page'. The leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. The leaderboards will be updated every 2 hours.
 
 To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.
 
