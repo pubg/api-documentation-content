@@ -9,7 +9,7 @@ This repo is intended to open up the content portion of the Official PUBG API Do
 ## Making changes
 Anyone can propose changes to the documentation. Feel free to open up an issue requesting a fix, or make the change and open a PR for review. We will review your request/PR as soon as we are able!
 
-**NOTE**: We ask that everyone please only open issues related to the documentation specifically. If you have questions or issue with the API, please use the "Report an API bug" widget on the [Developer Portal](https://developer.pubg.com/).
+**NOTE**: We ask that everyone please only open issues related to the documentation specifically. If you have questions or an issue using the API, please email pubgapi@pubg.com.
 
 ## FAQ
 

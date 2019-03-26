@@ -1,5 +1,5 @@
 title: Leaderboard Object
-description: "Leaderboard objects show a specific page containing the current rank of 100 of the top 1000 players for a game mode."
+description: "Leaderboard objects show a specific page containing the current rank of 500 of the top 1000 players for a game mode."
 type: object
 properties:
   type:
