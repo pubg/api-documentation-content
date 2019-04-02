@@ -14,6 +14,15 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v10.0.1
+-------
+
+Bug Fixes:
+
+- Fixed the issue where attributes.isCustomMatch was false and attributes.gameMode was "normal" in the match object for most matches at the /tournaments endpoint.
+
+
+
 v10.0.0
 -------
 
