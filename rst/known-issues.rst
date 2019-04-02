@@ -31,9 +31,3 @@ Missing Season Stats
 Content Decoding Fails For Some Telemetry Files
 -----------------------------------------------
 Occassionally content decoding will fail for a telemetry file.
-
-
-
-Incorrect attributes for matches at the /tournaments endpoint
--------------------------------------------------------------
-attributes.isCustomMatch is false and attributes.gameMode is "normal" in the match object for most matches at the /tournaments endpoint.
