@@ -6,11 +6,21 @@ Changelog
 
 
 Upcoming Changes
-+++++++++++++++++
+-----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v11.0.0 (planned for April 25)
++++++++++++++++++++++++++++++++
+Posted: April 11, 2019
+
+Data Changes:
+
+- attributes.gameMode will have additional enums for custom matches in the match object. "normal" will be split into "normal", "war", "zombie", "conquest", and "esports". They will each prepend "-solo", "-duo", "-squad", and "-fpp" as the other enums do.
 
 
 

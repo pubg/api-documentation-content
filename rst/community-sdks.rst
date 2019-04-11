@@ -60,6 +60,7 @@ C#/.Net
 
 PHP
 ---
+- https://github.com/samiaraboglu/pubg-php-api
 - https://github.com/myserywork/pubg-api-php
 - https://github.com/Lifeformwp/php-pubg
 - https://github.com/andrewbroberg/pubg-php
