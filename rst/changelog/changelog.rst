@@ -6,17 +6,20 @@ Changelog
 
 
 Upcoming Changes
------------------
++++++++++++++++++
 
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
-v11.0.0 (planned for April 25)
-+++++++++++++++++++++++++++++++
-Posted: April 11, 2019
+v11.0.0
+--------
+
+Bug Fixes:
+
+- Fixed the issue where content decoding would fail for some telemetry files.
 
 Data Changes:
 
