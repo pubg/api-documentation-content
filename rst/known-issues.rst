@@ -25,9 +25,3 @@ LogItemDrop events are missing for attachments that are dropped at the same time
 Missing Season Stats
 ---------------------
 [PC] Data from seasons prior to division.bro.official.2018-04 is unavailable.
-
-
-
-Content Decoding Fails For Some Telemetry Files
------------------------------------------------
-Occassionally content decoding will fail for a telemetry file.
