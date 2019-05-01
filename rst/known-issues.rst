@@ -16,12 +16,13 @@ The following items are misspelled in the telemetry:
 - ItemPackage.itemPackageId.Carapackage_RedBox_C
 
 
-Missing LogItemDrop Events
---------------------------
-LogItemDrop events are missing for attachments that are dropped at the same time as detaching them from a weapon. Attachments that are not attached to a weapon are logged normally when dropped.
-
-
 
 Missing Season Stats
 ---------------------
 [PC] Data from seasons prior to division.bro.official.2018-04 is unavailable.
+
+
+
+Inaccurate Values for bestRankPoint
+------------------------------------
+bestRankPoint in the game mode stats object is the highest value achieved for rankPoints during the season across all game modes. Since the values are only updated for each game mode after that game mode has been played, the value of bestRankPoint is not always up to date across all game modes.

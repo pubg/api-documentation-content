@@ -14,6 +14,15 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v11.0.1
+-------
+
+Bug Fixes:
+
+- Fixed the issue where LogItemDrop events were missing for attachments that were dropped at the same time as detaching them from a weapon.
+
+
+
 v11.0.0
 --------
 
