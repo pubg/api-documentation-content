@@ -6,11 +6,19 @@ Changelog
 
 
 Upcoming Changes
-+++++++++++++++++
+-----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+v12.0.0 (planned for May 21, 2019)
+++++++++++++++++++++++++++++++++++
+Posted May 13, 2019
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+Data Changes:
+
+- attributes.stats.deathType in the participant object will be "byzone" for players killed by the red or blue zones instead of "byplayer".
+
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
