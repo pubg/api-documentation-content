@@ -3,9 +3,12 @@
 Telemetry Events
 ================
 
-The following is a list of every telemetry event type with basic schemas to show the data that they contain. 
+The following is a list of every telemetry event type with basic schemas to show the data that they contain.
 
-Data dictionaries and enums can be found  `here <https://github.com/pubg/api-assets>`_.
+.. role:: raw-html(raw)
+   :format: html
+
+Data dictionaries and enums can be found :raw-html:`<a class="tosAlert">here</a>`.
 
 Objects shown as {object-name} are not described here in an effort to conserve space. More details about the objects in events can be located in the :ref:`telemetry-objects` reference. Please also note that each event contains the following fields which have been omitted from the outlines below::
 
