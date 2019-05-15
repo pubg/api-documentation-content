@@ -5,8 +5,10 @@ Telemetry Objects
 
 The following is a list of every telemetry object with basic schemas to show the data that they contain.
 
-Data dictionaries and enums can be found  `here <https://github.com/pubg/api-assets>`_.
+.. role:: raw-html(raw)
+   :format: html
 
+Data dictionaries and enums can be found :raw-html:`<a class="tosAlert">here</a>`.
 
 
 .. _blueZoneCustomOptions:
