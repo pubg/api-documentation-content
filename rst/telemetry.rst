@@ -11,11 +11,9 @@ Data dictionaries and enums can be found :raw-html:`<a class="tosAlert">here</a>
 
 To retrieve Telemetry Data
 ---------------------------
-You will need to start by pulling a match from the matches endpoint. Remember to replace $platform and "matchId" with the appropriate platform and matchId respectively.
+You will need to start by pulling a match from the matches endpoint. In order to get a match object, you will need to know its ID. You can find match IDs inside of player objects returned from the players endpoint. For more information about the players endpoint check out :ref:`players`. There is also a tutorial that may be helpful on the :ref:`getting-started` page.
 
-Note: In order to get a match object, you will need to know its ID. You can find match IDs inside of player objects returned from the players endpoint. For more information about the players endpoint check out :ref:`players`. There is also a tutorial that may be helpful on the :ref:`getting-started` page.
-
-Your request should look something like the following:
+Your request should look something like the code below. Remember to replace $platform and $matchId with the appropriate platform and matchId, respectively.
 
 .. code-block:: shell
 
@@ -37,7 +35,7 @@ Next, you will need to find an "assets" reference in the match "relationships" o
     ...
   }
 
-Once you have located this ID, you can search for the telemetry object which has that ID in the included array. The full object found there will provide you with a link to the telemetry file, and look something like this::
+Once you have located this ID, you can search for the telemetry object which has that ID in the included array. The full object found there will provide you with a link to the telemetry file, and look something like this (the URL is only an example and will not work)::
 
   {
     "type": "asset",
