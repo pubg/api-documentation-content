@@ -8,8 +8,8 @@ Changelog
 Upcoming Changes
 -----------------
 
-v12.0.0 (planned for May 21, 2019)
-++++++++++++++++++++++++++++++++++
+v12.0.0 (Delayed until TBD)
++++++++++++++++++++++++++++
 Posted May 13, 2019
 
 Data Changes:
