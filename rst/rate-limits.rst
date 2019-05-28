@@ -11,7 +11,7 @@ The rate limit headers are defined as follows:
 
 **X-RateLimit-Remaining** - *The number of requests left for the time window*
 
-**X-RateLimit-Reset** - *The remaining window before the rate limit is refilled in UTC epoch nanoseconds*
+**X-RateLimit-Reset** - *The time that the rate limit will be reset, as a UNIX timestamp*
 
 
 
