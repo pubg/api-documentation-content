@@ -7,7 +7,7 @@ description: |
   
   **Usage**: filter[playerNames]=playerName-1,playerName-2,…
 required: false
-example: "shroud"
+example: "WackyJacky101"
 style: form
 schema:
   type: string

@@ -1,3 +1,6 @@
+batchPlayerSeason:
+  $ref: './batchPlayerSeason.yml'
+
 leaderboards:
   $ref: './leaderboards.yml'
 

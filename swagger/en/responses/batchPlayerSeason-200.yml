@@ -1,0 +1,70 @@
+description: Batch Season Stats response
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            type:
+              type: string
+              description: "playerSeason"
+            attributes:
+              type: object
+              properties:
+                gameModeStats:
+                  type: object
+                  properties:
+                    $gameMode:
+                      $ref: '../schemas/index.yml#/gameModeStats'
+            relationships:
+              type: object
+              description: "Lists of match IDs that this player played this season (within the last 14 days) separated by game mode. If a player didn't play any matches in a season with a specific game mode, then the array for that game mode will be empty."
+              properties:
+                player:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: "player"
+                        id:
+                          type: string
+                          description: "Player ID"
+                matchesSolo:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesSoloFPP:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesDuo:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesDuoFPP:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesSquad:
+                  $ref: '../schemas/index.yml#/matchList'
+                matchesSquadFPP:
+                  $ref: '../schemas/index.yml#/matchList'
+                season:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: "season"
+                        id:
+                          type: string
+                          description: "Season ID"
+
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              description: "Link to this player season object"
+        meta:
+          type: object
+          description: "N/A"

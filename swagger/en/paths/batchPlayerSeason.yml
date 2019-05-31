@@ -1,0 +1,19 @@
+get:
+  tags:
+  - Season Stats
+  summary: Get season information for up to 10 players.
+  parameters:
+    - $ref: '../parameters/index.yml#/seasonId'
+    - $ref: '../parameters/index.yml#/gameMode'
+    - $ref: '../parameters/index.yml#/filterPlayerIds'
+  responses:
+    200:
+      $ref: '../responses/index.yml#/batchPlayerSeason-200'
+    401:
+      $ref: '../responses/index.yml#/errors/unauthorized'
+    404:
+      $ref: '../responses/index.yml#/errors/notFound'
+    415:
+      $ref: '../responses/index.yml#/errors/unsupportedMediaType'
+    429:
+      $ref: '../responses/index.yml#/errors/tooManyRequests'

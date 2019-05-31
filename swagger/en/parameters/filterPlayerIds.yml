@@ -5,7 +5,7 @@ description: |
   
   **Usage**: filter[playerIds]=playerId-1,playerId-2,…
 required: false
-example: "account.d50fdc18fcad49c691d38466bed6f8fd"
+example: "account.c0e530e9b7244b358def282782f893af"
 style: form
 schema:
   type: string
