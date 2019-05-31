@@ -1,7 +1,7 @@
 get:
   tags:
   - Players
-  summary: Get a collection of up to 6 players.
+  summary: Get a collection of up to 10 players.
   description: "Note: Either filter[playerIds] or filter[playerNames] must be specified, but they cannot be used at the same time."
   parameters:
     - $ref: '../parameters/index.yml#/filterPlayerIds'

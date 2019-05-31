@@ -51,6 +51,9 @@ paths:
   /players/{accountId}/seasons/{seasonId}:
     $ref: './paths/index.yml#/playerSeason'
 
+  /seasons/{seasonId}/gameMode/{gameMode}/players:
+    $ref: './paths/index.yml#/batchPlayerSeason'
+
 components:
   securitySchemes:
     ApiKeyAuth:

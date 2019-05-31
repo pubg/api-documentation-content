@@ -8,9 +8,9 @@ Changelog
 Upcoming Changes
 -----------------
 
-v12.0.0 (Delayed until TBD)
-+++++++++++++++++++++++++++
-Posted May 13, 2019
+v12.0.0 (planned for June 26)
+++++++++++++++++++++++++++++++
+Posted May 13, updated May 31
 
 Data Changes:
 
@@ -19,6 +19,16 @@ Data Changes:
 .. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+v11.1.0
+-------
+
+New Data:
+
+- Season stats for a single game mode can be requested in batches for up to 10 players using the new /seasons/{seasonId}/gameMode/{gameMode}/players endpoint.
+
+- The number of players that information can be requested for using the /players endpoint has been increased from 6 to 10 players.
 
 
 
