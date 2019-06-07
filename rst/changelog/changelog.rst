@@ -34,6 +34,7 @@ Removed:
 - participant.attributes.stats.killPointsDelta
 - participant.attributes.stats.lastKillPoints
 - participant.attributes.stats.lastWinPoints
+- participant.attributes.stats.mostDamage
 - participant.attributes.stats.rankPoints
 - participant.attributes.stats.winPoints
 - participant.attributes.stats.winPointsDelta
