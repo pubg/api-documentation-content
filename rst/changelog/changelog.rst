@@ -8,17 +8,37 @@ Changelog
 Upcoming Changes
 -----------------
 
-v12.0.0 (planned for June 26)
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v13.0.0 (planned for June 26)
 ++++++++++++++++++++++++++++++
 Posted May 13, updated May 31
 
 Data Changes:
 
-- attributes.stats.deathType in the participant object will be "byzone" for players killed by the red or blue zones instead of "byplayer".
+- participant.attributes.stats.deathType will be "byzone" for players killed by the red or blue zones instead of "byplayer".
 
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+v12.0.0 (planned for June 20)
+++++++++++++++++++++++++++++++
+Posted June 7
+
+Removed:
+
+- participant.attributes.stats.killPoints
+- participant.attributes.stats.killPointsDelta
+- participant.attributes.stats.lastKillPoints
+- participant.attributes.stats.lastWinPoints
+- participant.attributes.stats.mostDamage
+- participant.attributes.stats.rankPoints
+- participant.attributes.stats.winPoints
+- participant.attributes.stats.winPointsDelta
+
 
 
 v11.1.0
