@@ -11,6 +11,9 @@ errors:
   tooManyRequests:
     $ref: './tooManyRequests.yml'
 
+batchLifetime-200:
+  $ref: './batchLifetime-200.yml'
+
 batchPlayerSeason-200:
   $ref: './batchPlayerSeason-200.yml'
 

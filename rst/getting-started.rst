@@ -133,7 +133,7 @@ Getting Player Season Stats in Batches
 --------------------------------------
 You can get season stats for a game mode for up to 10 players with one request like this::
 
-  curl -g "https://api.pubg.com/shards/$platform/seasons/$seasonId/gameMode/$gameMode/players?filter[playerIds]=$playerId,$playerId" \
+  curl -g "https://api.pubg.com/shards/$platform/seasons/$seasonId/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2" \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
@@ -155,7 +155,7 @@ To see what the season stats response will look like, please head over to the :r
 
 Getting Player Lifetime Stats
 -----------------------------
-Lifetime stats can be obtained for players by querying the seasons endpoint and using "lifetime" as the '$seasonId'. Please be sure to replace '$platform', and '$playerId' with you own information::
+Lifetime stats can be obtained for players by querying the seasons endpoint and using "lifetime" as the '$seasonId'. Please be sure to replace '$platform', and '$playerId' with your own information::
 
   curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/lifetime"
   -H "Authorization: Bearer $api-key" \
@@ -164,6 +164,26 @@ Lifetime stats can be obtained for players by querying the seasons endpoint and 
 **shards/$platform** - *the platform shard*
 
 **filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
+
+**Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
+
+To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
+
+
+
+Getting Player Lifetime Stats in Batches
+-----------------------------------------
+You can get lifetime stats for a game mode for up to 10 players with one request. Please be sure to replace '$platform', and '$playerId' with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/seasons/lifetime/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2" \
+  -H "Authorization: Bearer api-key" \
+  -H "Accept: application/vnd.api+json"
+
+**shards/$platform** - *the platform shard*
+
+**filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
+
+**gameMode/$gameMode** - *the game mode*
 
 **Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
 
@@ -245,9 +265,11 @@ Getting Match Samples
 ---------------------
 The samples endpoint offers a large set of random match references that is updated for each platform every 24 hours.
 
-A samples request looks like this. Please be sure to replace '$platform' with your own information::
+The number of matches per shard may vary. Requests for samples need to be at least 24hrs in the past UTC time using the filter[createdAt-start] query parameter. All matches in the response will be between the time that you choose and 24 hours earlier than that time. If you leave out this parameter, the response will be the most recent sample available (matches from within the last 24 hours).
 
-  curl -g "https://api.pubg.com/shards/$platform/samples" \
+A samples request looks like this. Please be sure to replace '$platform' and $startTime with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/samples?filter[createdAt-start]=$startTime" \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
@@ -255,7 +277,7 @@ A samples request looks like this. Please be sure to replace '$platform' with yo
 
 **Note: Calling samples without filter[createdAt-start] will return the most recent samples list for that platform. You can fetch older samples up to 14 days using the filter.**
 
-In the response there will be an array of abbreviated match objects containing IDs and shards to look them up on the matches endpoint. This can be done as shown in the `Getting a Match`_ section.
+In the response, there will be an array of abbreviated match objects containing IDs and shards to look them up on the matches endpoint. This can be done as shown in the `Getting a Match`_ section.
 
 
 Getting Telemetry Data

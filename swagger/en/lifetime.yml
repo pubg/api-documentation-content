@@ -22,6 +22,9 @@ paths:
   /players/{accountId}/seasons/lifetime:
     $ref: './paths/index.yml#/lifetime'
 
+  /seasons/lifetime/gameMode/{gameMode}/players:
+    $ref: './paths/index.yml#/batchLifetime'
+
 components:
   securitySchemes:
     ApiKeyAuth:
