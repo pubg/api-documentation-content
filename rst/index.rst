@@ -24,3 +24,4 @@ PUBG API Documentation
   changelog/changelog
   known-issues
   community-sdks
+  community-tutorials
