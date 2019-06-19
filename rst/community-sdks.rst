@@ -76,6 +76,7 @@ Laravel
 
 Java
 ----
+- https://github.com/GPLNature/pubgapi / https://bintray.com/gplnature/java-wrappers/pubgapi
 - https://github.com/JoeZwet/pubg4j
 - https://github.com/xmiolo/Wrapper4Pubg
 - https://github.com/mautini/pubgjava
