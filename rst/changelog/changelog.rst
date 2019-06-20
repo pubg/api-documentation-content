@@ -31,7 +31,9 @@ New Data:
 
 - Lifetime stats for a single game mode can be requested in batches for up to 10 players using the new /seasons/lifetime/gameMode/{gameMode}/players endpoint.
 
+Data Changes:
 
+- LogPlayerKill.Assistant, LogPlayerKill.Killer, and LogPlayerPosition.Vehicle will be set to null instead of an empty object.
 
 Removed:
 
