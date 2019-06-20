@@ -56,14 +56,6 @@ properties:
             description: "This player's rank in the match based on kills"
             minimum: 1
             maximum: 130
-          killPoints:
-            type: integer
-            description: "N/A"
-            deprecated: true
-          killPointsDelta:
-            type: number
-            description: "N/A"
-            deprecated: true
           killStreaks:
             type: integer
             description: "Total number of kill streaks"
@@ -73,32 +65,16 @@ properties:
             description: "Number of enemy players killed"
             minimum: 0
             maximum: 129
-          lastKillPoints:
-            type: integer
-            description: "N/A"
-            deprecated: true
-          lastWinPoints:
-            type: integer
-            description: "N/A"
-            deprecated: true
           longestKill:
             type: number
             description: ""
             minimum: 0
-          mostDamage:
-            type: number
-            description: "N/A"
-            deprecated: true
           name:
             type: string
             description: "PUBG IGN of the player associated with this participant"
           playerId:
             type: string
             description: "Account ID of the player associated with this participant"
-          rankPoints:
-            type: number
-            description: "N/A"
-            deprecated: true
           revives:
             type: integer
             description: "Number of times this player revived teammates"
@@ -140,11 +116,3 @@ properties:
             description: "This player's placement in the match"
             minimum: 1
             maximum: 130
-          winPoints:
-            type: integer
-            description: "N/A"
-            deprecated: true
-          winPointsDelta:
-            type: number
-            description: "N/A"
-            deprecated: true

@@ -1,3 +1,6 @@
+batchLifetime:
+  $ref: './batchLifetime.yml'
+  
 batchPlayerSeason:
   $ref: './batchPlayerSeason.yml'
 

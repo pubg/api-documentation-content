@@ -24,9 +24,14 @@ Data Changes:
 
 
 
-v12.0.0 (planned for June 20)
-++++++++++++++++++++++++++++++
-Posted June 7
+v12.0.0
+-------
+
+New Data:
+
+- Lifetime stats for a single game mode can be requested in batches for up to 10 players using the new /seasons/lifetime/gameMode/{gameMode}/players endpoint.
+
+
 
 Removed:
 

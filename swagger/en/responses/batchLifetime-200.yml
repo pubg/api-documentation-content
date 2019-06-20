@@ -1,4 +1,4 @@
-description: Batch Season Stats response
+description: "Player lifetime response"
 content:
   application/vnd.api+json:
     schema:
@@ -9,7 +9,7 @@ content:
           properties:
             type:
               type: string
-              description: "playerSeason"
+              description: "lifetime"
             attributes:
               type: object
               properties:
@@ -57,14 +57,14 @@ content:
                           description: "season"
                         id:
                           type: string
-                          description: "Season ID"
+                          description: "lifetime"
 
         links:
           type: object
           properties:
             self:
               type: string
-              description: "Link to this player season object"
+              description: "Link to this player lifetime season object"
         meta:
           type: object
           description: "N/A"
