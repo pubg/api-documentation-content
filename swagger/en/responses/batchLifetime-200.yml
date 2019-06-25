@@ -20,7 +20,7 @@ content:
                       $ref: '../schemas/index.yml#/gameModeStats'
             relationships:
               type: object
-              description: "Lists of match IDs that this player played within the last 14 days for the specified game mode. If a player didn't play any matches for the requested game mode in the last 14 days, then the array will be empty. All game modes other than the one requested will be empty."
+              description: "Lists of up to the 32 most recent match IDs that this player played within the last 14 days for the specified game mode. If a player didn't play any matches for the requested game mode in the last 14 days, then the array will be empty. All game modes other than the one requested will be empty."
               properties:
                 player:
                   type: object
