@@ -123,7 +123,7 @@ With this information, we can now query the API for season stats like this. Plea
 
 For more information about shards, please see :ref:`regions`
 
-The match IDs for matches that count toward season stats will also be available. Custom matches and matches older than 14 days will not be available.
+The match IDs for matches that count toward season stats will also be available. Custom matches and matches older than 14 days will not be available. Only the 32 most recent matches played within 14 days will be available.
 
 To see what the season stats response will look like, please head over to the :ref:`seasons` page.
 

@@ -151,7 +151,7 @@ To specify the header Accept-Encoding, use this code:
 
 Data Retention Period
 ---------------------
-The data retention period is 14 days. **Match data** older than 14 days will not be available.
+The data retention period is 14 days. **Match data** older than 14 days will not be available. Match lists go back 14 days for the players endpoint, and the season stats enpoint will show up to the 32 most recent matches within 14 days.
 
 
 
