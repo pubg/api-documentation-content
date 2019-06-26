@@ -41,7 +41,7 @@ properties:
           deathType:
             type: string
             description: "The way by which this player died, or alive if they didn't"
-            enum: [alive, byplayer, suicide, logout]
+            enum: [alive, byplayer, byzone, suicide, logout]
           headshotKills:
             type: integer
             description: "Number of enemy players killed with headshots"
