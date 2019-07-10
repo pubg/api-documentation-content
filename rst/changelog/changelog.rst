@@ -8,9 +8,31 @@ Changelog
 Upcoming Changes
 -----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v13.1.0 (planned for July 24, 2019)
++++++++++++++++++++++++++++++++++++
+Posted: July 10, 2019
+
+New Data:
+
+- [PC] LogPlayerKill.VictimWeapon
+- [PC] LogPlayerKill.VictimWeaponAdditionalInfo
+- [PC] LogPlayerMakeGroggy.VictimWeapon
+- [PC] LogPlayerMakeGroggy.VictimWeaponAdditionalInfo
+
+
+
+v13.0.1
+-------
+
+Bug Fixes:
+
+- Fixed the issue where "kill steals" would sometimes lead to inaccurate values for attributes.stats.kills in the participant object.
 
 
 
