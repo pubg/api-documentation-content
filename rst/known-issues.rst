@@ -29,12 +29,6 @@ bestRankPoint in the game mode stats object is the highest value achieved for ra
 
 
 
-Inaccurate Values for attributes.stats.kills
----------------------------------------------
-In some cases, "kill steals" are not being awarded to players, and may be rewarded to the player that knocked the victim instead. This may lead to inaccurate values for attributes.stats.kills in the participant object.
-
-
-
 Missing Log Events for Throwable Items
 ---------------------------------------
 The number of grenades and smoke bombs dropped may sometimes exceed the number of items that have been picked up.
