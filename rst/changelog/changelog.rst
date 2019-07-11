@@ -14,16 +14,30 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
-v13.1.0 (planned for July 24, 2019)
+v14.0.0 (planned for July 24, 2019)
 +++++++++++++++++++++++++++++++++++
 Posted: July 10, 2019
+Updated: July 11, 2019
+
+Bug Fixes:
+
+- Fixed the issue where the value of bestRankPoint is not always up to date across all game modes.
 
 New Data:
 
+- playerSeason.attributes.bestRankPoint
 - [PC] LogPlayerKill.VictimWeapon
 - [PC] LogPlayerKill.VictimWeaponAdditionalInfo
 - [PC] LogPlayerMakeGroggy.VictimWeapon
 - [PC] LogPlayerMakeGroggy.VictimWeaponAdditionalInfo
+
+Data Changes:
+
+- [PC] The remastered Erangel map will be called "Baltic_Main" and not "Erangel_Main".
+
+Removed:
+
+- playerSeason.attributes.gameModeStats.{gameMode}.bestRankPoint
 
 
 
