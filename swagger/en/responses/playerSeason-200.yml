@@ -13,6 +13,10 @@ content:
             attributes:
               type: object
               properties:
+                bestRankPoint:
+                  type: number
+                  description: "Highest number of rank points the player was awarded during the season across all game modes"
+                  minimum: 0
                 gameModeStats:
                   type: object
                   properties:

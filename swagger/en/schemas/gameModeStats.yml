@@ -6,10 +6,6 @@ properties:
     type: integer
     description: "Number of enemy players this player damaged that were killed by teammates"
     minimum: 0
-  bestRankPoint:
-    type: number
-    description: "Highest number of rank points the player was awarded during the season across all game modes"
-    minimum: 0
   boosts:
     type: integer
     description: "Number of boost items used"
