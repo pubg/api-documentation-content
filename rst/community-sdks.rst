@@ -32,6 +32,7 @@ TypeScript
 
 Javascript
 ----------
+- https://github.com/carlos-menezes/pubg-api-promise
 - https://github.com/nulldreams/pubg-js
 
 
