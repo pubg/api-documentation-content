@@ -23,12 +23,6 @@ Missing Season Stats
 
 
 
-Inaccurate Values for bestRankPoint
-------------------------------------
-bestRankPoint in the game mode stats object is the highest value achieved for rankPoints during the season across all game modes. Since the values are only updated for each game mode after that game mode has been played, the value of bestRankPoint is not always up to date across all game modes.
-
-
-
 Missing Log Events for Throwable Items
 ---------------------------------------
 The number of grenades and smoke bombs dropped may sometimes exceed the number of items that have been picked up.
