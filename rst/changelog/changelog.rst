@@ -14,10 +14,8 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
-v14.0.0 (planned for July 24, 2019)
-+++++++++++++++++++++++++++++++++++
-Posted: July 10, 2019
-Updated: July 11, 2019
+v14.0.0
+--------
 
 Bug Fixes:
 
