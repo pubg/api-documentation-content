@@ -34,6 +34,6 @@ Please make sure that you fill out the form completely with as much detail as po
 
 In order to determine an appropriate rate limit for your application, we need to know how many API requests your application makes, when it makes them, and analytics showing the number of users if you have active users. We will also want to know about the caching and optimization strategies you are using in order to help reduce the number of API requests that your application requires. Please take a look at our :ref:`Caching Overview` and :ref:`Caching Implementation` sections for additional information.
 
-If the project you are working on has a barrier to entry, please provide all the necessary information on how to access your site as well as login credentials if applicable.
+If the project you are working on has a barrier to entry, please provide all the necessary information on how to access your site.
 
 If your rate limit request is approved, you will receive a notice that the rate limit has been increased for your application.
