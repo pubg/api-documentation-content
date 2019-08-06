@@ -23,7 +23,7 @@ properties:
         properties:
           DBNOs:
             type: integer
-            description: "Number of enemy players knocked"
+            description: "Number of players knocked"
             minimum: 0
           assists:
             type: integer
