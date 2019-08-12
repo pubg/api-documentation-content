@@ -26,3 +26,27 @@ Missing Season Stats
 Missing Log Events for Throwable Items
 ---------------------------------------
 The number of grenades and smoke bombs dropped may sometimes exceed the number of items that have been picked up.
+
+
+
+Inaccurate Values for "assists" in the participant object
+----------------------------------------------------------
+Players may sometimes have a different number of assists in participant.attributes.stats than represented by the log events in the telemetry file for a match.
+
+
+
+Inaccurate Values for "headshotKills" in the participant object
+----------------------------------------------------------------
+Players may sometimes have a different number of headshotKills in participant.attributes.stats than LogPlayerKill events with damageReason of "HeadShot". In these cases, the headshotkills are often awarded to the attacker that knocked the victim instead of the killer.
+
+
+
+Inaccurate Values for "roadKills" in the participant object
+------------------------------------------------------------
+Players may sometimes have a different number of roadKills in participant.attributes.stats than LogPlayerKill events with damageTypeCategory of "Damage_VehicleHit".
+
+
+
+Inaccurate Values for "fireWeaponStackCount" in LogPlayerAttack
+---------------------------------------------------------------
+The values for LogPlayerAttack.fireWeaponStackCount are sometimes inaccurate. In these cases, the values are often at least several thousand.
