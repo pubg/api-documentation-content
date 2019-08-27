@@ -13,6 +13,19 @@ Upcoming Changes
 To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
+v14.1.0
+--------
+
+New Data:
+
+- LogVehicleLeave.fellowPassengers
+- LogVehicleRide.fellowPassengers
+- [PS4, Xbox] LogPlayerKill.VictimWeapon
+- [PS4, Xbox] LogPlayerKill.VictimWeaponAdditionalInfo
+- [PS4, Xbox] LogPlayerMakeGroggy.VictimWeapon
+- [PS4, Xbox] LogPlayerMakeGroggy.VictimWeaponAdditionalInfo
+
+
 
 v14.0.0
 --------
