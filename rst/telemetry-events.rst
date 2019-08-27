@@ -246,7 +246,9 @@ LogPlayerKill
   "damageCauserAdditionalInfo": [string],
   "damageReason":               string,
   "distance":                   number,
-  "victimGameResult":           {GameResult}
+  "victimGameResult":           {GameResult},
+  "VictimWeapon"                string,
+  "VictimWeaponAdditionalInfo"  [string]
 
 
 
@@ -280,7 +282,9 @@ LogPlayerMakeGroggy
   "damageCauserAdditionalInfo": [string],
   "distance":                   number,
   "isAttackerInVehicle":        bool,
-  "dBNOId":                     int
+  "dBNOId":                     int,
+  "VictimWeapon"                string,
+  "VictimWeaponAdditionalInfo"  [string]
 
 
 
@@ -379,7 +383,8 @@ LogVehicleLeave
   "vehicle":      {Vehicle},
   "rideDistance": number,
   "seatIndex":    integer,
-  "maxSpeed":     number
+  "maxSpeed":     number,
+  "fellowPassengers" [{Character}, ...]
 
 
 
@@ -390,6 +395,7 @@ LogVehicleRide
   "character": {Character},
   "vehicle":   {Vehicle},
   "seatIndex": int
+  "fellowPassengers" [{Character}, ...]
 
 
 
