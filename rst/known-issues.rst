@@ -50,3 +50,15 @@ Players may sometimes have a different number of roadKills in participant.attrib
 Inaccurate Values for "fireWeaponStackCount" in LogPlayerAttack
 ---------------------------------------------------------------
 The values for LogPlayerAttack.fireWeaponStackCount are sometimes inaccurate. In these cases, the values are often at least several thousand.
+
+
+
+victim.location for LogPlayerTakeDamage and LogPlayerKill events are sometimes 0
+----------------------------------------------------------------------------------
+The values for LogPlayerTakeDamage.victim.location and LogPlayerKill.victim.location may be 0 when damageTypeCategory is "Damage_Groggy".
+
+
+
+Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed with the subCategory "Main"
+---------------------------------------------------------------------------------------------
+Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetry with the subCategory "Main" instead of "Handgun" for log events.
