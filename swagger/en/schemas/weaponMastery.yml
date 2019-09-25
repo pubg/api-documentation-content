@@ -1,0 +1,19 @@
+title: Weapon Mastery
+description: "Weapon Mastery contains weapon summaries for the lifetime of a player."
+type: object
+properties:
+  accountId:
+    type: string
+    description: "Player ID (also known as account ID)"
+  attributes:
+    type: object
+    properties:
+      platform:
+        type: string
+        description: "The platform"
+      weaponSummaries:
+        type: object
+        description: "The weapon summary for each weapon"
+      latestMatchId:
+        type: string
+        description: "The match ID of the last completed match that was played."

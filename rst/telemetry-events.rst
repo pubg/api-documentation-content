@@ -131,9 +131,10 @@ LogItemPickupFromLootbox
 
 .. code-block:: none
 
-  "character":   {Character},
-  "item":        {Item},
-  "ownerTeamId": int
+  "character":        {Character},
+  "item":             {Item},
+  "ownerTeamId":      int,
+  "creatorAccountId": string
 
 
 
@@ -201,6 +202,19 @@ LogObjectDestroy
 
 
 
+LogObjectInteraction
+--------------------
+
+.. code-block:: none
+
+  "character": {Character},
+  "objectType": string,
+  "objectTypeStatus": string,
+  "objectTypeAdditionalInfo": string,
+  "objectTypeCount": int
+
+
+
 LogParachuteLanding
 -------------------
 
@@ -243,12 +257,12 @@ LogPlayerKill
   "dBNOId":                     int
   "damageTypeCategory":         string,
   "damageCauserName":           string,
-  "damageCauserAdditionalInfo": [string],
+  "damageCauserAdditionalInfo": [string, ...],
   "damageReason":               string,
   "distance":                   number,
   "victimGameResult":           {GameResult},
   "VictimWeapon"                string,
-  "VictimWeaponAdditionalInfo"  [string]
+  "VictimWeaponAdditionalInfo"  [string, ...]
 
 
 
@@ -279,12 +293,12 @@ LogPlayerMakeGroggy
   "damageReason":               string,
   "damageTypeCategory":         string,
   "damageCauserName":           string,
-  "damageCauserAdditionalInfo": [string],
+  "damageCauserAdditionalInfo": [string, ...],
   "distance":                   number,
   "isAttackerInVehicle":        bool,
   "dBNOId":                     int,
   "VictimWeapon"                string,
-  "VictimWeaponAdditionalInfo"  [string]
+  "VictimWeaponAdditionalInfo"  [string, ...]
 
 
 

@@ -13,6 +13,22 @@ Upcoming Changes
 To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
+
+v14.2.0
+--------
+
+New Data:
+
+- LogItemPickupFromLootbox.creatorAccountId
+- [PC] The Weapon Mastery endpoint is available.
+- [PC] LogObjectInteraction
+- [PC] Vehicle.vehicleUniqueId
+- [PC] Vehicle.rotationPitch
+- [PC] Vehicle.isWheelsInAir
+- [PC] Vehicle.isInWaterVolume
+
+
+
 v14.1.0
 --------
 

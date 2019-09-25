@@ -49,3 +49,6 @@ tournaments-200:
 
 tournamentList-200:
   $ref: './tournamentList-200.yml'
+
+weaponMastery-200:
+  $ref: './weaponMastery-200.yml'

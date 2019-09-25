@@ -191,6 +191,23 @@ To see what the lifetime stats response will look like, please head over to the 
 
 
 
+Getting Player Weapon Mastery Stats
+------------------------------------
+Weapon Mastery information can be obtained for players by querying the weapon_mastery endpoint and using with a player's playerId. Please be sure to replace '$platform', and '$playerId' with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/weapon_mastery"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+**shards/$platform** - *the platform shard*
+
+**filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
+
+**Note: Weapon Mastery is current only available for players on Steam**
+
+To see what the Weapon Mastery response will look like, please head over to the :ref:`weaponMastery` page.
+
+
 Getting a Match
 ---------------
 Within the response from the players endpoint, you should see a list of match IDs structured like this::
