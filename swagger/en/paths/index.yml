@@ -36,3 +36,6 @@ tournamentList:
 
 tournaments:
   $ref: './tournaments.yml'
+
+weaponMastery:
+  $ref: './weaponMastery.yml'

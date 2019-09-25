@@ -30,3 +30,9 @@ season:
 
 tournament:
   $ref: './tournament.yml'
+
+weaponMastery:
+  $ref: './weaponMastery.yml'
+
+weaponSummary:
+  $ref: './weaponSummary.yml'

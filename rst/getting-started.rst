@@ -117,7 +117,7 @@ With this information, we can now query the API for season stats like this. Plea
 
 **shards/$platform-region** - *the platform-region shard*
 
-**filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
+**players/$playerId** - *the player account to search for*
 
 **Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
 
@@ -163,7 +163,7 @@ Lifetime stats can be obtained for players by querying the seasons endpoint and 
 
 **shards/$platform** - *the platform shard*
 
-**filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
+**players/$playerId** - *the player account to search for*
 
 **Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
 
@@ -189,6 +189,23 @@ You can get lifetime stats for a game mode for up to 10 players with one request
 
 To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
 
+
+
+Getting Player Weapon Mastery Stats
+------------------------------------
+Weapon Mastery information can be obtained for players by querying the weapon_mastery endpoint and using with a player's playerId. Please be sure to replace '$platform', and '$playerId' with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/weapon_mastery"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+**shards/$platform** - *the platform shard*
+
+**players/$playerId** - *the player account to search for*
+
+**Note: Weapon Mastery is current only available for players on Steam**
+
+To see what the Weapon Mastery response will look like, please head over to the :ref:`weaponMastery` page.
 
 
 Getting a Match

@@ -1,0 +1,69 @@
+title: Weapon Summary
+description: "The weapon summary for each weapon"
+type: object
+properties:
+  $Item_Weapon:
+    type: object
+    description: "The weapon summary"
+    properties:
+      XPTotal:
+        type: integer
+        description: "The total amount of XP earned for this weapon"
+      LevelCurrent:
+        type: integer
+        description: "The current level of this weapon"
+      TierCurrent:
+        type: integer
+        description: "The current tier of this weapon"
+      StatsTotal:
+        type: object
+        description: "The weapon mastery stats for this weapon"
+        properties:
+          MostDefeatsInAGame:
+            type: integer
+            description: "Most defeats in a single match"
+          Defeats:
+            type: integer
+            description: "The total number of defeats in their career"
+          MostDamagePlayerInAGame:
+            type: number
+            description: "The most damage that the player did in a single match"
+          DamagePlayer:
+            type: number
+            description: "The total damage that the player has done in their career"
+          MostHeadShotsInAGame:
+            type: integer
+            description: "The most headshots that the player did in a single match"
+          HeadShots:
+            type: integer
+            description: "The total headshots that the player has done in their career"
+          LongestDefeat:
+            type: number
+            description: "The longest distance that the player got a defeat for"
+          LongRangeDefeats:
+            type: integer
+            description: "The number of long range defeats for the player"
+          Kills:
+            type: integer
+            description: "The total number of kills for the player"
+          MostKillsInAGame:
+            type: integer
+            description: "The most kills for a player in a single match"
+          Groggies:
+            type: integer
+            description: "The total number of times that the player has caused another player to become groggy during their career"
+          MostGroggiesInAGame:
+            type: integer
+            description: "The highest number of times that the player has caused another player to become groggy during a match"
+      Medals:
+        description: "All of the medals received for this weapon"
+        type: array
+        items:
+          type: object
+          properties:
+            MedalId:
+              type: string
+              description: "The name of the medal"
+            Count:
+              type: integer
+              description: "The number of times that the player received the medal"

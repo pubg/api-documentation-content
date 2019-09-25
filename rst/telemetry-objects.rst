@@ -171,8 +171,13 @@ Vehicle
 .. code-block:: none
 
   {
-    "vehicleType":   string,
-    "vehicleId":     string,
-    "healthPercent": number,
-    "feulPercent":   number
+    "vehicleType":     string,
+    "vehicleId":       string,
+    "vehicleUniqueId": int,
+    "healthPercent":   number,
+    "feulPercent":     number,
+    "rotationPitch":   number,
+    "seatIndex":       int,
+    "isWheelsInAir":   bool,
+    "isInWaterVolume": bool
   }
