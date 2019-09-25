@@ -12,7 +12,7 @@ PUBG API Documentation
   players-endpoint
   seasons-endpoint
   lifetime-stats
-  weapon-mastery
+  weapon-mastery-endpoint
   matches-endpoint
   leaderboards-endpoint
   tournaments-endpoint
