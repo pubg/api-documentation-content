@@ -76,10 +76,11 @@ The PUBG API shards data by either `platform` or `platform-region` depending on 
 **shards/$platform** - *the platform shard*
 
 - **kakao** - Kakao
-- **psn** - PS4
 - **steam** - Steam
 - **tournament** - Tournaments
+- **psn** - PS4
 - **xbox** - Xbox
+- **console** - PS4/Xbox (used for the /matches and /samples endpoints)
 
 **shards/$platform-region** - *the platform-region shard*
 

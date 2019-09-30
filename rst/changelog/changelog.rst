@@ -14,6 +14,15 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v15.0.0
+--------
+- [PS4, Xbox] The Weapon Mastery endpoint is available.
+- [PS4, Xbox] The "console" shard must be used to get sample data for PS4/Xbox.
+- [PS4, Xbox] The "console" shard can be used, in addition to "xbox" and "psn", at the /matches endpoint for console matches.
+- [PS4, Xbox] Individual players' platforms can be determined from participant.shardId
+
+
+
 v14.2.0
 --------
 

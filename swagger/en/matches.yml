@@ -9,6 +9,7 @@ servers:
     variables:
       "platform":
         enum:
+        - "console"
         - "steam"
         - "psn"
         - "xbox"

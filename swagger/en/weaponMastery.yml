@@ -3,13 +3,16 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: "Weapon Mastery is currently only available for Steam"
+  description: ""
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:
       "platform":
         enum:
+        - "psn"
         - "steam"
+        - "xbox"
+        - "kakao"
         default: steam
 
 security:
