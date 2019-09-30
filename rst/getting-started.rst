@@ -203,8 +203,6 @@ Weapon Mastery information can be obtained for players by querying the weapon_ma
 
 **players/$playerId** - *the player account to search for*
 
-**Note: Weapon Mastery is current only available for players on Steam**
-
 To see what the Weapon Mastery response will look like, please head over to the :ref:`weaponMastery` page.
 
 
