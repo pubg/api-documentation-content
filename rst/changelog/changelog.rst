@@ -14,6 +14,19 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v15.1.0
+--------
+
+New Data:
+
+- [PS4, Xbox] LogObjectInteraction
+- [PS4, Xbox] Vehicle.vehicleUniqueId
+- [PS4, Xbox] Vehicle.rotationPitch
+- [PS4, Xbox] Vehicle.isWheelsInAir
+- [PS4, Xbox] Vehicle.isInWaterVolume
+
+
+
 v15.0.0
 --------
 
