@@ -20,7 +20,6 @@ Objects shown as {object-name} are not described here in an effort to conserve s
 
 LogArmorDestroy
 ---------------
-
 .. code-block:: none
 
   "attackId":           int,
@@ -60,7 +59,6 @@ LogGameStatePeriodic
 
 LogHeal
 -------
-
 .. code-block:: none
 
   "character":  {Character},
@@ -118,7 +116,6 @@ LogItemPickup
 
 LogItemPickupFromCarepackage
 ----------------------------
-
 .. code-block:: none
 
   "character":   {Character},
@@ -128,7 +125,6 @@ LogItemPickupFromCarepackage
 
 LogItemPickupFromLootbox
 ------------------------
-
 .. code-block:: none
 
   "character":        {Character},
@@ -193,7 +189,6 @@ blueZoneCustomOptions is a stringified array of objects. See :ref:`blueZoneCusto
 
 LogObjectDestroy
 ----------------
-
 .. code-block:: none
   
   "character":      {Character},
@@ -204,7 +199,6 @@ LogObjectDestroy
 
 LogObjectInteraction
 --------------------
-
 .. code-block:: none
 
   "character": {Character},
@@ -217,11 +211,18 @@ LogObjectInteraction
 
 LogParachuteLanding
 -------------------
-
 .. code-block:: none
 
   "character": {Character},
   "distance":  number
+
+
+
+LogPhaseChange
+---------------
+.. code-block:: none
+
+  "phase": int
 
 
 
@@ -284,7 +285,6 @@ LogPlayerLogout
 
 LogPlayerMakeGroggy
 -------------------
-
 .. code-block:: none
 
   "attackId":                   int,
@@ -315,7 +315,6 @@ LogPlayerPosition
 
 LogPlayerRevive
 ---------------
-
 .. code-block:: none
 
   "reviver":             {Character},
@@ -338,9 +337,20 @@ LogPlayerTakeDamage
 
 
 
+LogPlayerUseThrowable
+----------------------
+.. code-block:: none
+
+  "attackId":             int,
+  "fireWeaponStackCount": int,
+  "attacker":             {Character},
+  "attackType":           string,
+  "weapon":               {Item}
+
+
+
 LogRedZoneEnded
 ---------------
-
 .. code-block:: none
 
   "drivers": [{Character}, ...]
@@ -349,7 +359,6 @@ LogRedZoneEnded
 
 LogSwimEnd
 ----------
-
 .. code-block:: none
 
   "character":           {Character},
@@ -360,7 +369,6 @@ LogSwimEnd
 
 LogSwimStart
 ------------
-
 .. code-block:: none
 
   "character": {Character}
@@ -369,7 +377,6 @@ LogSwimStart
 
 LogVaultStart
 -------------
-
 .. code-block:: none
 
   "character": {Character}
@@ -415,7 +422,6 @@ LogVehicleRide
 
 LogWeaponFireCount
 ------------------
-
 .. code-block:: none
 
   "character": {Character},

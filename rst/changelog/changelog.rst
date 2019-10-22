@@ -14,6 +14,16 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v15.2.0
+--------
+
+New Data:
+
+- [PC] LogPhaseChange
+- [PC] LogPlayerUseThrowable
+
+
+
 v15.1.0
 --------
 
