@@ -222,7 +222,8 @@ LogPhaseChange
 ---------------
 .. code-block:: none
 
-  "phase": int
+  "phase":       int,
+  "elapsedTime": number
 
 
 
