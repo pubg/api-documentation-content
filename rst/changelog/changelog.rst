@@ -14,6 +14,16 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v15.3.0
+--------
+
+New Data:
+
+- [PS4, Xbox] LogPhaseChange
+- [PS4, Xbox] LogPlayerUseThrowable
+
+
+
 v15.2.0
 --------
 
