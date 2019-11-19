@@ -62,3 +62,9 @@ The values for LogPlayerTakeDamage.victim.location and LogPlayerKill.victim.loca
 Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed with the subCategory "Main"
 ---------------------------------------------------------------------------------------------
 Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetry with the subCategory "Main" instead of "Handgun" for log events.
+
+
+
+Inaccurate Values for "swimDistance", "rideDistance", and "walkDistance" in the participant object
+---------------------------------------------------------------------------------------------------
+Players may sometimes have different values for distances in participant.attributes.stats than in LogPlayerKill.victimGameResult. In this case, LogPlayerKill.victimGameResult should be considered as having the accurate values.
