@@ -68,3 +68,9 @@ Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetr
 Inaccurate Values for "swimDistance", "rideDistance", and "walkDistance" in the participant object
 ---------------------------------------------------------------------------------------------------
 Players may sometimes have different values for distances in participant.attributes.stats than in LogPlayerKill.victimGameResult. In this case, LogPlayerKill.victimGameResult should be considered as having the accurate values.
+
+
+
+Missing Matches For Players, Players Missing From LogMatchEnd, No Participant Object For Some Players
+------------------------------------------------------------------------------------------------------
+Some players are not showing up as participants in matches they have played even though they are in the telemetry (except in LogMatchEnd). The matches are also not showing up in /players or in their season stats.
