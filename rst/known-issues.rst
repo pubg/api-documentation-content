@@ -74,3 +74,9 @@ Players may sometimes have different values for distances in participant.attribu
 Missing Matches For Players, Players Missing From LogMatchEnd, No Participant Object For Some Players
 ------------------------------------------------------------------------------------------------------
 Some players are not showing up as participants in matches they have played even though they are in the telemetry (except in LogMatchEnd). The matches are also not showing up in /players or in their season stats.
+
+
+
+The Leaderboards Endpoint is Currently Not Available For PC
+------------------------------------------------------------
+The /leaderboards endpoint is not providing any data about players on the leaderboards.
