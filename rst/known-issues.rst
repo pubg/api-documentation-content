@@ -35,24 +35,6 @@ Players may sometimes have a different number of assists in participant.attribut
 
 
 
-Inaccurate Values for "headshotKills" in the participant object
-----------------------------------------------------------------
-Players may sometimes have a different number of headshotKills in participant.attributes.stats than LogPlayerKill events with damageReason of "HeadShot". In these cases, the headshotkills are often awarded to the attacker that knocked the victim instead of the killer.
-
-
-
-Inaccurate Values for "roadKills" in the participant object
-------------------------------------------------------------
-Players may sometimes have a different number of roadKills in participant.attributes.stats than LogPlayerKill events with damageTypeCategory of "Damage_VehicleHit".
-
-
-
-Inaccurate Values for "fireWeaponStackCount" in LogPlayerAttack
----------------------------------------------------------------
-The values for LogPlayerAttack.fireWeaponStackCount are sometimes inaccurate. In these cases, the values are often at least several thousand.
-
-
-
 victim.location for LogPlayerTakeDamage and LogPlayerKill events are sometimes 0
 ----------------------------------------------------------------------------------
 The values for LogPlayerTakeDamage.victim.location and LogPlayerKill.victim.location may be 0 when damageTypeCategory is "Damage_Groggy".
@@ -68,12 +50,6 @@ Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetr
 Inaccurate Values for "swimDistance", "rideDistance", and "walkDistance" in the participant object
 ---------------------------------------------------------------------------------------------------
 Players may sometimes have different values for distances in participant.attributes.stats than in LogPlayerKill.victimGameResult. In this case, LogPlayerKill.victimGameResult should be considered as having the accurate values.
-
-
-
-Missing Matches For Players, Players Missing From LogMatchEnd, No Participant Object For Some Players
-------------------------------------------------------------------------------------------------------
-Some players are not showing up as participants in matches they have played even though they are in the telemetry (except in LogMatchEnd). The matches are also not showing up in /players or in their season stats.
 
 
 

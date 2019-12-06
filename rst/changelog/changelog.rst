@@ -14,6 +14,15 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v15.3.1
+--------
+
+Bug Fix:
+
+- Fixed the issue where there were missing matches for some players, players were missing from LogMatchEnd, and there was no participant object for some players. This fix does not apply to previous matches.
+
+
+
 v15.3.0
 --------
 
