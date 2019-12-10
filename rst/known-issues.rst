@@ -56,3 +56,21 @@ Players may sometimes have different values for distances in participant.attribu
 The Leaderboards Endpoint is Currently Not Available For PC
 ------------------------------------------------------------
 The /leaderboards endpoint is not providing any data about players on the leaderboards.
+
+
+
+Players Missing From LogMatchEnd
+---------------------------------
+Some players are not listed in the LogMatchEnd event in the telemetry for some of the matches that they have played.
+
+
+
+Missing Participant Object For Players
+---------------------------------------
+Some players are not showing up as participants in some of the matches that they have played.
+
+
+
+Missing Matches For Players
+----------------------------
+Some matches may be missing for players at the /players endpoint. This occurs when there is no participant object for that player in the match.
