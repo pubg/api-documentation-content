@@ -35,24 +35,6 @@ Players may sometimes have a different number of assists in participant.attribut
 
 
 
-Inaccurate Values for "headshotKills" in the participant object
-----------------------------------------------------------------
-Players may sometimes have a different number of headshotKills in participant.attributes.stats than LogPlayerKill events with damageReason of "HeadShot". In these cases, the headshotkills are often awarded to the attacker that knocked the victim instead of the killer.
-
-
-
-Inaccurate Values for "roadKills" in the participant object
-------------------------------------------------------------
-Players may sometimes have a different number of roadKills in participant.attributes.stats than LogPlayerKill events with damageTypeCategory of "Damage_VehicleHit".
-
-
-
-Inaccurate Values for "fireWeaponStackCount" in LogPlayerAttack
----------------------------------------------------------------
-The values for LogPlayerAttack.fireWeaponStackCount are sometimes inaccurate. In these cases, the values are often at least several thousand.
-
-
-
 victim.location for LogPlayerTakeDamage and LogPlayerKill events are sometimes 0
 ----------------------------------------------------------------------------------
 The values for LogPlayerTakeDamage.victim.location and LogPlayerKill.victim.location may be 0 when damageTypeCategory is "Damage_Groggy".
@@ -71,12 +53,24 @@ Players may sometimes have different values for distances in participant.attribu
 
 
 
-Missing Matches For Players, Players Missing From LogMatchEnd, No Participant Object For Some Players
-------------------------------------------------------------------------------------------------------
-Some players are not showing up as participants in matches they have played even though they are in the telemetry (except in LogMatchEnd). The matches are also not showing up in /players or in their season stats.
-
-
-
 The Leaderboards Endpoint is Currently Not Available For PC
 ------------------------------------------------------------
 The /leaderboards endpoint is not providing any data about players on the leaderboards.
+
+
+
+Players Missing From LogMatchEnd
+---------------------------------
+Some players are not listed in the LogMatchEnd event in the telemetry for some of the matches that they have played.
+
+
+
+Missing Participant Object For Players
+---------------------------------------
+Some players are not showing up as participants in some of the matches that they have played.
+
+
+
+Missing Matches For Players
+----------------------------
+Some matches may be missing for players at the /players endpoint. This occurs when there is no participant object for that player in the match.
