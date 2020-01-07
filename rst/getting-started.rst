@@ -119,6 +119,8 @@ With this information, we can now query the API for season stats like this. Plea
 
 **players/$playerId** - *the player account to search for*
 
+**seasons/$seasonId** - *the season ID to search for*
+
 **Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
 
 For more information about shards, please see :ref:`regions`
@@ -143,7 +145,9 @@ You can get season stats for a game mode for up to 10 players with one request l
 
 **filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
 
-**gameMode/$gameMode** - *the game mode*
+**gameMode/$gameMode** - *the game mode to search for*
+
+**seasons/$seasonId** - *the season ID to search for*
 
 **Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
 
@@ -165,6 +169,8 @@ Lifetime stats can be obtained for players by querying the seasons endpoint and 
 
 **players/$playerId** - *the player account to search for*
 
+**seasons/lifetime** - *the lifetime season ID*
+
 **Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
 
 To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
@@ -183,7 +189,7 @@ You can get lifetime stats for a game mode for up to 10 players with one request
 
 **filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
 
-**gameMode/$gameMode** - *the game mode*
+**gameMode/$gameMode** - *the game mode to search for*
 
 **Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
 
@@ -234,19 +240,23 @@ To see what match responses look like, please head over to the :ref:`matches` pa
 
 Getting Leaderboard Data
 -------------------------
+Each leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. Leaderboards will be updated every 2 hours. The platform shards `console`, `xbox`, and `psn` share the same leaderboard for seasons after division.bro.official.console-03.
+
 You can get the current leaderboard data for each game mode like this::
 
-  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$gameMode?page[number]=$page \
+  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$seasonId/$gameMode?page[number]=$page \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
 **shards/$platform** - *the platform shard*
 
-**$gameMode** - *the game mode*
+**$seasonId** - *the season ID to search for*
+
+**$gameMode** - *the game mode to search for*
 
 **page[number]=$page** - *a filter specifying which page of the leaderboard to check*
 
-Please be sure to replace '$platform' and '$gameMode' with the appropriate platform and game mode that you would like the leaderboard for. You will also need to specify which page of the leaderboard you would like by replacing '$page'. The leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. The leaderboards will be updated every 2 hours.
+Please be sure to replace '$platform', '$seasonId', and '$gameMode' with the appropriate platform, season ID, and game mode that you would like the leaderboard for. Refer to `Getting Player Season Stats`_ for information about how to get season IDs. You will also need to specify which page of the leaderboard you would like by replacing '$page'.
 
 To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.
 

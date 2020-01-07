@@ -14,6 +14,23 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v16.0.0
+-------
+
+Bug Fix:
+
+- Fixed the issue where the /leaderboards endpoint was not available for steam.
+
+Data Changes:
+
+- [PC] The season ID is now required for requests to the /leaderboards endpoint.
+
+New Data:
+
+- [PS4, Xbox, Kakao] Kakao and Console (PS4 and Xbox) leaderboards are now available using the /leaderboards endpoint.
+
+
+
 v15.3.1
 --------
 

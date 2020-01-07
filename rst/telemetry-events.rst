@@ -205,7 +205,6 @@ LogObjectInteraction
   "objectType": string,
   "objectTypeStatus": string,
   "objectTypeAdditionalInfo": string,
-  "objectTypeCount": int
 
 
 
