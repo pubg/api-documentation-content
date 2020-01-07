@@ -115,6 +115,19 @@ The shard is specified after the pubg domain and before the endpoint like this::
 
 
 
+Game Modes
+----------
+For some requests, a game mode is also required to be speicifed in the request URL. Valid game modes are:
+
+- **solo** - 1 player per team, third person perspective
+- **solo-fpp** - 1 player per team, first person perspective
+- **duo** - up to 2 people per team, third person perspective
+- **duo-fpp** - up to 2 people per team, first person perspective
+- **squad** - more than 2 people per team, third person perspective
+- **squad-fpp** - more than 2 people per team, first person perspective
+
+
+
 GZIP
 ----
 Clients can specify the header `Accept-Encoding: gzip`, and the server will compress responses. Responses will be returned with `Content-Encoding: gzip`.

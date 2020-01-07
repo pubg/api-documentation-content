@@ -3,20 +3,24 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description: "Note: Leaderboard stats are only available for PC players. Leaderboards are updated every 2 hours."
+  description: "Note: Leaderboards are updated every 2 hours."
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:
       "platform":
         enum:
+        - "console"
+        - "kakao"
+        - "psn"
         - "steam"
+        - "xbox"
         default: steam
 
 security:
   - ApiKeyAuth: []
 
 paths:
-  /leaderboards/{gameMode}:
+  /leaderboards/{seasonId}/{gameMode}:
     $ref: './paths/index.yml#/leaderboards'
 
 components:

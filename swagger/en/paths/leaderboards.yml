@@ -3,6 +3,7 @@ get:
   - Leaderboards
   summary: Get the leaderboard for a game mode.
   parameters:
+    - $ref: '../parameters/index.yml#/seasonId'
     - $ref: '../parameters/index.yml#/gameMode'
     - $ref: '../parameters/index.yml#/pageNumber'
   responses:
