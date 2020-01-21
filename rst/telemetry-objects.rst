@@ -102,7 +102,9 @@ GameState
     "poisonGasWarningPosition": {Location},
     "poisonGasWarningRadius":   number,
     "redZonePosition":          {Location},
-    "redZoneRadius":            number
+    "redZoneRadius":            number,
+    "blackZonePosition":        {Location},
+    "blackZoneRadius":          number
   }
 
 
