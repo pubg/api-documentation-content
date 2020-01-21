@@ -14,6 +14,37 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v16.2.0 (planned for Jan 30)
++++++++++++++++++++++++++++++
+Posted: January 21
+
+New Data:
+
+- [PS4, Xbox] LogBlackZoneEnded
+- [PS4, Xbox] LogPlayerDestroyBreachableWall
+- [PS4, Xbox] LogPlayerKill.isThroughPenetrableWall
+- [PS4, Xbox] LogPlayerMakeGroggy.isThroughPenetrableWall
+- [PS4, Xbox] LogPlayerTakeDamage.isThroughPenetrableWall
+- [PS4, Xbox] GameState.blackZonePosition
+- [PS4, Xbox] GameState.blackZoneRadius
+
+
+
+v16.1.0
+--------
+
+New Data:
+
+- [PC] LogBlackZoneEnded
+- [PC] LogPlayerDestroyBreachableWall
+- [PC] LogPlayerKill.isThroughPenetrableWall
+- [PC] LogPlayerMakeGroggy.isThroughPenetrableWall
+- [PC] LogPlayerTakeDamage.isThroughPenetrableWall
+- [PC] GameState.blackZonePosition
+- [PC] GameState.blackZoneRadius
+
+
+
 v16.0.0
 -------
 

@@ -33,6 +33,14 @@ LogArmorDestroy
 
 
 
+LogBlackZoneEnded
+-----------------
+.. code-block:: none
+
+  "survivors": [{Character}, ...]
+
+
+
 LogCarePackageLand
 ------------------
 .. code-block:: none
@@ -120,6 +128,7 @@ LogItemPickupFromCarepackage
 
   "character":   {Character},
   "item":        {Item}
+  "carePackageUniqueId": number,
 
 
 
@@ -167,6 +176,7 @@ LogMatchEnd
 .. code-block:: none
 
   "characters":           [{Character}, ...],
+  "gameResultOnFinished": {GameResult} // For winning players only
 
 
 
@@ -247,6 +257,15 @@ LogPlayerCreate
 
 
 
+LogPlayerDestroyBreachableWall
+------------------------------
+.. code-block:: none
+
+  "attacker": {Character},
+  "weapon":   {Item}
+
+
+
 LogPlayerKill
 -------------
 .. code-block:: none
@@ -255,15 +274,16 @@ LogPlayerKill
   "killer":                     {Character},
   "victim":                     {Character},
   "assistant":                  {Character},
-  "dBNOId":                     int
+  "dBNOId":                     int,
+  "damageReason":               string,
   "damageTypeCategory":         string,
   "damageCauserName":           string,
   "damageCauserAdditionalInfo": [string, ...],
-  "damageReason":               string,
-  "distance":                   number,
-  "victimGameResult":           {GameResult},
   "VictimWeapon"                string,
   "VictimWeaponAdditionalInfo"  [string, ...]
+  "distance":                   number,
+  "victimGameResult":           {GameResult},
+  "isThroughPenetrableWall":    bool
 
 
 
@@ -294,11 +314,12 @@ LogPlayerMakeGroggy
   "damageTypeCategory":         string,
   "damageCauserName":           string,
   "damageCauserAdditionalInfo": [string, ...],
+  "VictimWeapon"                string,
+  "VictimWeaponAdditionalInfo"  [string, ...],
   "distance":                   number,
   "isAttackerInVehicle":        bool,
   "dBNOId":                     int,
-  "VictimWeapon"                string,
-  "VictimWeaponAdditionalInfo"  [string, ...]
+  "isThroughPenetrableWall":    bool
 
 
 
@@ -333,7 +354,8 @@ LogPlayerTakeDamage
   "damageReason":       string,
   "damage":             number,        // 1.0 damage = 1.0 health 
                                        // Net damage after armor; damage to health
-  "damageCauserName":   string
+  "damageCauserName":   string,
+  "isThroughPenetrableWall" bool
 
 
 
@@ -379,7 +401,8 @@ LogVaultStart
 -------------
 .. code-block:: none
 
-  "character": {Character}
+  "character": {Character},
+  "isLedgeGrab": bool
 
 
 
