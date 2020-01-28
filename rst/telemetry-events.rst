@@ -176,7 +176,7 @@ LogMatchEnd
 .. code-block:: none
 
   "characters":           [{Character}, ...],
-  "gameResultOnFinished": {GameResult} // For winning players only
+  "gameResultOnFinished": {GameResultOnFinished}   // Shows winning players only
 
 
 

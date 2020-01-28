@@ -49,7 +49,7 @@ Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetr
 
 Inaccurate Values for "swimDistance", "rideDistance", and "walkDistance" in the participant object
 ---------------------------------------------------------------------------------------------------
-Players may sometimes have different values for distances in participant.attributes.stats than in LogPlayerKill.victimGameResult. In this case, LogPlayerKill.victimGameResult should be considered as having the accurate values.
+Players may sometimes have different values for distances in participant.attributes.stats than in the GameResult object. In this case, GameResult should be considered as having the accurate values. The GameResult object can be found in LogPlayerKill.victimGameResult and LogMatchEnd.results.gameResultOnFinished.
 
 
 
