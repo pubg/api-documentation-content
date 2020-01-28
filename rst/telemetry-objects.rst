@@ -74,7 +74,6 @@ isGame represents the phase of the game defined by the status of bluezone and sa
 
 GameResult
 ----------
-
 .. code-block:: none
 
   {
@@ -83,6 +82,16 @@ GameResult
     "teamId":     int,
     "stats":      {Stats},
     "accountId":  string
+  }
+
+
+
+GameResultOnFinished
+---------------------
+.. code-block:: none
+
+  {
+    "results": [{GameResult}, ...]   // Shows winning players only
   }
 
 
