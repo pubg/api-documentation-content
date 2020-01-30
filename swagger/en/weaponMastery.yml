@@ -9,8 +9,9 @@ servers:
     variables:
       "platform":
         enum:
-        - "psn"
         - "steam"
+        - "console"
+        - "psn"
         - "xbox"
         - "kakao"
         default: steam
