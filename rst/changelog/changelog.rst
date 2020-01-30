@@ -14,9 +14,18 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
-v16.2.0 (planned for Jan 30)
+v17.0.0 (planned for Feb 13)
 +++++++++++++++++++++++++++++
-Posted: January 21
+Posted: January 30
+
+Removed:
+
+- Vehicle.rotationPitch
+
+
+
+v16.2.0
+--------
 
 New Data:
 
