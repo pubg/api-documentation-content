@@ -191,7 +191,6 @@ Vehicle
     "vehicleUniqueId": int,
     "healthPercent":   number,
     "feulPercent":     number,
-    "rotationPitch":   number,
     "seatIndex":       int,
     "isWheelsInAir":   bool,
     "isInWaterVolume": bool

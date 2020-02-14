@@ -8,15 +8,14 @@ Changelog
 Upcoming Changes
 -----------------
 
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 
 
-v17.0.0 (planned for Feb 13)
-+++++++++++++++++++++++++++++
-Posted: January 30
+v17.0.0
+--------
 
 Removed:
 
