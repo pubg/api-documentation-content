@@ -14,6 +14,15 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v17.1.0
+--------
+
+New Data:
+
+- Match.attributes.matchType
+
+
+
 v17.0.0
 --------
 

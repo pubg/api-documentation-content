@@ -18,15 +18,19 @@ properties:
       duration:
         type: integer
         description: "Length of the match measured in seconds"
+      matchType:
+        type: string
+        description: "Type of match"
+        enum: [arcade, custom, event, official, training]
       gameMode:
         type: string
         description: |
           Game mode played
-        enum: [duo, duo-fpp, solo, solo-fpp, squad, squad-fpp, conquest-duo, conquest-duo-fpp, conquest-solo, conquest-solo-fpp, conquest-squad, conquest-squad-fpp, esports-duo, esports-duo-fpp, esports-solo, esports-solo-fpp, esports-squad, esports-squad-fpp, normal-duo, normal-duo-fpp, normal-solo, normal-solo-fpp, normal-squad, normal-squad-fpp, war-duo, war-duo-fpp, war-solo, war-solo-fpp, war-squad, war-squad-fpp, zombie-duo, zombie-duo-fpp, zombie-solo, zombie-solo-fpp, zombie-squad, zombie-squad-fpp]
+        enum: [duo, duo-fpp, solo, solo-fpp, squad, squad-fpp, conquest-duo, conquest-duo-fpp, conquest-solo, conquest-solo-fpp, conquest-squad, conquest-squad-fpp, esports-duo, esports-duo-fpp, esports-solo, esports-solo-fpp, esports-squad, esports-squad-fpp, normal-duo, normal-duo-fpp, normal-solo, normal-solo-fpp, normal-squad, normal-squad-fpp, tdm, war-duo, war-duo-fpp, war-solo, war-solo-fpp, war-squad, war-squad-fpp, zombie-duo, zombie-duo-fpp, zombie-solo, zombie-solo-fpp, zombie-squad, zombie-squad-fpp]
       mapName:
         type: string
         description: "Map name"
-        enum: [Desert_Main, Erangel_Main, Savage_Main, Range_Main, DihorOtok_Main, Baltic_Main]
+        enum: [Baltic_Main, Desert_Main, DihorOtok_Main, Erangel_Main, Range_Main, Savage_Main, Summerland_Main]
       isCustomMatch:
         type: boolean
         description: "True if this match is a custom match"
