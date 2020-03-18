@@ -191,7 +191,11 @@ Vehicle
     "vehicleUniqueId": int,
     "healthPercent":   number,
     "feulPercent":     number,
+    "altitudeAbs":     number,
+    "altitudeRel":     number,
+    "velocity":        number,
     "seatIndex":       int,
     "isWheelsInAir":   bool,
-    "isInWaterVolume": bool
+    "isInWaterVolume": bool,
+    "isEngineOn":      bool
   }

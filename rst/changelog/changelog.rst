@@ -8,9 +8,33 @@ Changelog
 Upcoming Changes
 -----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v17.3.0 (planned for March 24, 2020)
+++++++++++++++++++++++++++++++++++++
+Posted March 18, 2020
+
+Deprecated:
+
+- LogMatchDefinition.PingQuality
+
+
+
+v17.2.0
+--------
+
+New Data:
+
+- LogPlayerUseFlareGun
+- Vehicle.velocity
+- Vehicle.altitudeAbs
+- Vehicle.altitudeRel
+- Vehicle.isEngineOn
+- [PC] If LogPlayerKill or LogPlayerMakeGroggy is triggered by a vehicle, and the engine was turned off, then the value "VehicleEngineOff" is added to damageCauserAdditionalInfo
 
 
 
