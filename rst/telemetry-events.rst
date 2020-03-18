@@ -359,6 +359,18 @@ LogPlayerTakeDamage
 
 
 
+LogPlayerUseFlareGun
+---------------------
+.. code-block:: none
+
+  "attackId":             int,
+  "fireWeaponStackCount": int,
+  "attacker":             {Character},
+  "attackType":           string,
+  "weapon":               {Item}
+
+
+
 LogPlayerUseThrowable
 ----------------------
 .. code-block:: none
