@@ -14,13 +14,30 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
-v17.3.0 (planned for March 24, 2020)
+v19.0.0 (planned for March 24, 2020)
 ++++++++++++++++++++++++++++++++++++
-Posted March 18, 2020
+Posted March 18, 2020, Updated March 20
+
+New Data:
+
+- [Console] If LogPlayerKill or LogPlayerMakeGroggy is triggered by a vehicle, and the engine was turned off, then the value "VehicleEngineOff" is added to damageCauserAdditionalInfo
+
+Data Changes:
+
+- [Console] LogMatchEnd.characters and LogMatchStart.characters have been changed from an array of Character objects to an array of CharacterWrapper objects
 
 Deprecated:
 
 - LogMatchDefinition.PingQuality
+
+
+
+v18.0.0
+--------
+
+Data Changes:
+
+- [PC] LogMatchEnd.characters and LogMatchStart.characters have been changed from an array of Character objects to an array of CharacterWrapper objects
 
 
 
