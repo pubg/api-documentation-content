@@ -175,7 +175,7 @@ LogMatchEnd
 -----------
 .. code-block:: none
 
-  "characters":           [{Character}, ...],
+  "characters":           [{CharacterWrapper}, ...],
   "gameResultOnFinished": {GameResultOnFinished}   // Shows winning players only
 
 
@@ -186,7 +186,7 @@ LogMatchStart
 
   "mapName":               string,
   "weatherId":             string,
-  "characters":            [{Character}, ...],
+  "characters":            [{CharacterWrapper}, ...],
   "cameraViewBehaviour":   string,             
   "teamSize":              int,
   "isCustomGame":          bool,

@@ -41,12 +41,26 @@ Character
     "name":         string,
     "teamId":       int,
     "health":       number,
-    "location":     Location,
+    "location":     {Location},
     "ranking":      int,
     "accountId":    string
     "isInBlueZone": bool,
     "isInRedZone":  bool,
     "zone":         [regionId, ...]
+  }
+
+
+
+CharacterWrapper
+----------------
+.. code-block:: none
+
+  {
+    "character":           {Character},
+    "primaryWeaponFirst":  string,
+    "primaryWeaponSecond": string,
+    "secondaryWeapon":     string,
+    "spawnKitIndex":       int
   }
 
 
@@ -57,7 +71,7 @@ Common
 
   {
     "isGame":  number
-  },
+  }
 
 isGame represents the phase of the game defined by the status of bluezone and safezone::
 
