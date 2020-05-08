@@ -67,6 +67,86 @@ To specify the headers, use this code:
 
 
 
+.. _parameters:
+
+URL Parameters
+---------------
+
+the platform shard
+........................................
+**shards/$platform**
+
+The PUBG API shards data by platform, and therefore requires a shard to be specified in the URL for most requests. In most cases, only the platform is required for the shard. However, the `platform-region` shard is required when making requests for PC and PS4 players' season stats for seasons prior to division.bro.official.2018-09, and for Xbox season stats for seasons before division.bro.official.2018-08. For more information about shards, please see :ref:`regions`
+
+the platform-region shard
+..........................
+**shards/$platform-region**
+
+The platform-region shard should be used for making requests for season stats for seasons before the Survival Title system was launched
+  
+- PC and PS4 season stats for seasons before and including division.bro.official.2018-09.
+- Xbox season stats for seasons before and including division.bro.official.2018-08.
+
+Game Mode
+..........
+**gameMode/$gameMode**
+
+Skip to :ref:`gamemodes` for more information about $gameMode values.
+
+Match ID
+.........
+**matches/$matchId**
+
+Match IDs are used to get match data and telemetry. They are listed within the responses from the players, samples, and season stats endpoints. Review :ref:`gettingMatch` for more information.
+
+Season ID
+..........
+**seasons/$seasonId**
+
+Season IDs are used for :ref:`gettingSeasonStats`. They are available in responses from the :ref:`seasons` endpoint.
+
+Lifetime Season ID
+...................
+**seasons/lifetime**
+
+The lifetime season ID can be used to get "lifetime" stats for a player. These are the same stats that are available in-game by choosing "Overall" while viewing your season stats. They include data beginning from when the Survival Title system was laynched:
+
+- PC lifetime stats begin with season division.bro.official.pc-2018-01
+- Playstation lifetime stats begin with season division.bro.official.playstation-01
+- Xbox lifetime stats begin with season division.bro.official.xbox-01
+
+Player Account ID
+......................
+**players/$playerId**
+
+Use this filter to specify which player accounts to search for.
+
+Player Account IDs Filter
+..........................
+**filter[playerIds]=$playerId**
+
+Use this filter to specify which player accounts to search for. You can search for up to 10 players at a time by separating their account IDs with commas.
+
+Player Account Names Filter
+............................
+**filter[playerNames]=$playerName**
+
+Use this filter to specify which players to search for. You can search for up to 10 players at a time by separating their player names with commas.
+
+Gamepad Filter
+...............
+**filter[gamepad]=$isGamepad**
+
+A filter specifying whether gamepad stats should be searched for instead of mouse/keyboard stats
+Stadia players have separate season stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the gamepad filter. When querying for these stats, $isGamepad should have the value `true`. This filter can be omitted otherwise.
+
+Page Filter
+...........
+**page[number]=$page**
+
+Leaderboards are separated into pages of 500 players each. Use the page filter to request additional pages. Pages are numbered beginning with 0. If this filter is omitted, the API will respond with the first page.
+
+
 .. _regions:
 
 Platforms and Regions
@@ -76,6 +156,7 @@ The PUBG API shards data by either `platform` or `platform-region` depending on 
 **shards/$platform** - *the platform shard*
 
 - **kakao** - Kakao
+- **stadia** - Stadia
 - **steam** - Steam
 - **tournament** - Tournaments
 - **psn** - PS4
@@ -109,11 +190,13 @@ The shard is specified after the pubg domain and before the endpoint like this::
 
   "...pubg.com/shards/steam/endpoint..."
 
-**Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
+**Note: Use the platform shard when making requests for Stadia players' season stats, PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
 
 **The platform shard should be used at all other endpoints that require a shard. The platform-region shard is deprecated.**
 
 
+
+.. _gamemodes:
 
 Game Modes
 ----------

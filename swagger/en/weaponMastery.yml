@@ -9,11 +9,12 @@ servers:
     variables:
       "platform":
         enum:
-        - "steam"
         - "console"
-        - "psn"
-        - "xbox"
         - "kakao"
+        - "psn"
+        - "stadia"
+        - "steam"
+        - "xbox"
         default: steam
 
 security:

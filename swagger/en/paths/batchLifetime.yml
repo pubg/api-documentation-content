@@ -5,6 +5,7 @@ get:
   parameters:
     - $ref: '../parameters/index.yml#/gameMode'
     - $ref: '../parameters/index.yml#/filterPlayerIds'
+    - $ref: '../parameters/index.yml#/filterGamepad'
   responses:
     200:
       $ref: '../responses/index.yml#/batchLifetime-200'

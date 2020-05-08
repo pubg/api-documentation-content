@@ -4,6 +4,9 @@ accountId:
 filterCreatedAt-start:
   $ref: './filterCreatedAt-start.yml'
 
+filterGamepad:
+  $ref: './filterGamepad.yml'
+
 filterPlayerIds:
   $ref: './filterPlayerIds.yml'
 

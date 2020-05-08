@@ -1,0 +1,11 @@
+name: filter[gamepad]
+in: query
+description: |
+  Filters for gamepad stats for stadia players.
+  
+  **Usage**: filter[gamepad]=true
+required: false
+example: "true"
+style: form
+schema:
+  type: bool
