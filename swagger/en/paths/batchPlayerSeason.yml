@@ -6,6 +6,7 @@ get:
     - $ref: '../parameters/index.yml#/seasonId'
     - $ref: '../parameters/index.yml#/gameMode'
     - $ref: '../parameters/index.yml#/filterPlayerIds'
+    - $ref: '../parameters/index.yml#/filterGamepad'
   responses:
     200:
       $ref: '../responses/index.yml#/batchPlayerSeason-200'

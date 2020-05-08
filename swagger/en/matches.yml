@@ -10,11 +10,12 @@ servers:
       "platform":
         enum:
         - "console"
-        - "steam"
-        - "psn"
-        - "xbox"
-        - "tournament"
         - "kakao"
+        - "psn"
+        - "stadia"
+        - "steam"
+        - "tournament"
+        - "xbox"
         default: steam
 paths:
   /matches/{id}:

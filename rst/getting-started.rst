@@ -8,7 +8,7 @@ The URL
 -------
 When making a request to the PUBG API, the URL controls what data you will get back and how it will be displayed. Let's take a look at this example URL and break down the interesting bits::
 
-  "https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName"    
+  "https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName"
 
 **shards/$platform** - *the platform shard*
     
@@ -20,7 +20,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
 
 **filter[playerNames]=$playerName** - *a filter specifying which players to search for*
 
-- There are a variety of filters and options that can narrow down a search, organize results, and more! Additional information about each available filter can be found within each endpoint's documentation page.
+- There are a variety of filters and options that can narrow down a search, organize results, and more! Additional information about each available filter can be found in :ref:`parameters`, and within each endpoint's documentation page.
 
 This URL will return a player object containing information about the requested player including a list of their recent match IDs. We will get into that more later in the tutorial.
 
@@ -45,6 +45,7 @@ The content type string will look like this::
   "Accept: application/vnd.api+json"
 
 
+.. _firstRequest:
 
 Putting the Request Together
 ----------------------------
@@ -57,6 +58,110 @@ We now have all of the pieces that we need to make our first request! Just make 
 To see what the player response will look like, please head over to the :ref:`players` page.
 
 
+.. _gettingPlayerId:
+
+Finding the Player Account ID
+------------------------------
+Players' account IDs are available in the response from :ref:`firstRequest`. In the response you will see players listed like this::
+
+  {
+    "type": "player",
+    "id": "$playerId"
+  }
+
+
+
+Season and Lifetime Stats
+--------------------------
+The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season or their overall stats. You will need a **playerId** and a **seasonId** to get season or lifetime stats.
+
+**Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
+
+We start by querying the seasons endpoint to get a list of seasons.
+
+
+Getting Season IDs
+...................
+Query the seasons endpoint to get a list of seasons like this. Please be sure to replace '$platform' with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/seasons" \
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+**Note: The list of seasons will only be changing about once every two months when a new seasons is added. Applications should not be querying for the list of seasons more than once per month.**
+
+In the response you will see seasons listed like this::
+
+  {
+    "type": "season",
+    "id": "$seasonId",
+    "attributes": {
+      "isCurrentSeason": true,
+      "isOffseason": false
+    }
+  }
+
+
+
+.. _gettingSeasonStats:
+
+Getting Player Season Stats
+............................
+Now that we know the $seasonId, we can query the API for season stats like this. Please be sure to replace '$platform', '$playerId', and '$seasonId' with you own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/$seasonId?filter[gamepad]=$isGamepad"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+You will need to use the :ref:`platform-region-shard` when making requests for stats from seasons that occurred before the Survial Title system was introduced.
+
+** Note: Stadia players have separate season stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the gamepad filter. When querying for these stats, $isGamepad should have the value `true`. This filter can be omitted otherwise.**
+
+Match IDs for matches that were played within 14 days will also be available. A maximum of 32 match IDs per player will be in the response. Custom matches and matches older than 14 days will not be available.
+
+
+
+To see what the season stats response will look like, please head over to the :ref:`seasons` page.
+
+Getting Player Lifetime Stats
+..............................
+Lifetime stats are the stats that are available in-game by choosing "Overall" while viewing your season stats. They can be obtained for players by querying the seasons endpoint and using "lifetime" as the '$seasonId'::
+
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/lifetime?filter[gamepad]=$isGamepad"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+The first season included in lifetime stats for each platform is listed in :ref:`lifetimeSeasonID`. To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
+
+
+
+Making Batch Requests
+----------------------
+You can make requests for season/lifetime stats and for players in batches of up to 10 players at a time. This should be done whenever possible to help reduce the number of rate-limited requests that are required by your application.
+
+
+
+Making Batch Requests For Stats
+................................
+You can get season stats for a single game mode for up to 10 players at a time like this::
+
+  curl -g "https://api.pubg.com/shards/$platform/seasons/$seasonId/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2?filter[gamepad]=$isGamepad" \
+  -H "Authorization: Bearer api-key" \
+  -H "Accept: application/vnd.api+json"
+
+You will need to use the :ref:`platform-region-shard` when making requests for stats from seasons that occurred before the Survial Title system was introduced.
+
+To see what the season stats response will look like, please head over to the :ref:`seasons` page.
+
+Lifetime stats for a single game mode can also be requested for up to 10 players at a time by using "lifetime" as the `$seasonId`::
+
+  curl -g "https://api.pubg.com/shards/$platform/seasons/lifetime/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2?filter[gamepad]=$isGamepad" \
+  -H "Authorization: Bearer api-key" \
+  -H "Accept: application/vnd.api+json"
+
+To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
+
+
 
 Getting Match Lists For Players in Batches
 ------------------------------------------
@@ -66,154 +171,20 @@ You can get match lists for up to 10 players with one request like this::
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
-**shards/$platform** - *the platform shard*
-
-**filter[playerNames]=$playerName** - *a filter specifying which players to search for*
-
-**Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
-
 Please be sure to replace '$platform' with the appropriate platform for the players that you are requesting information for. You can request information for up to 10 players by separating their account IDs with commas. This can also be done with in-game names rather than account IDs by changing ?filter[playerIds]' to '?filter[playerNames]' like this::
 
   curl -g "https://api.pubg.com/shards/$platform/players?filter[playerIds]=$playerId-1,$playerId-2" \
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
-**shards/$platform** - *the platform shard*
-
-**filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
-
 To see what the player response will look like, please head over to the :ref:`players` page.
 
 
 
-Getting Player Season Stats
------------------------------
-The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season.
-
-**Note: The list of seasons will only be changing about once every two months when a new seasons is added. Applications should not be querying for the list of seasons more than once per month.**
-
-We start by querying the seasons endpoint to get a list of seasons like this. Please be sure to replace '$platform' with your own information::
-
-  curl -g "https://api.pubg.com/shards/$platform/seasons" \
-  -H "Authorization: Bearer $api-key" \
-  -H "Accept: application/vnd.api+json"
-
-In the response you will see seasons listed like this::
-
-  {
-    "type": "season",
-    "id": "$seasonId"
-    "isCurrentSeason" true:
-    "isOffseason": false:
-  }
-
-With this information, we can now query the API for season stats like this. Please be sure to replace '$platform', '$playerId', and '$seasonId' with you own information::
-
-  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/$seasonId"
-  -H "Authorization: Bearer $api-key" \
-  -H "Accept: application/vnd.api+json"
-
-**shards/$platform** - *the platform shard*
-
-**shards/$platform-region** - *the platform-region shard*
-
-**players/$playerId** - *the player account to search for*
-
-**seasons/$seasonId** - *the season ID to search for*
-
-**Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
-
-For more information about shards, please see :ref:`regions`
-
-The match IDs for matches that count toward season stats will also be available. Custom matches and matches older than 14 days will not be available. Only the 32 most recent matches played within 14 days will be available.
-
-To see what the season stats response will look like, please head over to the :ref:`seasons` page.
-
-
-
-Getting Player Season Stats in Batches
---------------------------------------
-You can get season stats for a game mode for up to 10 players with one request like this::
-
-  curl -g "https://api.pubg.com/shards/$platform/seasons/$seasonId/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2" \
-  -H "Authorization: Bearer api-key" \
-  -H "Accept: application/vnd.api+json"
-
-**shards/$platform** - *the platform shard*
-
-**shards/$platform-region** - *the platform-region shard*
-
-**filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
-
-**gameMode/$gameMode** - *the game mode to search for*
-
-**seasons/$seasonId** - *the season ID to search for*
-
-**Note: Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
-
-Please be sure to replace '$platform', '$seasonId', and '$gameMode' with the appropriate platform, season ID, and game mode that you would like season stats for. You can request season stats for up to 10 players by separating their account IDs with commas.
-
-To see what the season stats response will look like, please head over to the :ref:`seasons` page.
-
-
-
-Getting Player Lifetime Stats
------------------------------
-Lifetime stats can be obtained for players by querying the seasons endpoint and using "lifetime" as the '$seasonId'. Please be sure to replace '$platform', and '$playerId' with your own information::
-
-  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/lifetime"
-  -H "Authorization: Bearer $api-key" \
-  -H "Accept: application/vnd.api+json"
-
-**shards/$platform** - *the platform shard*
-
-**players/$playerId** - *the player account to search for*
-
-**seasons/lifetime** - *the lifetime season ID*
-
-**Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
-
-To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
-
-
-
-Getting Player Lifetime Stats in Batches
------------------------------------------
-You can get lifetime stats for a game mode for up to 10 players with one request. Please be sure to replace '$platform', and '$playerId' with your own information::
-
-  curl -g "https://api.pubg.com/shards/$platform/seasons/lifetime/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2" \
-  -H "Authorization: Bearer api-key" \
-  -H "Accept: application/vnd.api+json"
-
-**shards/$platform** - *the platform shard*
-
-**filter[playerIds]=$playerId** - *a filter specifying which player accounts to search for*
-
-**gameMode/$gameMode** - *the game mode to search for*
-
-**Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
-
-To see what the lifetime stats response will look like, please head over to the :ref:`lifetime` page.
-
-
-
-Getting Player Weapon Mastery Stats
-------------------------------------
-Weapon Mastery information can be obtained for players by querying the weapon_mastery endpoint and using with a player's playerId. Please be sure to replace '$platform', and '$playerId' with your own information::
-
-  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/weapon_mastery"
-  -H "Authorization: Bearer $api-key" \
-  -H "Accept: application/vnd.api+json"
-
-**shards/$platform** - *the platform shard*
-
-**players/$playerId** - *the player account to search for*
-
-To see what the Weapon Mastery response will look like, please head over to the :ref:`weaponMastery` page.
-
+.. _gettingMatch:
 
 Getting a Match
----------------
+----------------
 Within the response from the players endpoint, you should see a list of match IDs structured like this::
 
   "matches": {
@@ -238,27 +209,21 @@ To see what match responses look like, please head over to the :ref:`matches` pa
 
 
 
-Getting Leaderboard Data
--------------------------
-Each leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. Leaderboards will be updated every 2 hours. The platform shards `console`, `xbox`, and `psn` share the same leaderboard for seasons after division.bro.official.console-03.
+Getting Match Samples
+---------------------
+The samples endpoint offers a large set of random match references that is updated for each platform every 24 hours.
 
-You can get the current leaderboard data for each game mode like this::
+The number of matches per shard may vary. Requests for samples need to be at least 24hrs in the past UTC time using the filter[createdAt-start] query parameter. All matches in the response will be between the time that you choose and 24 hours earlier than that time. If you leave out this parameter, the response will be the most recent sample available (matches from within the last 24 hours).
 
-  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$seasonId/$gameMode?page[number]=$page \
+A samples request looks like this. Please be sure to replace '$platform' and $startTime with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/samples?filter[createdAt-start]=$startTime" \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
-**shards/$platform** - *the platform shard*
+**Note: Calling samples without filter[createdAt-start] will return the most recent samples list for that platform. You can fetch older samples up to 14 days using the filter.**
 
-**$seasonId** - *the season ID to search for*
-
-**$gameMode** - *the game mode to search for*
-
-**page[number]=$page** - *a filter specifying which page of the leaderboard to check*
-
-Please be sure to replace '$platform', '$seasonId', and '$gameMode' with the appropriate platform, season ID, and game mode that you would like the leaderboard for. Refer to `Getting Player Season Stats`_ for information about how to get season IDs. You will also need to specify which page of the leaderboard you would like by replacing '$page'.
-
-To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.
+In the response, there will be an array of abbreviated match objects containing IDs and shards to look them up on the matches endpoint. This can be done as shown in the `Getting a Match`_ section.
 
 
 
@@ -286,25 +251,34 @@ To see exactly what the tournament responses will look like, please head over to
 
 
 
-Getting Match Samples
----------------------
-The samples endpoint offers a large set of random match references that is updated for each platform every 24 hours.
-
-The number of matches per shard may vary. Requests for samples need to be at least 24hrs in the past UTC time using the filter[createdAt-start] query parameter. All matches in the response will be between the time that you choose and 24 hours earlier than that time. If you leave out this parameter, the response will be the most recent sample available (matches from within the last 24 hours).
-
-A samples request looks like this. Please be sure to replace '$platform' and $startTime with your own information::
-
-  curl -g "https://api.pubg.com/shards/$platform/samples?filter[createdAt-start]=$startTime" \
-  -H "Authorization: Bearer api-key" \
-  -H "Accept: application/vnd.api+json"
-
-**shards/$platform** - *the platform shard*
-
-**Note: Calling samples without filter[createdAt-start] will return the most recent samples list for that platform. You can fetch older samples up to 14 days using the filter.**
-
-In the response, there will be an array of abbreviated match objects containing IDs and shards to look them up on the matches endpoint. This can be done as shown in the `Getting a Match`_ section.
-
-
 Getting Telemetry Data
 ----------------------
 Telemetry data will provide you with additional information for each match. This data is compressed using gzip and clients using the API should specify that they accept gzip compressed responses. The URL string that links to the telemetry file for a match can be found in the Asset Object of that match. For additional information, please refer to the :ref:`telemetry` page.
+
+
+
+Getting Player Weapon Mastery Stats
+------------------------------------
+Weapon Mastery information can be obtained for players by querying the weapon_mastery endpoint. Don't forget to replace '$platform', and '$playerId' with your own information::
+
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/weapon_mastery"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+To see what the Weapon Mastery response will look like, please head over to the :ref:`weaponMastery` page.
+
+
+
+Getting Leaderboard Data
+-------------------------
+Each leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. Leaderboards will be updated every 2 hours. The platform shards `console`, `xbox`, and `psn` share the same leaderboard for seasons after division.bro.official.console-03.
+
+You can get the current leaderboard data for each game mode like this::
+
+  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$seasonId/$gameMode?page[number]=$page \
+  -H "Authorization: Bearer api-key" \
+  -H "Accept: application/vnd.api+json"
+
+Please be sure to replace '$platform', '$seasonId', and '$gameMode' with the appropriate platform, season ID, and game mode that you would like the leaderboard for. Refer to `Getting Player Season Stats`_ for information about how to get season IDs. You will also need to specify which page of the leaderboard you would like by replacing '$page'.
+
+To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.

@@ -4,17 +4,18 @@ info:
   version: 1.0.0
   title: ""
   description:  Notes:<br><br>
-    - Use the platform shard when making requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.<br><br>
+    - Use the platform shard when making stadia requests, requests for PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.<br><br>
     - The list of seasons can be queried using both the plaform shard and the platform-region shard.<br><br>
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:
       "platform":
         enum:
-        - "steam"
-        - "psn"
-        - "xbox"
         - "kakao"
+        - "psn"
+        - "stadia"
+        - "steam"
+        - "xbox"
         default: steam
   - url: https://api.pubg.com/shards/{platform-region}
     variables:

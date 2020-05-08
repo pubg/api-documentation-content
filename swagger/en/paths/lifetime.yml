@@ -4,6 +4,7 @@ get:
   summary: Get lifetime stats for a single player.
   parameters:
     - $ref: '../parameters/index.yml#/accountId'
+    - $ref: '../parameters/index.yml#/filterGamepad'
   responses:
     200:
       $ref: '../responses/index.yml#/lifetime-200'
