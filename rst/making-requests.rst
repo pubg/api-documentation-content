@@ -115,7 +115,7 @@ Lifetime Season ID
 ...................
 **seasons/lifetime**
 
-The lifetime season ID can be used to get "lifetime" stats for a player. These are the same stats that are available in-game by choosing "Overall" while viewing your season stats. They include data beginning from when the Survival Title system was laynched:
+The lifetime season ID can be used to get "lifetime" stats for a player. These are the same stats that are available in-game by choosing "Overall" while viewing your season stats. They include data beginning from when the Survival Title system was launched:
 
 - PC lifetime stats begin with season division.bro.official.pc-2018-01
 - Playstation lifetime stats begin with season division.bro.official.playstation-01
@@ -140,12 +140,13 @@ Player Account Names Filter
 
 Use this filter to specify which players to search for. You can search for up to 10 players at a time by separating their player names (in-game names) with commas.
 
+.. _gamepadFilter:
+
 Gamepad Filter
 ...............
 **filter[gamepad]=$isGamepad**
 
-A filter specifying whether gamepad stats should be searched for instead of mouse/keyboard stats
-Stadia players have separate season stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the gamepad filter. When querying for these stats, $isGamepad should have the value `true`. This filter can be omitted otherwise.
+A filter specifying whether gamepad stats should be searched for instead of mouse/keyboard stats when using the `stadia` shard. Stadia players have separate season stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the `console` shard, or by using the gamepad filter with the `stadia` shard. When querying for these stats, $isGamepad should have the value `true`. This filter can be omitted otherwise. The API will respond with keyboard/mouse stats to queries for stats using the `stadia` shard without this filter.
 
 Page Filter
 ...........

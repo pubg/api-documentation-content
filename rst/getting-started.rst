@@ -75,9 +75,11 @@ Season and Lifetime Stats
 --------------------------
 The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season or their overall stats. You will need a **playerId** and a **seasonId** to get season or lifetime stats.
 
-**Note: The first seasons for lifetime stats are division.bro.official.pc-2018-01 for PC, division.bro.official.playstation-01 for PS4, and division.bro.official.xbox-01 for Xbox.**
+The :ref:`lifetimeSeasonID` can be used to get "lifetime" stats for a player. These are the same stats that are available in-game by choosing "Overall" while viewing your season stats. They include data beginning from when the Survival Title system was launched. The first seasons for lifetime stats are `division.bro.official.pc-2018-01` for PC, `division.bro.official.playstation-01` for PS4, `division.bro.official.xbox-01` for Xbox, and `division.bro.official.console-07` for Stadia.
 
-We start by querying the seasons endpoint to get a list of seasons.
+Stadia players have separate season and lifetime stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the `console` shard, or by using the :ref:`gamepadFilter` with the `stadia` shard.
+
+We start by querying the seasons endpoint to get a list of seasons:
 
 
 Getting Season IDs
@@ -101,6 +103,8 @@ In the response you will see seasons listed like this::
     }
   }
 
+To see what the full seasons response will look like, please head over to the :ref:`seasons` page.
+
 
 
 .. _gettingSeasonStats:
@@ -109,25 +113,23 @@ Getting Player Season Stats
 ............................
 Now that we know the $seasonId, we can query the API for season stats like this. Please be sure to replace '$platform', '$playerId', and '$seasonId' with you own information::
 
-  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/$seasonId?filter[gamepad]=$isGamepad"
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/$seasonId"
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
 You will need to use the :ref:`platform-region-shard` when making requests for stats from seasons that occurred before the Survial Title system was introduced.
 
-** Note: Stadia players have separate season stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the gamepad filter. When querying for these stats, $isGamepad should have the value `true`. This filter can be omitted otherwise.**
-
 Match IDs for matches that were played within 14 days will also be available. A maximum of 32 match IDs per player will be in the response. Custom matches and matches older than 14 days will not be available.
 
-
-
 To see what the season stats response will look like, please head over to the :ref:`seasons` page.
+
+
 
 Getting Player Lifetime Stats
 ..............................
 Lifetime stats are the stats that are available in-game by choosing "Overall" while viewing your season stats. They can be obtained for players by querying the seasons endpoint and using "lifetime" as the '$seasonId'::
 
-  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/lifetime?filter[gamepad]=$isGamepad"
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/lifetime"
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
@@ -145,7 +147,7 @@ Making Batch Requests For Stats
 ................................
 You can get season stats for a single game mode for up to 10 players at a time like this::
 
-  curl -g "https://api.pubg.com/shards/$platform/seasons/$seasonId/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2?filter[gamepad]=$isGamepad" \
+  curl -g "https://api.pubg.com/shards/$platform/seasons/$seasonId/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2" \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
@@ -155,7 +157,7 @@ To see what the season stats response will look like, please head over to the :r
 
 Lifetime stats for a single game mode can also be requested for up to 10 players at a time by using "lifetime" as the `$seasonId`::
 
-  curl -g "https://api.pubg.com/shards/$platform/seasons/lifetime/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2?filter[gamepad]=$isGamepad" \
+  curl -g "https://api.pubg.com/shards/$platform/seasons/lifetime/gameMode/$gameMode/players?filter[playerIds]=$playerId-1,$playerId-2" \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
