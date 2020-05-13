@@ -14,16 +14,24 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v19.1.0
+--------
+
+New Data:
+
+- [Stadia] Data from Stadia matches and for Stadia players is now available.
+
+
 v19.0.0
 --------
 
 New Data:
 
-- [Console] If LogPlayerKill or LogPlayerMakeGroggy is triggered by a vehicle, and the engine was turned off, then the value "VehicleEngineOff" is added to damageCauserAdditionalInfo
+- [Console] If LogPlayerKill or LogPlayerMakeGroggy is triggered by a vehicle, and the engine was turned off, then the value "VehicleEngineOff" is added to damageCauserAdditionalInfo.
 
 Data Changes:
 
-- [Console] LogMatchEnd.characters and LogMatchStart.characters have been changed from an array of Character objects to an array of CharacterWrapper objects
+- [Console] LogMatchEnd.characters and LogMatchStart.characters have been changed from an array of Character objects to an array of CharacterWrapper objects.
 
 
 
@@ -41,7 +49,7 @@ v18.0.0
 
 Data Changes:
 
-- [PC] LogMatchEnd.characters and LogMatchStart.characters have been changed from an array of Character objects to an array of CharacterWrapper objects
+- [PC] LogMatchEnd.characters and LogMatchStart.characters have been changed from an array of Character objects to an array of CharacterWrapper objects.
 
 
 
@@ -55,7 +63,7 @@ New Data:
 - Vehicle.altitudeAbs
 - Vehicle.altitudeRel
 - Vehicle.isEngineOn
-- [PC] If LogPlayerKill or LogPlayerMakeGroggy is triggered by a vehicle, and the engine was turned off, then the value "VehicleEngineOff" is added to damageCauserAdditionalInfo
+- [PC] If LogPlayerKill or LogPlayerMakeGroggy is triggered by a vehicle, and the engine was turned off, then the value "VehicleEngineOff" is added to damageCauserAdditionalInfo.
 
 
 

@@ -5,6 +5,7 @@ get:
   parameters:
     - $ref: '../parameters/index.yml#/accountId'
     - $ref: '../parameters/index.yml#/seasonId'
+    - $ref: '../parameters/index.yml#/filterGamepad'
   responses:
     200:
       $ref: '../responses/index.yml#/playerSeason-200'
