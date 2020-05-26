@@ -1,0 +1,59 @@
+description: "Ranked Player Stats Response"
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            type:
+              type: string
+              description: "rankedPlayerStats"
+            attributes:
+              type: object
+              properties:
+                rankedGameModeStats:
+                  type: object
+                  properties:
+                    squad:
+                      $ref: '../schemas/index.yml#/rankedGameModeStats'
+                    squad-fpp:
+                      $ref: '../schemas/index.yml#/rankedGameModeStats'
+            relationships:
+              type: object
+              properties:
+                player:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: "player"
+                        id:
+                          type: string
+                          description: "Player ID"
+
+                season:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: "season"
+                        id:
+                          type: string
+                          description: "Season ID"
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              description: "Link to this ranked player stats object"
+        meta:
+          type: object
+          description: "N/A"

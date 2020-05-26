@@ -5,6 +5,30 @@ info:
   title: ""
   description: "Note: Leaderboards are updated every 2 hours."
 servers:
+  - url: https://api.pubg.com/shards/{platform-region}
+    variables:
+      "platform-region":
+        enum:
+        - "pc-as"
+        - "pc-eu"
+        - "pc-jp"
+        - "pc-krjp"
+        - "pc-kakao"
+        - "pc-na"
+        - "pc-oc"
+        - "pc-ru"
+        - "pc-sa"
+        - "pc-sea"
+        - "psn-as"
+        - "psn-eu"
+        - "psn-na"
+        - "psn-oc"
+        - "xbox-as"
+        - "xbox-eu"
+        - "xbox-na"
+        - "xbox-oc"
+        - "xbox-sa"
+        default: pc-na
   - url: https://api.pubg.com/shards/{platform}
     variables:
       "platform":
@@ -15,7 +39,6 @@ servers:
         - "steam"
         - "xbox"
         default: steam
-
 security:
   - ApiKeyAuth: []
 

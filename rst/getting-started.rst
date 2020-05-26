@@ -71,9 +71,9 @@ Players' account IDs are available in the response from :ref:`firstRequest`. In 
 
 
 
-Season and Lifetime Stats
---------------------------
-The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season or their overall stats. You will need a **playerId** and a **seasonId** to get season or lifetime stats.
+Ranked, Season, and Lifetime Stats
+-----------------------------------
+The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season or their overall stats. You will need a **playerId** and a **seasonId** to get ranked, season, or lifetime stats.
 
 The :ref:`lifetimeSeasonID` can be used to get "lifetime" stats for a player. These are the same stats that are available in-game by choosing "Overall" while viewing your season stats. They include data beginning from when the Survival Title system was launched. The first seasons for lifetime stats are `division.bro.official.pc-2018-01` for PC, `division.bro.official.playstation-01` for PS4, `division.bro.official.xbox-01` for Xbox, and `division.bro.official.console-07` for Stadia.
 
@@ -125,6 +125,20 @@ To see what the season stats response will look like, please head over to the :r
 
 
 
+.. _gettingRankedStats:
+
+Getting Player Ranked Stats
+............................
+Ranked stats are available beginning with Season 7. We can query the API for ranked stats by adding `/ranked` to the request URL for season stats::
+
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/seasons/$seasonId/ranked"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+A list of match IDs is not available from this endpoint. To see what the ranked stats response will look like, please head over to the :ref:`seasons` page.
+
+
+
 Getting Player Lifetime Stats
 ..............................
 Lifetime stats are the stats that are available in-game by choosing "Overall" while viewing your season stats. They can be obtained for players by querying the seasons endpoint and using "lifetime" as the '$seasonId'::
@@ -166,7 +180,7 @@ To see what the lifetime stats response will look like, please head over to the 
 
 
 Getting Match Lists For Players in Batches
-------------------------------------------
+...........................................
 You can get match lists for up to 10 players with one request like this::
 
   curl -g "https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName-1,$playerName-2" \
@@ -273,14 +287,14 @@ To see what the Weapon Mastery response will look like, please head over to the 
 
 Getting Leaderboard Data
 -------------------------
-Each leaderboard includes the top 1000 players for the specified game mode separated into 2 pages of 500 players each, numbered 0-1. Leaderboards will be updated every 2 hours. The platform shards `console`, `xbox`, and `psn` share the same leaderboard for seasons after division.bro.official.console-03.
+Leaderboards are available for each season beginning with the first Survival Title :ref:`seasonID` for each platform. Each leaderboard includes the top 500 players for the specified game mode. Leaderboards for the current season will be updated every 2 hours. :ref:`platform-region-shard` shard should be used to get leaderboards beginning with season division.bro.official.pc-2018-07 (for PC) and season division.bro.official.console-07 (for console). :ref:`platform-shard` is only supported up to Season 6.
 
 You can get the current leaderboard data for each game mode like this::
 
-  curl -g "https://api.pubg.com/shards/$platform/leaderboards/$seasonId/$gameMode?page[number]=$page \
+  curl -g "https://api.pubg.com/shards/$platform-region/leaderboards/$seasonId/$gameMode \
   -H "Authorization: Bearer api-key" \
   -H "Accept: application/vnd.api+json"
 
-Please be sure to replace '$platform', '$seasonId', and '$gameMode' with the appropriate platform, season ID, and game mode that you would like the leaderboard for. Refer to `Getting Player Season Stats`_ for information about how to get season IDs. You will also need to specify which page of the leaderboard you would like by replacing '$page'.
+Please be sure to replace '$platform-region', '$seasonId', and '$gameMode' with the appropriate platform, season ID, and game mode that you would like the leaderboard for. Refer to `Getting Player Season Stats`_ for information about how to get season IDs. You will also need to specify which page of the leaderboard you would like by replacing '$page'.
 
 To see what the leaderboards response will look like, please head over to the :ref:`leaderboards` page.

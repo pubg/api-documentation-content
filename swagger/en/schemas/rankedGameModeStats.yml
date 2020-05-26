@@ -1,0 +1,134 @@
+title: Ranked Game Mode Stats Object
+description: "Ranked Game Mode stats objects contain a player's aggregated ranked stats for a game mode in the context of a season."
+type: object
+properties:
+  currentRankPoint:
+    type: integer
+    description: "Player's current rank points"
+    minimum: 0
+  bestRankPoint:
+    type: integer
+    description: "Player's highest rank points"
+    minimum: 0
+  currentTier:
+    type: object
+    properties:
+      tier:
+        type: string
+        description: "Player's current ranked tier"
+      subTier:
+        type: string
+        description: "Player's current ranked subtier"
+  bestTier:
+    type: object
+    properties:
+      tier:
+        type: string
+        description: "Player's highest ranked tier"
+      subTier:
+        type: string
+        description: "Player's highest ranked subtier"
+  roundsPlayed:
+    type: integer
+    description: "Number of matches played"
+    minimum: 0
+  avgRank:
+    type: number
+    description: "Average rank"
+    minimum: 0
+  avgSurvivalTime:
+    type: number
+    description: "Average time survived in a match"
+    minimum: 0
+  top10Ratio:
+    type: number
+    description: "Ratio of number of times this player made it to the top 10 in a match / times didn't make it to top 10"
+    minimum: 0
+  winRatio:
+    type: number
+    description: "Ratio of number of matches won / matches didn't win"
+    minimum: 0
+  assists:
+    type: integer
+    description: "Number of enemy players this player damaged that were killed by teammates"
+    minimum: 0
+  wins:
+    type: integer
+    description: "Number of matches won"
+    minimum: 0
+  kda:
+    type: number
+    description: "Kill death assist ratio"
+    minimum: 0
+  kdr:
+    type: number
+    description: "Kills to death ratio"
+    minimum: 0
+  kills:
+    type: integer
+    description: "Number of enemy players killed"
+    minimum: 0
+  deaths:
+    type: integer
+    description: "Number of player deaths"
+    minimum: 0
+  roundMostKills:
+    type: integer
+    description: "Highest number of kills in a single match"
+    minimum: 0
+  longestKill:
+    type: number
+    description: "The longest distance that the player has made a kill from"
+    minimum: 0
+  headshotKills:
+    type: integer
+    description: "Number of enemy players killed with headshots"
+    minimum: 0
+  headshotKillRatio:
+    type: number
+    description: "Ratio of number of enemy players killed with headshots"
+    minimum: 0
+  damageDealt:
+    type: number
+    description: "Total damage dealt. Note: Self inflicted damage is subtracted"
+    minimum: 0
+  dBNOs:
+    type: integer
+    description: "Number of enemy players knocked"
+    minimum: 0
+  reviveRatio:
+    type: number
+    description: "Ratio of number of times this player revived teammates"
+    minimum: 0
+  revives:
+    type: integer
+    description: "Number of times this player revived teammates"
+    minimum: 0
+  dailyKills:
+    type: integer
+    description: "Number of kills during the most recent day played."
+    minimum: 0
+  heals:
+    type: integer
+    description: "Number of healing items used"
+    minimum: 0
+  boosts:
+    type: integer
+    description: "Number of boost items used"
+    minimum: 0
+  weaponsAcquired:
+    type: integer
+    description: "Number of weapons picked up"
+    minimum: 0
+  teamKills:
+    type: integer
+    description: "Number of times this player killed a teammate"
+    minimum: 0
+  playTime:
+    type: number
+    description: "Amount of time played"
+    minimum: 0
+  killStreak:
+    type: integer
+    description: "Highest kill streak"
+    minimum: 0

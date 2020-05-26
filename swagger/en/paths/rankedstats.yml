@@ -1,13 +1,13 @@
 get:
   tags:
-  - Leaderboards
-  summary: Get the leaderboard for a game mode.
+  - Ranked Stats
+  summary: Get ranked stats for a single player.
   parameters:
+    - $ref: '../parameters/index.yml#/accountId'
     - $ref: '../parameters/index.yml#/seasonId'
-    - $ref: '../parameters/index.yml#/gameMode'
   responses:
     200:
-      $ref: '../responses/index.yml#/leaderboards-200'
+      $ref: '../responses/index.yml#/rankedstats-200'
     401:
       $ref: '../responses/index.yml#/errors/unauthorized'
     404:

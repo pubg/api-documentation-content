@@ -1,5 +1,5 @@
 title: Leaderboard Object
-description: "Leaderboard objects show a specific page containing the current rank of 500 of the top 1000 players for a game mode."
+description: "Leaderboard objects show the current rank of the top 500 players for a game mode."
 type: object
 properties:
   type:
@@ -13,10 +13,13 @@ properties:
     properties:
       shardId:
         type: string
-        description: "platform shard"
+        description: "the shard ID"
       gameMode:
         type: string
         description: "The game mode"
+      seasonId:
+        type: string
+        description: "The season ID"
   relationships:
     type: object
     properties:
@@ -85,10 +88,20 @@ properties:
                   type: number
                   description: "Kill death ratio"
                   minimum: 0
+                kda:
+                  type: number
+                  description: "Kill death assist ratio"
+                  minimum: 0
                 averageRank:
                   type: number
                   description: "Average rank"
                   minimum: 0
+                tier:
+                  type: string
+                  description: "Player's tier"
+                subTier:
+                  type: string
+                  description: "Player's subtier"
   links:
     type: object
     properties:
