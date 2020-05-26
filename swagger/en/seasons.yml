@@ -49,7 +49,7 @@ paths:
   /seasons:
     $ref: './paths/index.yml#/seasons'
 
-  /seasons/{seasonId}/gameMode/{gameMode}/ranked:
+  /players/{accountId}/seasons/{seasonId}/ranked:
     $ref: './paths/index.yml#/rankedstats'
     
   /players/{accountId}/seasons/{seasonId}:

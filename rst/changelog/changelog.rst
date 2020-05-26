@@ -19,7 +19,7 @@ v20.0.0
 
 New Data:
 
-- [PC] Player ranked stats are now available via the ranked stats endpoint.
+- Player ranked stats are now available via the ranked stats endpoint.
 - leaderboard.included.player.attributes.stats.kda
 - leaderboard.included.player.attributes.stats.tier
 - leaderboard.included.player.attributes.stats.subTier
