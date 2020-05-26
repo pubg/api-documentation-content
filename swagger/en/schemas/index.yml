@@ -19,6 +19,9 @@ participant:
 player:
   $ref: './player.yml'
 
+rankedGameModeStats:
+  $ref: './rankedGameModeStats.yml'
+
 roster:
   $ref: './roster.yml'
 

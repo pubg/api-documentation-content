@@ -72,6 +72,8 @@ To specify the headers, use this code:
 URL Parameters
 ---------------
 
+.. _platform-shard:
+
 the platform shard
 ........................................
 **shards/$platform**
@@ -103,11 +105,18 @@ Match ID
 
 Match IDs are used to get match data and telemetry. They are listed within the responses from the players, samples, and season stats endpoints. Review :ref:`gettingMatch` for more information.
 
+.. _seasonID:
+
 Season ID
 ..........
 **seasons/$seasonId**
 
-Season IDs are used for :ref:`gettingSeasonStats`. They are available in responses from the :ref:`seasons` endpoint.
+Season IDs are used for :ref:`gettingSeasonStats`. They are available in responses from the :ref:`seasons` endpoint. Some stats are only available after the Survival Title system went live. For each platform, the first Survival Title season is:
+
+- pc: division.bro.official.pc-2018-01
+- psn: division.bro.official.playstation-01
+- xbox: division.bro.official.xbox-01
+- stadia: N/A, first season: division.bro.official.console-07
 
 .. _lifetimeSeasonID:
 
@@ -146,7 +155,9 @@ Gamepad Filter
 ...............
 **filter[gamepad]=$isGamepad**
 
-A filter specifying whether gamepad stats should be searched for instead of mouse/keyboard stats when using the `stadia` shard. Stadia players have separate season stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the `console` shard, or by using the gamepad filter with the `stadia` shard. When querying for these stats, $isGamepad should have the value `true`. This filter can be omitted otherwise. The API will respond with keyboard/mouse stats to queries for stats using the `stadia` shard without this filter.
+A filter specifying whether gamepad stats should be searched for instead of mouse/keyboard stats when using the `stadia` shard.
+
+Stadia players have separate season stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the `console` shard, or by using the gamepad filter with the `stadia` shard. When querying for these stats, $isGamepad should have the value `true`. This filter should be omitted otherwise. The API will respond with keyboard/mouse stats to queries for stats using the `stadia` shard without this filter.
 
 Page Filter
 ...........

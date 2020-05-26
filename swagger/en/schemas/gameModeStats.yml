@@ -70,9 +70,11 @@ properties:
     type: number
     description: "Number of rank points the player was awarded. This value will be 0 when roundsPlayed < 10"
     minimum: 0
+    deprecated: true
   rankPointsTitle:
     type: string
     description: "Rank title in the form title-level"
+    deprecated: true
   revives:
     type: integer
     description: "Number of times this player revived teammates"

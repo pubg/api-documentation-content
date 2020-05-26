@@ -22,6 +22,9 @@ players:
 playerSeason:
   $ref: './playerSeason.yml'
 
+rankedstats:
+  $ref: './rankedstats.yml'
+
 samples:
   $ref: './samples.yml'
   

@@ -14,6 +14,7 @@ The following items are misspelled in the telemetry:
 - Item.ItemID: ItemAmmo12GuageC
 - Vehicle.FeulPercent
 - ItemPackage.itemPackageId.Carapackage_RedBox_C
+- damageReason.SimlateAIBeKilled
 
 
 
@@ -50,21 +51,3 @@ Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetr
 Inaccurate Values for "swimDistance", "rideDistance", and "walkDistance" in the participant object
 ---------------------------------------------------------------------------------------------------
 Players may sometimes have different values for distances in participant.attributes.stats than in the GameResult object. In this case, GameResult should be considered as having the accurate values. The GameResult object can be found in LogPlayerKill.victimGameResult and LogMatchEnd.results.gameResultOnFinished.
-
-
-
-Players Missing From LogMatchEnd
----------------------------------
-Some players are not listed in the LogMatchEnd event in the telemetry for some of the matches that they have played.
-
-
-
-Missing Participant Object For Players
----------------------------------------
-Some players are not showing up as participants in some of the matches that they have played.
-
-
-
-Missing Matches For Players
-----------------------------
-Some matches may be missing for players at the /players endpoint. This occurs when there is no participant object for that player in the match.

@@ -38,6 +38,9 @@ samples-200:
 playerSeason-200:
   $ref: './playerSeason-200.yml'
 
+rankedstats-200:
+  $ref: './rankedstats-200.yml'
+
 seasons-200:
   $ref: './seasons-200.yml'
 
