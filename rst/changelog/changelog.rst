@@ -19,14 +19,14 @@ v20.0.0
 
 New Data:
 
-- [PC] Player ranked stats are now available.
+- [PC] Player ranked stats are now available via the ranked stats endpoint.
 - leaderboard.included.player.attributes.stats.kda
 - leaderboard.included.player.attributes.stats.tier
 - leaderboard.included.player.attributes.stats.subTier
 
 Data Changes:
 
-- Leaderboards require the :ref:`platform-region-shard` for seasons beginning with Season 7. API responses will include the top 500 players for each leaderboard. The page filter is no longer necessary.
+- Leaderboards require :ref:`platform-region-shard` for seasons beginning with Season 7. API responses will include the top 500 players for each leaderboard. The page filter is no longer necessary.
 
 Deprecated:
 
