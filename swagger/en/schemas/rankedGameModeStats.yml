@@ -40,6 +40,7 @@ properties:
     type: number
     description: "Average time survived in a match"
     minimum: 0
+    deprecated: true
   top10Ratio:
     type: number
     description: "Ratio of number of times this player made it to the top 10 in a match / times didn't make it to top 10"
@@ -64,6 +65,7 @@ properties:
     type: number
     description: "Kills to death ratio"
     minimum: 0
+    deprecated: true
   kills:
     type: integer
     description: "Number of enemy players killed"
@@ -76,18 +78,22 @@ properties:
     type: integer
     description: "Highest number of kills in a single match"
     minimum: 0
+    deprecated: true
   longestKill:
     type: number
     description: "The longest distance that the player has made a kill from"
     minimum: 0
+    deprecated: true
   headshotKills:
     type: integer
     description: "Number of enemy players killed with headshots"
     minimum: 0
+    deprecated: true
   headshotKillRatio:
     type: number
     description: "Ratio of number of enemy players killed with headshots"
     minimum: 0
+    deprecated: true
   damageDealt:
     type: number
     description: "Total damage dealt. Note: Self inflicted damage is subtracted"
@@ -100,35 +106,39 @@ properties:
     type: number
     description: "Ratio of number of times this player revived teammates"
     minimum: 0
+    deprecated: true
   revives:
     type: integer
     description: "Number of times this player revived teammates"
     minimum: 0
-  dailyKills:
-    type: integer
-    description: "Number of kills during the most recent day played."
-    minimum: 0
+    deprecated: true
   heals:
     type: integer
     description: "Number of healing items used"
     minimum: 0
+    deprecated: true
   boosts:
     type: integer
     description: "Number of boost items used"
     minimum: 0
+    deprecated: true
   weaponsAcquired:
     type: integer
     description: "Number of weapons picked up"
     minimum: 0
+    deprecated: true
   teamKills:
     type: integer
     description: "Number of times this player killed a teammate"
     minimum: 0
+    deprecated: true
   playTime:
     type: number
     description: "Amount of time played"
     minimum: 0
+    deprecated: true
   killStreak:
     type: integer
     description: "Highest kill streak"
     minimum: 0
+    deprecated: true

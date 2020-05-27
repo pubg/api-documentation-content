@@ -14,6 +14,30 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v20.1.0
+--------
+
+Deprecated:
+
+- leaderboard.included.player.attributes.stats.winRatio
+- leaderboard.included.player.attributes.stats.killDeathRatio
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.reviveRatio
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.revives
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.heals
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.boosts
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.weaponsAcquired
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.teamKills
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.playTime
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.killStreak
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.avgSurvivalTime
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.kdr
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.roundMostKills
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.longestKill
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.headshotKills
+- rankedplayerstats.attributes.rankedGameModeStats.{gameMode}.headshotKillRatio
+
+
+
 v20.0.0
 --------
 
