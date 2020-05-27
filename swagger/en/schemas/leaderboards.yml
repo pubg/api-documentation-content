@@ -76,6 +76,7 @@ properties:
                   type: number
                   description: "Win ratio"
                   minimum: 0
+                  deprecated: true
                 averageDamage:
                   type: integer
                   description: "Average amount of damage dealt per match"
@@ -88,6 +89,7 @@ properties:
                   type: number
                   description: "Kill death ratio"
                   minimum: 0
+                  deprecated: true
                 kda:
                   type: number
                   description: "Kill death assist ratio"
