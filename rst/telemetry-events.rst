@@ -71,7 +71,7 @@ LogHeal
 
   "character":  {Character},
   "item":       {Item},
-  "healAmount": number
+  "healamount": number
 
 
 
