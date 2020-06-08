@@ -3,9 +3,10 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: ""
-  description:  Notes:<br><br>
-    - Use the platform-region shard for seasons that occurred before the Surivor Title System. The platform-shard must be used otherwise. <br><br>
-    - The list of seasons can be queried using both the plaform shard and the platform-region shard.<br><br>
+  description: |
+    Notes:
+    - Use the platform-region shard for seasons that occurred before the Surivor Title System. The platform-shard must be used otherwise.
+    - The list of seasons can be queried using both the plaform shard and the platform-region shard.
 servers:
   - url: https://api.pubg.com/shards/{platform}
     variables:
