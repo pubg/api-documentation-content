@@ -34,7 +34,7 @@ The primary API endpoints (players and matches) are structured to favor specific
 - Stat sites & bots - A user must enter their player name to see their stats and history, meaning that the application only needs to query the API when that happens
 - Leaderboards & coaching services - Users must register on the site, meaning that the application only has to query for known players
 
-This being said, some applications may still need to analyze large amounts of random data. This can be done by requesting sample data, which is a randomized statistical sample that can be used to infer and understand global changes. This data can be acquired from the samples endpoint.
+This being said, some applications, such as those that provide heatmaps, may still need to analyze large amounts of random data. We provide a random number of matches everyday for this purpose which can be acquired by making a request to the samples endpoint. Since sample rates are random and independent per shard, this data cannot and should not be used to attempt to estimate the total number of matches or unique PUBG players, or as a way to compare the number of matches or unique PUBG players per platform.
 
 
 
