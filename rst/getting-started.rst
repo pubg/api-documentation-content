@@ -227,7 +227,7 @@ To see what match responses look like, please head over to the :ref:`matches` pa
 
 Getting Match Samples
 ---------------------
-The samples endpoint offers a large set of random match references that is updated for each platform every 24 hours. Sample rates are independent for each platform and not uniform across any time interval.
+The samples endpoint offers a large set of random match references that is updated for each platform every 24 hours. Sample rates are independent for each platform and not uniform across any time interval. They cannot and should not be used to attempt to estimate the total number of matches or unique PUBG players, or as a way to compare the number of matches or unique PUBG players per platform.
 
 The number of matches per shard may vary. Requests for samples need to be at least 24hrs in the past UTC time using the filter[createdAt-start] query parameter. All matches in the response will be between the time that you choose and 24 hours earlier than that time. If you leave out this parameter, the response will be the most recent sample available (matches from within the last 24 hours).
 
