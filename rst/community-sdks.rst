@@ -16,7 +16,6 @@ NodeJS
 ------
 - https://github.com/Wobow/pubg_api
 - https://github.com/PaulEndri/pubg-sdk
-- https://github.com/hunyadi8/pubg-api-http / https://www.npmjs.com/package/pubg-api-http
 - https://github.com/ickerio/pubg.js / https://www.npmjs.com/package/pubg.js
 - https://github.com/feed4rz/node-battlegrounds / https://npmjs.org/package/battlegrounds
 - https://github.com/kmocorro/pubg-chicken / https://www.npmjs.com/package/pubg-chicken
