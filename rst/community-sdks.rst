@@ -24,6 +24,12 @@ GraphQL
 
 
 
+Go
+--
+https://github.com/NovikovRoman/pubg
+
+
+
 Python
 ------
 - https://github.com/ramonsaraiva/pubg-python
