@@ -14,9 +14,53 @@ Want your SDK listed here? Email us at pubgapi@pubg.com with a link to your wrap
 
 NodeJS
 ------
+- https://github.com/ickerio/pubg.js / https://www.npmjs.com/package/pubg.js
+
+
+
+GraphQL
+-------
+- https://github.com/JadTermsani/PubgRecords-server
+
+
+
+Python
+------
+- https://github.com/ramonsaraiva/pubg-python
+- https://github.com/Discord-ian/pubgy
+- https://github.com/crflynn/chicken-dinner
+
+
+
+C#/.Net
+-------
+- https://github.com/GavinPower747/pubg-dotnet
+
+
+
+PHP
+---
+- https://github.com/samiaraboglu/pubg-php-api
+
+
+
+Java
+----
+- https://github.com/GPLNature/pubgapi / https://bintray.com/gplnature/java-wrappers/pubgapi
+
+
+
+No Longer Maintained
+====================
+SDKs under this section seem to be no longer maintained by the developer.
+Usage for new projects is not recommended as they are most likely not compatible with the current API.
+
+
+
+NodeJS
+------
 - https://github.com/Wobow/pubg_api
 - https://github.com/PaulEndri/pubg-sdk
-- https://github.com/ickerio/pubg.js / https://www.npmjs.com/package/pubg.js
 - https://github.com/feed4rz/node-battlegrounds / https://npmjs.org/package/battlegrounds
 - https://github.com/kmocorro/pubg-chicken / https://www.npmjs.com/package/pubg-chicken
 - https://github.com/Dsacdalan/pubg-microwave-dinner / https://www.npmjs.com/package/pubg-microwave-dinner
@@ -39,28 +83,18 @@ Javascript
 GraphQL
 -------
 - https://github.com/antoniojps/graphql-pubg
-- https://github.com/JadTermsani/PubgRecords-server
-
-
-
-Python
-------
-- https://github.com/ramonsaraiva/pubg-python
-- https://github.com/Discord-ian/pubgy
-- https://github.com/crflynn/chicken-dinner
 
 
 
 C#/.Net
 -------
-- https://github.com/GavinPower747/pubg-dotnet
 - https://github.com/EpicKitten/PUBGLibrary
+- https://github.com/Scarjit/PUBGSDK/
 
 
 
 PHP
 ---
-- https://github.com/samiaraboglu/pubg-php-api
 - https://github.com/myserywork/pubg-api-php
 - https://github.com/Lifeformwp/php-pubg
 - https://github.com/andrewbroberg/pubg-php
@@ -76,8 +110,6 @@ Laravel
 
 Java
 ----
-- https://github.com/GPLNature/pubgapi / https://bintray.com/gplnature/java-wrappers/pubgapi
-- https://github.com/JoeZwet/pubg4j
 - https://github.com/xmiolo/Wrapper4Pubg
 - https://github.com/mautini/pubgjava
 - https://github.com/SoftwareSandbox/pubg-api-client
@@ -102,12 +134,6 @@ Swift
 -----
 - https://github.com/cocoahero/pubg-swift
 - https://github.com/s0hno/PUBGClientSwift
-
-
-
-C#
---
-- https://github.com/Scarjit/PUBGSDK/
 
 
 
@@ -146,3 +172,5 @@ Dart
 Clojure
 -------
 - https://github.com/cjsauer/pubg-clj
+
+
