@@ -1,14 +1,39 @@
+.. _community_contributions:
+
+#######################
+Community Contributions
+#######################
+
+
+
+How to Contribute
+=================
+Want your tutorial or SDK listed here? Email us at pubgapi@pubg.com with a link to your work!
+
+
+
+.. _community_tutorials:
+
+Community Tutorials
+===================
+Tutorials created by the community.
+
+
+
+Tutorials for Getting Started
+------------------------------
+
+
+
+`How to write a PUBG app using the PUBG API <https://medium.com/@rpicapstone1/how-to-write-a-pubg-app-using-the-free-pubg-api-4d625729ebac>`_
+
+
+
 .. _community_sdks:
 
 Community SDKs
 ==============
 API wrappers made by community developers.
-
-
-
-How to Contribute
------------------
-Want your SDK listed here? Email us at pubgapi@pubg.com with a link to your wrapper!
 
 
 
