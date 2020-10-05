@@ -127,8 +127,17 @@ LogItemPickupFromCarepackage
 .. code-block:: none
 
   "character":   {Character},
-  "item":        {Item}
+  "item":        {Item},
   "carePackageUniqueId": number,
+
+
+
+LogItemPickupFromCustomPackage
+------------------------------
+.. code-block:: none
+
+  "character":   {Character},
+  "item":        {Item},
 
 
 
@@ -415,6 +424,20 @@ LogVaultStart
 
   "character": {Character},
   "isLedgeGrab": bool
+
+
+
+LogVehicleDamage
+-----------------
+.. code-block:: none
+
+  "attackId":           int,
+  "attacker":           {Character},
+  "vehicle":            {Vehicle},
+  "damageTypeCategory": string,
+  "damageCauserName":   string,
+  "damage":             number,
+  "distance":           number,
 
 
 

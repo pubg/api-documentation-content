@@ -1,0 +1,52 @@
+description: "survival mastery response"
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Identifier for this object type ("survivalMasterySummary")
+        id:
+          type: string
+          description: "Player ID (also known as account ID)"
+        attributes:
+          type: object
+          properties:
+            xp:
+              type: integer
+              description: "Survival Mastery experience points"
+            level:
+              type: integer
+              description: "Survival Mastery level"
+            totalMatchesPlayed:
+                type: integer
+                description: "Total number of matches played that count toward Survival Mastery"
+            latestMatchId:
+              type: string
+              description: "The match ID of the last completed match that was played"
+            stats:
+              type: array
+              items:
+                type: object
+                properties:
+                  statid:
+                    type: string
+                    description: "The ID for the statistic"
+                  total:
+                    type: number
+                  average:
+                    type: number
+                  careerBest:
+                    type: number
+                  lastMatchValue:
+                    type: number
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              description: "Link to this object"
+        meta:
+          type: object
+          description: "N/A"

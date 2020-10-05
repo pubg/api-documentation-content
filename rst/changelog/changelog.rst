@@ -14,6 +14,17 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v20.2.0
+--------
+
+New Data:
+
+- LogItemPickupFromCustomPackage
+- LogVehicleDamage
+- The Survival Mastery endpoint is available.
+
+
+
 v20.1.0
 --------
 

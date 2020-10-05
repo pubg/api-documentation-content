@@ -110,5 +110,6 @@ properties:
       self:
         type: string
         description: "Link to this object"
-      meta:
-        type: object
+  meta:
+    type: object
+    description: "N/A"

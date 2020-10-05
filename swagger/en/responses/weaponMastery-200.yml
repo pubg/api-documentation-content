@@ -14,10 +14,16 @@ content:
               type: string
               description: "The platform"
             weaponSummaries:
-              type: object
-              description: "The weapon summary for each weapon"
               $ref: '../schemas/index.yml#/weaponSummary'
             latestMatchId:
               type: string
-              description: "The match ID of the last completed match that was played."
-                    
+              description: "The match ID of the last completed match that was played"
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              description: "Link to this object"
+        meta:
+          type: object
+          description: "N/A"

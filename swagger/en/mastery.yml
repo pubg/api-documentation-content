@@ -23,6 +23,8 @@ security:
 paths:
   /players/{accountId}/weapon_mastery:
     $ref: './paths/index.yml#/weaponMastery'
+  /players/{accountId}/survival_mastery:
+    $ref: './paths/index.yml#/survivalMastery'
 
 components:
   securitySchemes:
@@ -37,3 +39,5 @@ components:
       $ref: './schemas/index.yml#/weaponMastery'
     weaponSummary:
       $ref: './schemas/index.yml#/weaponSummary'
+    survivalMastery:
+      $ref: './schemas/index.yml#/survivalMastery'
