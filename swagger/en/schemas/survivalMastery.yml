@@ -34,12 +34,16 @@ properties:
               description: "The ID for the statistic"
             total:
               type: number
+              description: "Career total"
             average:
               type: number
+              description: "Career average"
             careerBest:
               type: number
+              description: "Career best"
             lastMatchValue:
               type: number
+              description: "Value in last match"
   links:
     type: object
     properties:

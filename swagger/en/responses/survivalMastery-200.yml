@@ -38,7 +38,7 @@ content:
                     description: "Career total"
                   average:
                     type: number
-                    description: "Community average"
+                    description: "Career average"
                   careerBest:
                     type: number
                     description: "Career best"
