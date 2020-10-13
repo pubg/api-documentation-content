@@ -19,31 +19,232 @@ properties:
         description: "Survival Mastery level"
       totalMatchesPlayed:
           type: integer
-          description: "Total number of matches played that count toward Survival Mastery"
+          description: "Number of matches played that count toward Survival Mastery"
       latestMatchId:
         type: string
         description: "The match ID of the last completed match that was played"
       stats:
-        type: array
-        description: "Survival Mastery stats for the player"
-        items:
-          type: object
-          properties:
-            statid:
-              type: string
-              description: "The ID for the statistic"
-            total:
-              type: number
-              description: "Career total"
-            average:
-              type: number
-              description: "Career average"
-            careerBest:
-              type: number
-              description: "Career best"
-            lastMatchValue:
-              type: number
-              description: "Value in last match"
+        type: object
+        properties:
+          airDropsCalled:
+            description: "Number of air drops called"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          damageDealt:
+            description: "Total amount of damage dealt to other players"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          damageTaken:
+            description: "Total amount of damage taken"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          distanceBySwimming:
+            description: "Total distance travelled by swimming"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          distanceByVehicle:
+            description: "Total distance travelled by vehicle"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          distanceOnFoot:
+            description: "Total distance travelled on foot"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          distanceTotal:
+            description: "Total distance travelled by foot, swimming, and vehicle"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          healed:
+            description: "Total amount healed"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          hotDropLandings:
+            description: "Number of times landing in a hot drop location"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+          enemyCratesLooted:
+            description: "Number of enemy crates looted"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          position:
+            description: "Match placement"
+            properties:
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          revived:
+            description: "Number of times revived"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          teammatesRevived:
+            description: "Number of times reviving another player"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          timeSurvived:
+            description: "Total time survived"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          throwablesThrown:
+            description: "Number of throwables thrown"
+            properties:
+              total:
+                type: number
+                description: "Career total"
+              average:
+                type: number
+                description: "Career average"
+              careerBest:
+                type: number
+                description: "Career best"
+              lastMatchValue:
+                type: number
+                description: "Value in last match"
+          top10:
+            description: "Number of times placing in the top 10"
+            properties:
+              total:
+                type: number
+                description: "Career total"
   links:
     type: object
     properties:
