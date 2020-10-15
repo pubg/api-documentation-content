@@ -23,6 +23,10 @@ New Data:
 - LogVehicleDamage
 - The Survival Mastery endpoint is available.
 
+Bug Fix:
+
+- Fixed unexpected data for deprecated Player.attributes.createdAt and Player.attributes.updatedAt
+
 
 
 v20.1.0
