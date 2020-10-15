@@ -1,12 +1,12 @@
 get:
   tags:
-  - Weapon Mastery
-  summary: Get weapon mastery information for a single player
+  - Survival Mastery
+  summary: Get survival mastery information for a single player
   parameters:
     - $ref: '../parameters/index.yml#/accountId'
   responses:
     200:
-      $ref: '../responses/index.yml#/weaponMastery-200'
+      $ref: '../responses/index.yml#/survivalMastery-200'
     401:
       $ref: '../responses/index.yml#/errors/unauthorized'
     404:

@@ -34,6 +34,9 @@ seasons:
 status:
   $ref: './status.yml'
 
+survivalMastery:
+  $ref: './survivalMastery.yml'
+
 tournamentList:
   $ref: './tournamentList.yml'
 

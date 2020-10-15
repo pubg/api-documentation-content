@@ -273,15 +273,23 @@ Telemetry data will provide you with additional information for each match. This
 
 
 
-Getting Player Weapon Mastery Stats
-------------------------------------
-Weapon Mastery information can be obtained for players by querying the weapon_mastery endpoint. Don't forget to replace '$platform', and '$playerId' with your own information::
+Getting Player Mastery Stats
+-----------------------------
+Weapon Mastery and Survival Mastery information can be obtained for players by querying the weapon_mastery and survival_mastery endpoints. Don't forget to replace '$platform', and '$playerId' with your own information.
+
+Weapon Mastery::
 
   curl -g "https://api.pubg.com/shards/$platform/players/$playerId/weapon_mastery"
   -H "Authorization: Bearer $api-key" \
   -H "Accept: application/vnd.api+json"
 
-To see what the Weapon Mastery response will look like, please head over to the :ref:`weaponMastery` page.
+Survival Mastery::
+
+  curl -g "https://api.pubg.com/shards/$platform/players/$playerId/survival_mastery"
+  -H "Authorization: Bearer $api-key" \
+  -H "Accept: application/vnd.api+json"
+
+You can see what the responses will look like at the :ref:`mastery` page.
 
 
 

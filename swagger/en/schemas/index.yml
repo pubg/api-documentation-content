@@ -31,6 +31,9 @@ sample:
 season:
   $ref: './season.yml'
 
+survivalMastery:
+  $ref: './survivalMastery.yml'
+
 tournament:
   $ref: './tournament.yml'
 

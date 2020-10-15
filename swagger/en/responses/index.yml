@@ -47,6 +47,9 @@ seasons-200:
 status-200:
   $ref: './status-200.yml'
 
+survivalMastery-200:
+  $ref: './survivalMastery-200.yml'
+
 tournaments-200:
   $ref: './tournaments-200.yml'
 
