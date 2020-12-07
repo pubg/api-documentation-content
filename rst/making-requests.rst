@@ -78,7 +78,7 @@ the platform shard
 ........................................
 **shards/$platform**
 
-The PUBG API shards data by platform, and therefore requires a shard to be specified in the URL for most requests. In most cases, only the platform is required for the shard. However, the `platform-region` shard is required when making requests for PC and PS4 players' season stats for seasons prior to division.bro.official.2018-09, and for Xbox season stats for seasons before division.bro.official.2018-08. For more information about shards, please see :ref:`regions`.
+The PUBG API shards data by platform, and therefore requires a shard to be specified in the URL for most requests. In most cases, only the platform is required for the shard. However, the `platform-region` shard is required when making requests for PC and PSN players' season stats for seasons prior to division.bro.official.2018-09, and for Xbox season stats for seasons before division.bro.official.2018-08. For more information about shards, please see :ref:`regions`.
 
 .. _platform-region-shard:
 
@@ -88,7 +88,7 @@ the platform-region shard
 
 The platform-region shard should be used for making requests for season stats for seasons before the Survival Title system was launched:
   
-- PC and PS4 season stats for seasons before and including division.bro.official.2018-09.
+- PC and PSN season stats for seasons before and including division.bro.official.2018-09.
 - Xbox season stats for seasons before and including division.bro.official.2018-08.
 
 For more information about shards, please see :ref:`regions`.
@@ -178,9 +178,9 @@ The PUBG API shards data by either `platform` or `platform-region` depending on 
 - **stadia** - Stadia
 - **steam** - Steam
 - **tournament** - Tournaments
-- **psn** - PS4
+- **psn** - PSN
 - **xbox** - Xbox
-- **console** - PS4/Xbox (used for the /matches and /samples endpoints)
+- **console** - PSN/Xbox (used for the /matches and /samples endpoints)
 
 **shards/$platform-region** - *the platform-region shard*
 
@@ -209,7 +209,7 @@ The shard is specified after the pubg domain and before the endpoint like this::
 
   "...pubg.com/shards/steam/endpoint..."
 
-**Note: Use the platform shard when making requests for Stadia players' season stats, PC and PS4 players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
+**Note: Use the platform shard when making requests for Stadia players' season stats, PC and PSN players' season stats for seasons after division.bro.official.2018-09, and for Xbox season stats for seasons after division.bro.official.2018-08. Use the platform-region shard for making any other requests for players' season stats.**
 
 **The platform shard should be used at all other endpoints that require a shard. The platform-region shard is deprecated.**
 

@@ -12,7 +12,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
 
 **shards/$platform** - *the platform shard*
     
-- The PUBG API shards data by platform, and therefore requires a shard to be specified in the URL for most requests. In most cases, only the platform is required for the shard. However, the `platform-region` shard is required when making requests for PC and PS4 players' season stats for seasons prior to division.bro.official.2018-09, and for Xbox season stats for seasons before division.bro.official.2018-08. For more information about shards, please see :ref:`regions`
+- The PUBG API shards data by platform, and therefore requires a shard to be specified in the URL for most requests. In most cases, only the platform is required for the shard. However, the `platform-region` shard is required when making requests for PC and PSN players' season stats for seasons prior to division.bro.official.2018-09, and for Xbox season stats for seasons before division.bro.official.2018-08. For more information about shards, please see :ref:`regions`
 
 **players** - *the endpoint to query*
 
@@ -75,7 +75,7 @@ Ranked, Season, and Lifetime Stats
 -----------------------------------
 The stats included in the participant objects within a match response show player stats in the context of that match, but it is also possible to obtain player stats for an entire season or their overall stats. You will need a **playerId** and a **seasonId** to get ranked, season, or lifetime stats.
 
-The :ref:`lifetimeSeasonID` can be used to get "lifetime" stats for a player. These are the same stats that are available in-game by choosing "Overall" while viewing your season stats. They include data beginning from when the Survival Title system was launched. The first seasons for lifetime stats are `division.bro.official.pc-2018-01` for PC, `division.bro.official.playstation-01` for PS4, `division.bro.official.xbox-01` for Xbox, and `division.bro.official.console-07` for Stadia.
+The :ref:`lifetimeSeasonID` can be used to get "lifetime" stats for a player. These are the same stats that are available in-game by choosing "Overall" while viewing your season stats. They include data beginning from when the Survival Title system was launched. The first seasons for lifetime stats are `division.bro.official.pc-2018-01` for PC, `division.bro.official.playstation-01` for PSN, `division.bro.official.xbox-01` for Xbox, and `division.bro.official.console-07` for Stadia.
 
 Stadia players have separate season and lifetime stats for when they use a keyboard and mouse, and for when they use a gamepad. Gamepad stats can be queried for by using the `console` shard, or by using the :ref:`gamepadFilter` with the `stadia` shard.
 

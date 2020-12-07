@@ -8,9 +8,30 @@ Changelog
 Upcoming Changes
 -----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+..No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+v21.0.0 (Date TBD)
+-------
+
+Removed:
+
+- LogPlayerKill
+
+
+To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v20.3.0
+--------
+
+New Data:
+
+- LogPlayerKillV2
+
+Bug Fix:
+
+- Fixed the issue where the value for participant.attributes.stats.killStreaks was always 0.
 
 
 
