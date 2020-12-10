@@ -297,15 +297,15 @@ LogPlayerKill
 
 
 LogPlayerKillV2
--------------
+---------------
 .. code-block:: none
 
     "attackId":                     int,
     "dBNOId:"                       int,
     "victimGameResult":             {GameResult},
     "victim":                       {Character},
-    "victimWeaponAdditionalInfo":   [string, ...],
     "victimWeapon":                 string,
+    "victimWeaponAdditionalInfo":   [string, ...],
     "dBNOMaker":                    {Character},
     "dBNODamageInfo":               {DamageInfo}
     "finisher":                     {Character},
