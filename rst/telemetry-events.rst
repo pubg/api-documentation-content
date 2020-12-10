@@ -288,14 +288,34 @@ LogPlayerKill
   "damageTypeCategory":         string,
   "damageCauserName":           string,
   "damageCauserAdditionalInfo": [string, ...],
-  "VictimWeapon"                string,
-  "VictimWeaponAdditionalInfo"  [string, ...]
+  "victimWeapon"                string,
+  "victimWeaponAdditionalInfo"  [string, ...]
   "distance":                   number,
   "victimGameResult":           {GameResult},
   "isThroughPenetrableWall":    bool
 
 
 
+LogPlayerKillV2
+-------------
+.. code-block:: none
+
+    "attackId":                     int,
+    "dBNOId:"                       int,
+    "victimGameResult":             {GameResult},
+    "victim":                       {Character},
+    "victimWeaponAdditionalInfo":   [string, ...],
+    "victimWeapon":                 string,
+    "dBNOMaker":                    {Character},
+    "dBNODamageInfo":               {DamageInfo}
+    "finisher":                     {Character},
+    "finishDamageInfo":             {DamageInfo},
+    "killer":                       {Character},
+    "killerDamageInfo":             {DamageInfo},
+    "isSuicide":                    bool
+
+
+    
 LogPlayerLogin
 --------------
 .. code-block:: none

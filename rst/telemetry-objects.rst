@@ -86,6 +86,19 @@ isGame represents the phase of the game defined by the status of bluezone and sa
 
 
 
+DamageInfo
+----------
+.. code-block:: none
+
+  "damageReason":             string,
+  "damageTypeCategory":       string,
+  "damageCauserName":         string,
+  "additionalInfo":           [string, ...],
+  "distance":                 int,
+  "isThroughPenetrableWall":  bool
+
+
+
 GameResult
 ----------
 .. code-block:: none
