@@ -90,12 +90,14 @@ DamageInfo
 ----------
 .. code-block:: none
 
-  "damageReason":             string,
-  "damageTypeCategory":       string,
-  "damageCauserName":         string,
-  "additionalInfo":           [string, ...],
-  "distance":                 int,
-  "isThroughPenetrableWall":  bool
+  {
+    "damageReason":             string,
+    "damageTypeCategory":       string,
+    "damageCauserName":         string,
+    "additionalInfo":           [string, ...],
+    "distance":                 int,
+    "isThroughPenetrableWall":  bool
+  }
 
 
 
