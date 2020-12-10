@@ -11,7 +11,7 @@ Upcoming Changes
 .. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 v21.0.0 (Date TBD)
--------------------
++++++++++++++++++++
 Posted: Dec 10, 2020
 
 Removed:
