@@ -23,6 +23,15 @@ To subscribe to our mailing list for changelog updates, `click here <http://eepu
 
 
 
+v20.4.0
+--------
+
+New Data:
+
+- LogEmPickupLiftOff
+
+
+
 v20.3.0
 --------
 

@@ -57,6 +57,15 @@ LogCarePackageSpawn
 
 
 
+LogEmPickupLiftOff
+-------------------
+.. code-block:: none
+
+  "instigator":  {Character},
+  "riders":      [{Character}, ...]
+
+
+
 LogGameStatePeriodic
 --------------------
 .. code-block:: none
