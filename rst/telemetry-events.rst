@@ -284,6 +284,16 @@ LogPlayerDestroyBreachableWall
 
 
 
+LogPlayerDestroyProp
+--------------------
+.. code-block:: none
+
+  "attacker":       {Character},
+  "objectType":     string,
+  "objectLocation": {Location}
+
+
+
 LogPlayerKill
 -------------
 .. code-block:: none
@@ -321,6 +331,8 @@ LogPlayerKillV2
     "finishDamageInfo":             {DamageInfo},
     "killer":                       {Character},
     "killerDamageInfo":             {DamageInfo},
+    "assists_AccountId":            [string, ...],
+    "teamKillers_AccountId":        [string, ...],
     "isSuicide":                    bool
 
 

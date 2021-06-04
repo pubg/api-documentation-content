@@ -10,9 +10,9 @@ Upcoming Changes
 
 .. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
-v21.0.0 (Date TBD)
-+++++++++++++++++++
-Posted: Dec 10, 2020
+v21.0.0
+++++++++
+Planned: June 18, 2021
 
 Removed:
 
@@ -20,6 +20,17 @@ Removed:
 
 
 To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+
+
+v20.5.0
+--------
+
+New Data:
+
+- LogPlayerDestroyProp
+- LogPlayerKillV2.assists_AccountId
+- LogPlayerKillV2.teamKillers_AccountId
 
 
 
