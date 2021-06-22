@@ -30,15 +30,9 @@ The number of grenades and smoke bombs dropped may sometimes exceed the number o
 
 
 
-Inaccurate Values for "assists" in the participant object
-----------------------------------------------------------
-Players may sometimes have a different number of assists in participant.attributes.stats than represented by the log events in the telemetry file for a match.
-
-
-
-victim.location for LogPlayerTakeDamage and LogPlayerKill events are sometimes 0
-----------------------------------------------------------------------------------
-The values for LogPlayerTakeDamage.victim.location and LogPlayerKill.victim.location may be 0 when damageTypeCategory is "Damage_Groggy".
+victim.location for LogPlayerTakeDamage events are sometimes 0
+---------------------------------------------------------------
+The values for LogPlayerTakeDamage.victim.location may be 0 when damageTypeCategory is "Damage_Groggy".
 
 
 
@@ -50,4 +44,4 @@ Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetr
 
 Inaccurate Values for "swimDistance", "rideDistance", and "walkDistance" in the participant object
 ---------------------------------------------------------------------------------------------------
-Players may sometimes have different values for distances in participant.attributes.stats than in the GameResult object. In this case, GameResult should be considered as having the accurate values. The GameResult object can be found in LogPlayerKill.victimGameResult and LogMatchEnd.results.gameResultOnFinished.
+Players may sometimes have different values for distances in participant.attributes.stats than in the GameResult object. In this case, GameResult should be considered as having the accurate values. The GameResult object can be found in LogPlayerKillV2.victimGameResult and LogMatchEnd.results.gameResultOnFinished.
