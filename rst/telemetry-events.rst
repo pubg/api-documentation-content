@@ -294,8 +294,8 @@ LogPlayerDestroyProp
 
 
 
-LogPlayerKill
--------------
+LogPlayerKill (tournament matches)
+-----------------------------------
 .. code-block:: none
 
   "attackId":                   int,
@@ -538,3 +538,7 @@ LogWheelDestroy
   "vehicle":            {Vehicle},
   "damageTypeCategory": string,
   "damageCauserName":   string
+
+
+
+  Deprecated

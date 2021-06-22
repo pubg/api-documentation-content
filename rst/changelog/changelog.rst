@@ -8,18 +8,22 @@ Changelog
 Upcoming Changes
 -----------------
 
-.. No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+
+.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 v21.0.0
-++++++++
-Planned: June 18, 2021
+--------
 
 Removed:
 
-- LogPlayerKill
+- [PC, Console] LogPlayerKill
 
+LogPlayerKill events will not be removed from matches that finished before this update. This update does not effect tournament matches.
 
-To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+Bug Fix:
+
+- Fixed the issue where players would sometimes have a different number of assists in participant.attributes.stats than indicated by the log events in the telemetry file for a match.
 
 
 
