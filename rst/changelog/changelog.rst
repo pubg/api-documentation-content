@@ -12,6 +12,18 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 .. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
+
+
+v21.1.0
+--------
+
+New Data:
+
+- LogPlayerRedeploy
+- LogPlayerRedeployBRStart
+
+
+
 v21.0.0
 --------
 

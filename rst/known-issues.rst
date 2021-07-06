@@ -30,12 +30,6 @@ The number of grenades and smoke bombs dropped may sometimes exceed the number o
 
 
 
-victim.location for LogPlayerTakeDamage events are sometimes 0
----------------------------------------------------------------
-The values for LogPlayerTakeDamage.victim.location may be 0 when damageTypeCategory is "Damage_Groggy".
-
-
-
 Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed with the subCategory "Main"
 ---------------------------------------------------------------------------------------------
 Item_Weapon_vz61Skorpion_C and Item_Weapon_FlareGun_C are listed in the telemetry with the subCategory "Main" instead of "Handgun" for log events.

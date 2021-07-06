@@ -384,6 +384,22 @@ LogPlayerPosition
 
 
 
+LogPlayerRedeploy
+------------------
+.. code-block:: none
+
+  "character":  {Character},
+
+
+
+LogPlayerRedeployBRStart
+-------------------------
+.. code-block:: none
+
+  "characters": [{Character}, ...],
+
+
+
 LogPlayerRevive
 ---------------
 .. code-block:: none
