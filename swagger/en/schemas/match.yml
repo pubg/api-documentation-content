@@ -21,7 +21,7 @@ properties:
       matchType:
         type: string
         description: "Type of match"
-        enum: [arcade, custom, event, official, training]
+        enum: [airoyale, arcade, custom, event, official, seasonal, training]
       gameMode:
         type: string
         description: |

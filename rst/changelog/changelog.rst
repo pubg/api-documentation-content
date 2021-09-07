@@ -14,6 +14,17 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v21.2.0
+--------
+
+New Data:
+
+- LogItemPutToVehicleTrunk
+- LogItemPickupFromVehicleTrunk
+- New attributes.matchType enums: "airoyale", "seasonal"
+
+
+
 v21.1.0
 --------
 

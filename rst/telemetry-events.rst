@@ -161,6 +161,26 @@ LogItemPickupFromLootbox
 
 
 
+LogItemPickupFromVehicleTrunk
+-----------------------------
+.. code-block:: none
+
+  "character": {Character},
+  "vehicle":   {Vehicle},
+  "item":      {Item}
+
+
+
+LogItemPutToVehicleTrunk
+------------------------
+.. code-block:: none
+
+  "character": {Character},
+  "vehicle":   {Vehicle},
+  "item":      {Item}
+
+
+
 LogItemUnequip
 --------------
 .. code-block:: none
