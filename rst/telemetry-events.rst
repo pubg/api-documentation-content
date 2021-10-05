@@ -57,6 +57,15 @@ LogCarePackageSpawn
 
 
 
+LogCharacterCarry
+------------------
+.. code-block:: none
+
+  "character":  {Character},
+  "carryState": string
+
+
+
 LogEmPickupLiftOff
 -------------------
 .. code-block:: none

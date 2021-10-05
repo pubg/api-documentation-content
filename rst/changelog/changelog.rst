@@ -14,6 +14,15 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 
 
+v21.3.0
+--------
+
+New Data:
+
+- LogCharacterCarry
+
+
+
 v21.2.0
 --------
 
