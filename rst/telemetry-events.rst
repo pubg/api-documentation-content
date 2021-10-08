@@ -585,5 +585,3 @@ LogWheelDestroy
   "damageCauserName":   string
 
 
-
-  Deprecated
