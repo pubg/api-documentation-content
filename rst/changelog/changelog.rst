@@ -12,7 +12,19 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 .. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
+v21.3.1
+--------
 
+
+
+Data Changes:
+
+- [PC, Console] Weapon Mastery stats are now separated by Official & Competitive modes via the weapon mastery endpoint. {Item_Weapon}.CompetitiveStatsTotal and {Item_Weapon}.OfficialStatsTotal
+- Previous stats of combined Official and Competitive matches are no longer updated, but those stats as they were before this update are still shown under weaponSummaries.{Item_Weapon}.StatsTotal
+
+Deprecated:
+
+-{Item_Weapon}.Medals
 
 v21.3.0
 --------
