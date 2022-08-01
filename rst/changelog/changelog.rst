@@ -19,8 +19,9 @@ v21.3.1
 
 Data Changes:
 
-- [PC, Console] Weapon Mastery stats are now separated by Official & Competitive modes via the weapon mastery endpoint. {Item_Weapon}.CompetitiveStatsTotal and {Item_Weapon}.OfficialStatsTotal
-- Previous stats of combined Official and Competitive matches are no longer updated, but those stats as they were before this update are still shown under weaponSummaries.{Item_Weapon}.StatsTotal
+- [PC, Console] Weapon Mastery stats are now separated by Official & Competitive modes via the weapon mastery endpoint.
+- Official stats are found in {Item_Weapon}.CompetitiveStatsTotal and Competitive Stats are found by accessing {Item_Weapon}.OfficialStatsTotal
+- Previous stats of combined Official and Competitive matches shown with weaponSummaries.{Item_Weapon}.StatsTotal will no longer be updated, but those stats as they were before this update are still accessible using weaponSummaries.{Item_Weapon}.StatsTotal
 
 Deprecated:
 

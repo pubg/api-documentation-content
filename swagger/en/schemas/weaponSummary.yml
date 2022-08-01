@@ -55,7 +55,6 @@ properties:
           MostGroggiesInAGame:
             type: integer
             description: "The highest number of times that the player has caused another player to become groggy during a match"
-            deprecated: true
       Medals:
         description: "All of the medals received for this weapon"
         type: array
