@@ -18,8 +18,8 @@ v21.3.1
 New Data:
 
 - [PC, Console] Weapon Mastery stats are now separated by Official & Competitive modes via the weapon mastery endpoint.
-- Official stats are found in {Item_Weapon}.CompetitiveStatsTotal
-- Competitive Stats are found by accessing {Item_Weapon}.OfficialStatsTotal
+- Official stats are found in {Item_Weapon}.OfficialStatsTotal
+- Competitive Stats are found by accessing {Item_Weapon}.CompetitiveStatsTotal
 
 Deprecated:
 
