@@ -275,7 +275,7 @@ Telemetry data will provide you with additional information for each match. This
 
 Getting Player Mastery Stats
 -----------------------------
-Weapon Mastery and Survival Mastery information can be obtained for players by querying the weapon_mastery and survival_mastery endpoints. Don't forget to replace '$platform', and '$playerId' with your own information. Previous stats of combined Official and Competitive matches shown with weaponSummaries.{Item_Weapon}.StatsTotal will no longer be updated, but those stats as they were before this update are still accessible using weaponSummaries.{Item_Weapon}.StatsTotal.
+Weapon Mastery and Survival Mastery information can be obtained for players by querying the weapon_mastery and survival_mastery endpoints. Don't forget to replace '$platform', and '$playerId' with your own information. NOTE: Weapon Mastery stats (accessed by {Item_Weapon}.StatsTotal) before 18.2 update were combined Official and Competitive stats. Those stats will no longer be updated, although they are still accessible using weaponSummaries.{Item_Weapon}.StatsTotal. Weapon Mastery stats after 18.2 update are separated into {Item_Weapon}.OfficialStatsTotal and {Item_Weapon}.CompetitiveStatsTotal with some different fields than previously.
 
 Weapon Mastery::
 
