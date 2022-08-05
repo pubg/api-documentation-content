@@ -13,7 +13,7 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 .. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
 v22.0.0
---------
+-------
 
 New Data:
 
