@@ -114,12 +114,14 @@ properties:
       Medals:
         description: "All of the medals received for this weapon"
         type: array
+        deprecated: true
         items:
           type: object
           properties:
             MedalId:
               type: string
               description: "The name of the medal"
+              deprecated: true
             Count:
               type: integer
               description: "The number of times that the player received the medal"
