@@ -12,6 +12,22 @@ No planned changes at the moment. To subscribe to our mailing list for changelog
 
 .. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
 
+v22.0.0
+--------
+
+New Data:
+
+- [PC, Console] weaponMasterySummary.weaponSummaries.{Item_Weapon}.OfficialStatsTotal has been added to Weapon Mastery beginning with the 18.2 patch. These stats will not include previous Weapon Mastery stats.
+- weaponMasterySummary.weaponSummaries.{Item_Weapon}.CompetitiveStatsTotal has been added to Weapon Mastery beginning with the 18.2 patch. These stats will not include previous Weapon Mastery stats.
+
+Data Changes:
+
+- Weapon Mastery stats prior to the 18.2 patch will still be shown in weaponMasterySummary.weaponSummaries.{Item_Weapon}.StatsTotal, but they will no longer be updated.
+
+Deprecated:
+
+- weaponMasterySummary.weaponSummaries.{Item_Weapon}.Medals
+
 
 
 v21.3.0

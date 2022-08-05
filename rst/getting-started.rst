@@ -11,7 +11,7 @@ When making a request to the PUBG API, the URL controls what data you will get b
   "https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName"
 
 **shards/$platform** - *the platform shard*
-    
+
 - The PUBG API shards data by platform, and therefore requires a shard to be specified in the URL for most requests. In most cases, only the platform is required for the shard. However, the `platform-region` shard is required when making requests for PC and PSN players' season stats for seasons prior to division.bro.official.2018-09, and for Xbox season stats for seasons before division.bro.official.2018-08. For more information about shards, please see :ref:`regions`
 
 **players** - *the endpoint to query*
@@ -275,7 +275,7 @@ Telemetry data will provide you with additional information for each match. This
 
 Getting Player Mastery Stats
 -----------------------------
-Weapon Mastery and Survival Mastery information can be obtained for players by querying the weapon_mastery and survival_mastery endpoints. Don't forget to replace '$platform', and '$playerId' with your own information.
+Weapon Mastery and Survival Mastery information can be obtained for players by querying the weapon_mastery and survival_mastery endpoints. Don't forget to replace '$platform', and '$playerId' with your own information. NOTE: Weapon Mastery stats were reset as part of the 18.2 update, and separated into "OfficialStatsTotal" and "CompetitiveStatsTotal".
 
 Weapon Mastery::
 

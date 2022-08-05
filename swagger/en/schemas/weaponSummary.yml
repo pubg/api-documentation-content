@@ -55,15 +55,74 @@ properties:
           MostGroggiesInAGame:
             type: integer
             description: "The highest number of times that the player has caused another player to become groggy during a match"
+      OfficialStatsTotal:
+        type: object
+        description: "The weapon mastery stats for this weapon for games played in Official mode only"
+        properties:
+          MostDefeatsInAGame:
+            type: integer
+            description: "Most defeats in a single match"
+          Defeats:
+            type: integer
+            description: "The total number of defeats in their career"
+          DamagePlayer:
+            type: number
+            description: "The total damage that the player has done in their career"
+          HeadShots:
+            type: integer
+            description: "The total headshots that the player has done in their career"
+          Kills:
+            type: integer
+            description: "The total number of kills for the player"
+          MostKillsInAGame:
+            type: integer
+            description: "The most kills for a player in a single match"
+          Groggies:
+            type: integer
+            description: "The total number of times that the player has caused another player to become groggy during their career"
+          LongestKill:
+            type: number
+            description: "The longest distance that the player got a kill for"
+      CompetitiveStatsTotal:
+        type: object
+        description: "The weapon mastery stats for this weapon for games played in Official mode only"
+        properties:
+          MostDefeatsInAGame:
+            type: integer
+            description: "Most defeats in a single match"
+          Defeats:
+            type: integer
+            description: "The total number of defeats in their career"
+          DamagePlayer:
+            type: number
+            description: "The total damage that the player has done in their career"
+          HeadShots:
+            type: integer
+            description: "The total headshots that the player has done in their career"
+          Kills:
+            type: integer
+            description: "The total number of kills for the player"
+          MostKillsInAGame:
+            type: integer
+            description: "The most kills for a player in a single match"
+          Groggies:
+            type: integer
+            description: "The total number of times that the player has caused another player to become groggy during their career"
+          LongestKill:
+            type: number
+            description: "The longest distance that the player got a kill for"
       Medals:
         description: "All of the medals received for this weapon"
         type: array
+        deprecated: true
         items:
           type: object
           properties:
             MedalId:
               type: string
               description: "The name of the medal"
+              deprecated: true
             Count:
               type: integer
               description: "The number of times that the player received the medal"
+              deprecated: true
