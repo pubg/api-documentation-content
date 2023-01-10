@@ -8,9 +8,7 @@ Changelog
 Upcoming Changes
 -----------------
 
-No planned changes at the moment. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
-
-.. To subscribe to our mailing list for changelog updates, `click here <http://eepurl.com/dFPTNL>`_.
+No planned changes at the moment.
 
 v22.0.0
 -------
