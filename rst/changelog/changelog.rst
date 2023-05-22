@@ -11,10 +11,11 @@ Upcoming Changes
 No planned changes at the moment.
 
 v22.0.1
+-------
 
 New Data:
 
-- Add ban info in player object
+- Add ban type to player object
 
 
 
