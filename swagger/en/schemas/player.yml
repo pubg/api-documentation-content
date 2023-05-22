@@ -33,19 +33,9 @@ properties:
       patchVersion:
         type: string
         description: "Version of the game"
-      banCard:
-        type: object
-        description: "Ban information (v22.0.1)"
-        properties:
-          Reason:
-            type: string
-          ValidSince:
-            type: dateTime
-          Until:
-            type: dateTime
-          BanType:
-            type: string
-            description: Innocent, TemporaryBan, PermanentBan
+      banType:
+        type: string
+        description: "Innocent, TemporaryBan, PermanentBan"
       titleId:
         type: string
         description: "Identifies the studio and game"
