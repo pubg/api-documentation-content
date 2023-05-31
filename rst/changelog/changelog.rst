@@ -10,6 +10,15 @@ Upcoming Changes
 
 No planned changes at the moment.
 
+v22.0.2
+-------
+
+New Data:
+
+- Add tier to survival mastery object
+
+
+
 v22.0.1
 -------
 
