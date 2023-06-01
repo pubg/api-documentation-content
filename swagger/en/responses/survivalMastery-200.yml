@@ -16,6 +16,9 @@ content:
             xp:
               type: integer
               description: "Survival Mastery experience points"
+            tier:
+              type: integer
+              description: "Survival Mastery tier"
             level:
               type: integer
               description: "Survival Mastery level"
