@@ -10,6 +10,15 @@ Upcoming Changes
 
 No planned changes at the moment.
 
+v22.0.3
+-------
+
+Removed:
+
+- Tournaments endpoint and matches
+
+
+
 v22.0.2
 -------
 
