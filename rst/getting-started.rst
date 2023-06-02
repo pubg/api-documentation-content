@@ -243,30 +243,6 @@ In the response, there will be an array of abbreviated match objects containing 
 
 
 
-Getting Tournament Matches
---------------------------
-Start by getting the list of tournaments to obtain the ID for the tournament you want to lookup like this::
-
-  curl -g "https://api.pubg.com/tournaments" \
-  -H "Authorization: Bearer api-key" \
-  -H "Accept: application/vnd.api+json"
-
-The response from the tournaments endpoint will contain an array of tournament references, showing their IDs and createdAt timestamps. Grab the ID of the desired tournament and use it to lookup the tournament like this. Be sure to replace '$tournamentId' with your own information::
-
-  curl -g "https://api.pubg.com/tournaments/$tournamentId" \
-  -H "Authorization: Bearer api-key" \
-  -H "Accept: application/vnd.api+json"
-
-**tournaments/$tournamentId** - *the tournament ID*
-
-In response you will be given a list of match IDs from the tournament that you can lookup on the matches endpoint.
-
-**Note: Be sure to use the tournament shard when looking up tournament matches.**
-
-To see exactly what the tournament responses will look like, please head over to the :ref:`tournaments` page.
-
-
-
 Getting Telemetry Data
 ----------------------
 Telemetry data will provide you with additional information for each match. This data is compressed using gzip and clients using the API should specify that they accept gzip compressed responses. The URL string that links to the telemetry file for a match can be found in the Asset Object of that match. For additional information, please refer to the :ref:`telemetry` page.
