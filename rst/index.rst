@@ -15,7 +15,6 @@ PUBG API Documentation
   mastery-endpoint
   matches-endpoint
   leaderboards-endpoint
-  tournaments-endpoint
   samples-endpoint
   telemetry
   telemetry-events
