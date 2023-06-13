@@ -1,0 +1,18 @@
+description: Clan response
+content:
+  application/vnd.api+json:
+    schema:
+      type: object
+      properties:
+        data:
+          $ref: '../schemas/index.yml#/clan'
+        links:
+          type: object
+          description: "Pagination links"
+          properties:
+            self:
+              type: string
+              description: "Link to this clan object"
+        meta:
+          type: object
+          description: "N/A"
