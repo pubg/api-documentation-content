@@ -42,3 +42,6 @@ weaponMastery:
 
 weaponSummary:
   $ref: './weaponSummary.yml'
+
+clan:
+  $ref: './clan.yml'
