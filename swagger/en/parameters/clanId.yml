@@ -1,0 +1,6 @@
+name: clanId
+in: path
+description: "The clan ID to search for."
+required: true
+schema:
+  type: string
