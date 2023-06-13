@@ -24,3 +24,6 @@ pageNumber:
 
 seasonId:
   $ref: './seasonId.yml'
+
+clanId:
+  $ref: './clanId.yml'
