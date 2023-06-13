@@ -58,3 +58,6 @@ tournamentList-200:
 
 weaponMastery-200:
   $ref: './weaponMastery-200.yml'
+
+clan-200:
+  $ref: './clan-200.yml'
