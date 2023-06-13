@@ -45,3 +45,6 @@ tournaments:
 
 weaponMastery:
   $ref: './weaponMastery.yml'
+
+clan:
+  $ref: './clan.yml'
