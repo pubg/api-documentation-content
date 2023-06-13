@@ -1,0 +1,17 @@
+get:
+  tags:
+  - Clans
+  summary: Get a clan.
+  parameters:
+    - $ref: '../parameters/index.yml#/clanId'
+  responses:
+    200:
+      $ref: '../responses/index.yml#/clan-200'
+    401:
+      $ref: '../responses/index.yml#/errors/unauthorized'
+    404:
+      $ref: '../responses/index.yml#/errors/notFound'
+    415:
+      $ref: '../responses/index.yml#/errors/unsupportedMediaType'
+    429:
+      $ref: '../responses/index.yml#/errors/tooManyRequests'
