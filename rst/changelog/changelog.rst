@@ -10,6 +10,16 @@ Upcoming Changes
 
 No planned changes at the moment.
 
+v22.1.0
+-------
+
+New Data:
+
+- Add ClanID to player object
+- The Clans endpoint is available
+
+
+
 v22.0.3
 -------
 
