@@ -75,11 +75,6 @@ PHP
 
 
 
-Java
-----
-- https://github.com/GPLNature/pubgapi / https://bintray.com/gplnature/java-wrappers/pubgapi
-
-
 
 No Longer Maintained
 ====================
